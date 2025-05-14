@@ -10,7 +10,7 @@ import Features from '~/components/widgets/Features.astro';
 
 // Define metadata for the page
 const metadata = {
-  title: 'Unified Networks | Expert UniFi Solutions in Louth & Meath',
+  title: 'Fix Slow Internet & Wi-Fi Blackspots | Expert UniFi & Starlink Installation | Unified Networks', // SEO Optimized Title
   ignoreTitleTemplate: true, // Uses the title as is, without appending the site title
 };
 ---
@@ -20,65 +20,65 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Book Your Free UniFi Network Consultation', // Updated CTA
+        text: 'Book Your Free Network Consultation', // General CTA
         href: '/#contact', // Assuming you'll have a contact section with this ID or a contact page
         icon: 'tabler:phone',
       },
       {
-        text: 'Our UniFi Services', // Updated secondary CTA
-        href: '#services', // Changed to #services to match the Features ID
+        text: 'Our Network Solutions', // General secondary CTA
+        href: '#services', // Links to the Features ID
       },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Unified Networks - Professional UniFi Network Installation' }}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Unified Networks - Solutions for slow internet, Wi-Fi blackspots, and Starlink installation' }}
   >
     <Fragment slot="title">
-      Elevate Your Connectivity: Expert UniFi Network Design & Installation for Homes & Businesses in Louth & Meath.
+      Tired of Slow Internet & Wi-Fi Dead Zones? Expert UniFi & Starlink Network Solutions for Flawless Connectivity.
     </Fragment>
 
     <Fragment slot="subtitle">
-      At Unified Networks, we harness the power of cutting-edge UniFi technology to deliver robust, scalable, and centrally managed network solutions. Say goodbye to Wi-Fi dead zones and unreliable connections – experience the confidence of a professionally engineered network.
+      We design, install, and optimize high-performance UniFi and Starlink networks to eliminate frustrating slowdowns, buffering, and Wi-Fi blackspots. Get reliable, fast internet for your home or business with our professionally engineered solutions.
     </Fragment>
   </Hero>
 
   <Note
     title="Our Promise: Intelligent Design, Seamless Performance."
-    description="We deliver tailored UniFi network solutions built on honest advice and meticulous planning. No guesswork – just robust, high-performance connectivity designed for your specific needs in Louth, Meath, and surrounding areas."
+    description="We deliver tailored UniFi and Starlink network solutions built on honest advice and meticulous planning. No guesswork – just robust, high-performance connectivity designed to solve your internet problems and meet your specific needs."
   />
 
   <Features
-    id="services" // Changed ID to 'services' to match the CTA link
-    tagline="Our UniFi Expertise"
-    title="Comprehensive UniFi Network Services"
-    subtitle="We specialize in the full UniFi ecosystem, providing homes and businesses with enterprise-grade Wi-Fi, advanced routing, and complete network control. Discover how we can enhance your connectivity."
+    id="services" // ID for CTA link
+    tagline="Our Network Expertise"
+    title="Comprehensive Solutions for Your Internet Challenges"
+    subtitle="We specialize in the UniFi Network ecosystem and professional Starlink installations, providing homes and businesses with solutions for slow internet, poor Wi-Fi coverage, and the need for reliable, high-speed connectivity. Discover how we can enhance your internet experience."
     items={[
       {
-        title: 'UniFi Network Architecture & Deployment',
-        description: 'We design and deploy bespoke UniFi network infrastructures, from gateways and switches to high-performance Wi-Fi access points, ensuring optimal coverage, speed, and scalability for your property.',
-        icon: 'tabler:network', // CORRECTED ICON - Changed from device-lan to network
+        title: 'Custom UniFi Network Design & Deployment',
+        description: 'Suffering from slow internet or patchy Wi-Fi? We design and deploy bespoke UniFi network infrastructures, from gateways and switches to high-performance Wi-Fi access points, ensuring optimal coverage, boosted speeds, and scalability for your property.',
+        icon: 'tabler:network',
       },
       {
-        title: 'Advanced UniFi Wi-Fi Optimisation',
-        description: 'Eliminate dead zones and interference. We leverage UniFi\'s powerful RF management and diverse access point range to guarantee seamless, high-speed Wi-Fi coverage throughout your home or business.',
-        icon: 'tabler:wifi',
-      },
-      {
-        title: 'Integrated Broadband & Starlink Solutions with UniFi',
-        description: 'Expert advice on the best internet options, including Starlink, seamlessly integrated with a robust UniFi network for optimal distribution and reliability throughout your premises.',
+        title: 'Expert Starlink Installation & UniFi Integration', // Starlink more prominent
+        description: 'Get reliable high-speed internet, even in remote locations, with our professional Starlink installation service. We ensure optimal satellite dish setup for maximum performance and can seamlessly integrate Starlink with a robust UniFi network for flawless Wi-Fi distribution throughout your premises.',
         icon: 'tabler:satellite',
       },
       {
-        title: 'High-Performance UniFi Building-to-Building Connectivity',
-        description: 'Extend your network across properties. We implement robust UniFi point-to-point (PtP) and point-to-multipoint (PtMP) wireless bridges for stable, high-speed connections.',
+        title: 'Eliminate Wi-Fi Dead Zones & Boost Speed with UniFi',
+        description: 'Stop Wi-Fi blackspots and frustrating buffering. We leverage UniFi\'s powerful RF management and diverse access point range to guarantee seamless, high-speed Wi-Fi coverage and reliable internet throughout your home or business.',
+        icon: 'tabler:wifi',
+      },
+      {
+        title: 'Extend Your Network: UniFi Point-to-Point Links',
+        description: 'Need to connect outbuildings or remote areas without running cables? We implement robust UniFi point-to-point (PtP) and point-to-multipoint (PtMP) wireless bridges for stable, high-speed connections, eliminating network blackspots between properties.',
         icon: 'tabler:antenna-bars-5',
       },
       {
-        title: 'Your Local UniFi Ecosystem Specialists',
-        description: 'Deep expertise in the full UniFi suite – Network, Protect, Access, and Talk. We deploy and manage enterprise-grade UniFi systems tailored to your environment, offering powerful features without complex contracts.',
-        icon: 'tabler:settings-cog', // UPDATED ICON - Changed from brand-ubuntu to settings-cog for better relevance
+        title: 'Your Expert UniFi Network Specialists',
+        description: 'Deep expertise in the UniFi Network application and hardware. We deploy and manage enterprise-grade UniFi network systems tailored to your environment, offering powerful solutions for slow internet, better routing, enhanced switching, and superior Wi-Fi features without complex contracts.',
+        icon: 'tabler:settings-cog',
       },
       {
-        title: 'Comprehensive UniFi Network Audits & Health Checks',
-        description: 'Ensure your network is performing at its peak. We diagnose slowdowns, interference, and security vulnerabilities, providing actionable insights to optimize your existing UniFi or other network setups.',
+        title: 'Network Health Checks: Diagnose & Fix Slow Internet',
+        description: 'Is your current network underperforming or causing slow internet speeds? We test and diagnose slowdowns, Wi-Fi interference, and security issues, providing actionable insights to optimize your existing UniFi or other network setups and improve internet speed.',
         icon: 'tabler:activity',
       },
     ]}
