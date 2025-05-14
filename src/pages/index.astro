@@ -1,84 +1,87 @@
 ---
+// Import the main layout component
 import Layout from '~/layouts/PageLayout.astro';
 
+// Import the widgets/components used on this page
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
+// import FAQs from '~/components/widgets/FAQs.astro'; // Keep this commented out or remove if not used immediately
 
+// Define metadata for the page
 const metadata = {
-  title: 'Unified Networks',
-  ignoreTitleTemplate: true,
+  title: 'Unified Networks | Expert UniFi Solutions in Louth & Meath',
+  ignoreTitleTemplate: true, // Uses the title as is, without appending the site title
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Section -->
   <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'Book a Free Call',
-        href: '/#contact',
+        text: 'Book Your Free UniFi Network Consultation', // Updated CTA
+        href: '/#contact', // Assuming you'll have a contact section with this ID or a contact page
         icon: 'tabler:phone',
       },
       {
-        text: 'Our Services',
-        href: '#features',
+        text: 'Our UniFi Services', // Updated secondary CTA
+        href: '#services', // Changed to #services to match the Features ID
       },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Unified Networks' }}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Unified Networks - Professional UniFi Network Installation' }}
   >
     <Fragment slot="title">
-      Professional Network Solutions for Homes & Small Businesses
+      Elevate Your Connectivity: Expert UniFi Network Design & Installation for Homes & Businesses in Louth & Meath.
     </Fragment>
 
     <Fragment slot="subtitle">
-      We design, install, and optimize networks using high-quality UniFi equipment. From Wi-Fi dead zones to Starlink setup — Unified Networks helps you stay connected with confidence.
+      At Unified Networks, we harness the power of cutting-edge UniFi technology to deliver robust, scalable, and centrally managed network solutions. Say goodbye to Wi-Fi dead zones and unreliable connections – experience the confidence of a professionally engineered network.
     </Fragment>
   </Hero>
 
-  <!-- Note Section -->
-  <Note title="Our Promise" description="Tailored network solutions. Honest advice. No guesswork." />
+  <Note
+    title="Our Promise: Intelligent Design, Seamless Performance."
+    description="We deliver tailored UniFi network solutions built on honest advice and meticulous planning. No guesswork – just robust, high-performance connectivity designed for your specific needs in Louth, Meath, and surrounding areas."
+  />
 
-  <!-- Features Section -->
   <Features
-    id="features"
-    tagline="What We Offer"
-    title="Network Services That Keep You Connected"
-    subtitle="We specialize in UniFi systems, helping homes and businesses get the most out of their internet."
+    id="services" // Changed ID to 'services' to match the CTA link
+    tagline="Our UniFi Expertise"
+    title="Comprehensive UniFi Network Services"
+    subtitle="We specialize in the full UniFi ecosystem, providing homes and businesses with enterprise-grade Wi-Fi, advanced routing, and complete network control. Discover how we can enhance your connectivity."
     items={[
       {
-        title: 'Network Design & Setup',
-        description: 'Full planning and installation of wired and wireless networks, customized for your space and usage needs.',
-        icon: 'tabler:network',
+        title: 'UniFi Network Architecture & Deployment',
+        description: 'We design and deploy bespoke UniFi network infrastructures, from gateways and switches to high-performance Wi-Fi access points, ensuring optimal coverage, speed, and scalability for your property.',
+        icon: 'tabler:device-lan', // Kept original icon, assuming it's still appropriate
       },
       {
-        title: 'Wi-Fi Optimization',
-        description: 'We eliminate dead zones and interference, ensuring reliable Wi-Fi coverage throughout your property.',
+        title: 'Advanced UniFi Wi-Fi Optimisation',
+        description: 'Eliminate dead zones and interference. We leverage UniFi\'s powerful RF management and diverse access point range to guarantee seamless, high-speed Wi-Fi coverage throughout your home or business.',
         icon: 'tabler:wifi',
       },
       {
-        title: 'Broadband & Starlink Consulting',
-        description: 'Get expert advice on your best internet options including Starlink, mobile broadband and satellite.',
+        title: 'Integrated Broadband & Starlink Solutions with UniFi',
+        description: 'Expert advice on the best internet options, including Starlink, seamlessly integrated with a robust UniFi network for optimal distribution and reliability throughout your premises.',
         icon: 'tabler:satellite',
       },
       {
-        title: 'Point-to-Point Links',
-        description: 'Connect outbuildings, farms, or remote cameras with stable long-distance wireless links.',
+        title: 'High-Performance UniFi Building-to-Building Connectivity',
+        description: 'Extend your network across properties. We implement robust UniFi point-to-point (PtP) and point-to-multipoint (PtMP) wireless bridges for stable, high-speed connections.',
         icon: 'tabler:antenna-bars-5',
       },
       {
-        title: 'UniFi System Expertise',
-        description: 'We deploy enterprise-grade UniFi systems scaled to your environment — no contracts, just quality.',
-        icon: 'tabler:brand-ubuntu',
+        title: 'Your Local UniFi Ecosystem Specialists',
+        description: 'Deep expertise in the full UniFi suite – Network, Protect, Access, and Talk. We deploy and manage enterprise-grade UniFi systems tailored to your environment, offering powerful features without complex contracts.',
+        icon: 'tabler:brand-ubuntu', // Consider changing to a more generic "settings" or "expert" icon if 'brand-ubuntu' isn't fitting
       },
       {
-        title: 'Network Health Checks',
-        description: 'Already have a setup? We test and diagnose slowdowns, interference and security issues.',
+        title: 'Comprehensive UniFi Network Audits & Health Checks',
+        description: 'Ensure your network is performing at its peak. We diagnose slowdowns, interference, and security vulnerabilities, providing actionable insights to optimize your existing UniFi or other network setups.',
         icon: 'tabler:activity',
       },
     ]}
   />
 
-  <!-- Additional Content Sections or CTA here -->
-</Layout>
+  </Layout>
