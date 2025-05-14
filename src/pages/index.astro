@@ -15,47 +15,40 @@ const metadata = {
 };
 
 // Define props for the Contact widget
-// These props will be passed to your `contact.astro` component,
-// which then passes relevant parts to the updated `Form.astro` component.
 const contactProps = {
   id: "contact", // For the anchor link from the hero button
   title: "Ready to End Your Internet Frustrations?",
   subtitle: "Reach out today for your free network consultation. Let's discuss how we can bring seamless, high-performance internet to your home or business. Starlink installation also available.",
   button: "Send Message", // Text for the submit button
-  inputs: [ // Defines the input fields for the form
+  inputs: [ 
     {
       type: 'text',
-      name: 'name', // This 'name' attribute is crucial for Netlify Forms
+      name: 'name', 
       label: 'Your Name',
       placeholder: 'John Doe',
-      required: true, // You can make fields required
+      required: true, 
     },
     {
       type: 'email',
-      name: 'email', // Crucial for Netlify Forms
+      name: 'email', 
       label: 'Your Email',
       placeholder: 'you@example.com',
       required: true,
     },
     {
       type: 'tel',
-      name: 'phone', // Crucial for Netlify Forms
+      name: 'phone', 
       label: 'Phone Number (Optional)',
       placeholder: '08X XXX XXXX',
-      // required: false, // Optional field
     },
   ],
-  textarea: { // Defines the textarea field
-    name: 'message', // Crucial for Netlify Forms (Form.astro defaults to 'message' if not provided)
+  textarea: { 
+    name: 'message', 
     label: 'Your Message',
     placeholder: 'How can we help you get better internet?',
     rows: 4,
     required: true,
   },
-  // Optional: If your contact.astro and Form.astro support a 'formName' prop to override the default in Form.astro
-  // formName: 'homepage-contact', // This would allow customizing the Netlify form name from here
-  // Note: To use 'formName' like this, contact.astro and Form.astro would need to be adapted to pass it down.
-  // For now, it will use the 'name' prop (defaulting to 'contact-form') from Form.astro.
 };
 ---
 
@@ -64,8 +57,8 @@ const contactProps = {
     actions={[
       {
         variant: 'primary',
-        text: 'Book Your Free Network Consultation',
-        href: '/#contact', // Links to the Contact widget ID
+        text: 'Book Free Consultation', // Made button text slightly shorter
+        href: '/#contact', 
         icon: 'tabler:phone',
       },
       {
@@ -73,14 +66,14 @@ const contactProps = {
         href: '#services',
       },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Unified Networks - Professional network setup for fast, reliable internet and Wi-Fi' }}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Unified Networks - Fixing slow internet and Wi-Fi dead zones with expert network solutions.' }} // Updated alt text
   >
     <Fragment slot="title">
-      Tired of Slow Internet & Wi-Fi Dead Zones? Get Flawless Connectivity with Our Expert Network Solutions.
+      Slow Internet? Wi-Fi Dead Zones? Get Seamless Connectivity. {/* Shorter, more direct title */}
     </Fragment>
 
     <Fragment slot="subtitle">
-      We design, install, and optimize high-performance networks using professional-grade equipment to eliminate frustrating slowdowns, buffering, and Wi-Fi blackspots. We also provide expert Starlink installation for challenging locations. Experience reliable, fast internet for your home or business.
+      Expert network solutions for fast, reliable internet. We design & install high-performance systems (including Starlink) to eliminate blackspots and buffering. {/* More concise subtitle */}
     </Fragment>
   </Hero>
 
@@ -128,8 +121,6 @@ const contactProps = {
     ]}
   />
 
-  {/* This passes the defined inputs, textarea, button text, etc., to your contact.astro component */}
-  {/* The contact.astro component then uses Form.astro (which you've updated) to render the Netlify-ready form */}
   <Contact {...contactProps} />
 
 </Layout>
