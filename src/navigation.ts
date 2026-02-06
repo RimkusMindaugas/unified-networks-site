@@ -2,7 +2,7 @@ import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || '').replace(/\D/g, '');
 const whatsappMessage = encodeURIComponent(
-  'Hi Unified Networks, I am looking for help with internet or Wi-Fi setup in Drogheda, Dundalk, Navan, Dublin, or nearby areas.'
+  'Hi Unified Networks, I am looking for help with internet or Wi-Fi setup.'
 );
 const whatsappHref = whatsappNumber
   ? `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
