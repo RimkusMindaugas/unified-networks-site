@@ -1,61 +1,37 @@
 ---
-// src/components/ui/Form.astro
 import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
-const { 
-  inputs, 
-  textarea, 
-  disclaimer, 
-  button = 'Contact us', 
-  description = '',
-  name = 'contact-form' // Added a name prop for the form, defaulting to 'contact-form'
-} = Astro.props;
+const { inputs, textarea, disclaimer, button = 'Contact us', description = '', formName = 'contact' } = Astro.props;
 ---
 
-{/* Netlify Forms Integration:
-  - Added `name` attribute to the form (can be customized via props).
-  - Added `method="POST"`.
-  - Added `data-netlify="true"`.
-  - Added `data-netlify-honeypot="bot-field"` for spam protection.
-  - Added hidden input `form-name` which must match the form's `name` attribute.
-  - Added hidden honeypot field `bot-field`.
-*/}
-<form 
-  name={name} 
-  method="POST" 
-  data-netlify="true" 
-  data-netlify-honeypot="bot-field"
->
-  {/* Hidden field for Netlify to identify the form. Its value MUST match the form's name attribute. */}
-  <input type="hidden" name="form-name" value={name} />
-
-  {/* Honeypot field for basic spam protection. Should be hidden from users. */}
+<form name={formName} method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value={formName} />
   <p class="hidden">
     <label>
-      Don’t fill this out if you’re human: <input name="bot-field" />
+      Do not fill this out if you are human: <input name="bot-field" />
     </label>
   </p>
 
   {
     inputs &&
       inputs.map(
-        ({ type = 'text', name: inputName, label = '', autocomplete = 'on', placeholder = '', required = false }) =>
-          inputName && (
+        ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '', required = false }) =>
+          name && (
             <div class="mb-6">
               {label && (
-                <label for={inputName} class="block text-sm font-medium dark:text-slate-300"> {/* Added dark mode text color */}
+                <label for={name} class="block text-sm font-medium">
                   {label}
                 </label>
               )}
               <input
                 type={type}
-                name={inputName}
-                id={inputName}
+                name={name}
+                id={name}
                 autocomplete={autocomplete}
                 placeholder={placeholder}
-                required={required} // Added required attribute if passed in props
-                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 dark:text-white" {/* Added dark mode text color */}
+                required={required}
+                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
               />
             </div>
           )
@@ -64,17 +40,17 @@ const {
 
   {
     textarea && (
-      <div class="mb-6"> {/* Added mb-6 for spacing consistent with inputs */}
-        <label for={textarea.name || 'message'} class="block text-sm font-medium dark:text-slate-300"> {/* Added dark mode text color */}
-          {textarea.label || 'Your Message'} {/* Default label if not provided */}
+      <div>
+        <label for={textarea.name || 'message'} class="block text-sm font-medium">
+          {textarea.label}
         </label>
         <textarea
           id={textarea.name || 'message'}
-          name={textarea.name || 'message'} // Ensure name attribute is present
-          rows={textarea.rows || 4}
+          name={textarea.name ? textarea.name : 'message'}
+          rows={textarea.rows ? textarea.rows : 4}
           placeholder={textarea.placeholder}
-          required={textarea.required || false} // Added required attribute
-          class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 dark:text-white" {/* Added dark mode text color */}
+          required={textarea.required || false}
+          class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
         />
       </div>
     )
@@ -82,18 +58,21 @@ const {
 
   {
     disclaimer && (
-      <div class="mt-3 mb-6 flex items-start"> {/* Added mb-6 for spacing */}
+      <div class="mt-3 flex items-start">
         <div class="flex mt-0.5">
           <input
-            id={disclaimer.name || "disclaimer-checkbox"} // Ensure unique id if name is not present
-            name={disclaimer.name || "disclaimer"} // Ensure name attribute
+            id={disclaimer.name || 'disclaimer'}
+            name={disclaimer.name || 'disclaimer'}
             type="checkbox"
-            required={disclaimer.required || false} // Added required attribute
-            class="cursor-pointer h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-slate-800 dark:ring-offset-slate-900" // Adjusted styling for better visibility
+            required={disclaimer.required || false}
+            class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
           />
         </div>
         <div class="ml-3">
-          <label for={disclaimer.name || "disclaimer-checkbox"} class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
+          <label
+            for={disclaimer.name || 'disclaimer'}
+            class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400"
+          >
             {disclaimer.label}
           </label>
         </div>

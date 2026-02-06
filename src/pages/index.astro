@@ -1,54 +1,58 @@
 ---
-// Import the main layout component
 import Layout from '~/layouts/PageLayout.astro';
 
-// Import the widgets/components used on this page
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Contact from '~/components/widgets/Contact.astro'; // Import the theme's contact widget
+import Contact from '~/components/widgets/Contact.astro';
 
-// Define metadata for the page
 const metadata = {
-  title: 'Expert Network Setup & Wi-Fi Solutions | Fix Slow Internet & Dead Zones | Unified Networks (Starlink Available)',
+  title: 'Expert Network Setup and Wi-Fi Solutions | Unified Networks',
   ignoreTitleTemplate: true,
 };
 
-// Define props for the Contact widget
 const contactProps = {
-  id: "contact", // For the anchor link from the hero button
-  title: "Ready to End Your Internet Frustrations?",
-  subtitle: "Reach out today for your free network consultation. Let's discuss how we can bring seamless, high-performance internet to your home or business. Starlink installation also available.",
-  button: "Send Message", // Text for the submit button
-  inputs: [ 
+  id: 'contact',
+  title: 'Ready to Fix Your Internet?',
+  subtitle:
+    'Tell us what is not working and we will recommend the right solution for your home or business. Free consultation available.',
+  formName: 'consultation',
+  button: 'Send Message',
+  inputs: [
     {
       type: 'text',
-      name: 'name', 
+      name: 'name',
       label: 'Your Name',
       placeholder: 'John Doe',
-      required: true, 
+      required: true,
     },
     {
       type: 'email',
-      name: 'email', 
-      label: 'Your Email',
+      name: 'email',
+      label: 'Email Address',
       placeholder: 'you@example.com',
       required: true,
     },
     {
       type: 'tel',
-      name: 'phone', 
-      label: 'Phone Number (Optional)',
+      name: 'phone',
+      label: 'Phone Number',
       placeholder: '08X XXX XXXX',
     },
   ],
-  textarea: { 
-    name: 'message', 
-    label: 'Your Message',
-    placeholder: 'How can we help you get better internet?',
-    rows: 4,
+  textarea: {
+    name: 'message',
+    label: 'Tell us about your internet issues',
+    placeholder: 'Slow Wi-Fi, dead zones, unstable connection, Starlink setup, or another issue.',
+    rows: 5,
     required: true,
   },
+  disclaimer: {
+    name: 'consent',
+    label: 'I agree to be contacted about my request.',
+    required: true,
+  },
+  description: 'We usually reply within one business day.',
 };
 ---
 
@@ -57,70 +61,78 @@ const contactProps = {
     actions={[
       {
         variant: 'primary',
-        text: 'Book Free Consultation', // Made button text slightly shorter
-        href: '/#contact', 
+        text: 'Book Free Consultation',
+        href: '/#contact',
         icon: 'tabler:phone',
       },
-      {
-        text: 'Our Network Solutions',
-        href: '#services',
-      },
+      { text: 'View Services', href: '/#services' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Unified Networks - Fixing slow internet and Wi-Fi dead zones with expert network solutions.' }} // Updated alt text
+    image={{
+      src: '~/assets/images/hero-image.png',
+      alt: 'Unified Networks improving Wi-Fi coverage and internet reliability',
+    }}
   >
     <Fragment slot="title">
-      Slow Internet? Wi-Fi Dead Zones? Get Seamless Connectivity. {/* Shorter, more direct title */}
+      Slow Internet or Wi-Fi Dead Zones?
+      <br />
+      We Build Fast, Reliable Networks.
     </Fragment>
 
     <Fragment slot="subtitle">
-      Expert network solutions for fast, reliable internet. We design & install high-performance systems (including Starlink) to eliminate blackspots and buffering. {/* More concise subtitle */}
+      Expert network design, Wi-Fi optimization, and Starlink installation for homes and businesses. We remove blackspots,
+      improve speed, and deliver stable coverage where you need it.
     </Fragment>
   </Hero>
 
   <Note
-    title="Our Promise: Intelligent Design, Seamless Performance."
-    description="We deliver tailored network solutions, including Starlink installations, built on honest advice and meticulous planning. No guesswork – just robust, high-performance connectivity designed to solve your internet problems and meet your specific needs."
+    title="Our Promise"
+    description="Practical advice, clean installations, and high-performance networks tailored to your property and usage."
   />
 
   <Features
     id="services"
-    tagline="Our Network Expertise"
-    title="Comprehensive Solutions for Your Internet Challenges"
-    subtitle="We specialize in creating robust networks with professional-grade systems to provide reliable solutions for slow internet and poor Wi-Fi coverage. We also offer expert Starlink installations for areas with challenging connectivity. Discover how we can enhance your internet experience."
+    tagline="Network Services"
+    title="Professional Solutions for Home and Business Connectivity"
+    subtitle="From full network installs to targeted fixes, we deliver reliable performance with clear recommendations and no guesswork."
     items={[
       {
-        title: 'Custom Network Design & Deployment',
-        description: 'Suffering from slow internet or patchy Wi-Fi? We design and deploy bespoke network infrastructures, from advanced routers and switches to high-performance Wi-Fi access points, ensuring optimal coverage, boosted speeds, and scalability for your property.',
+        title: 'Custom Network Design and Deployment',
+        description:
+          'We design and install network infrastructure with proper routing, switching, and Wi-Fi planning for stable performance.',
         icon: 'tabler:network',
       },
       {
-        title: 'Eliminate Wi-Fi Dead Zones & Boost Speed',
-        description: 'Stop Wi-Fi blackspots and frustrating buffering. We leverage powerful RF management and a diverse range of access points to guarantee seamless, high-speed Wi-Fi coverage and reliable internet throughout your home or business.',
+        title: 'Wi-Fi Dead Zone Elimination',
+        description:
+          'We improve signal quality and place access points correctly so coverage is consistent across your property.',
         icon: 'tabler:wifi',
       },
       {
-        title: 'Expert Starlink Installation Service',
-        description: 'For locations with limited traditional broadband, we offer professional Starlink installation services. We ensure optimal satellite dish setup for maximum performance and can integrate Starlink into your existing network for reliable Wi-Fi distribution.',
+        title: 'Starlink Installation and Integration',
+        description:
+          'We install and optimize Starlink systems, then integrate them into your local network for reliable, usable speed.',
         icon: 'tabler:satellite',
       },
       {
-        title: 'Extend Your Network: Point-to-Point Links',
-        description: 'Need to connect outbuildings or remote areas without running cables? We implement robust point-to-point (PtP) and point-to-multipoint (PtMP) wireless bridges for stable, high-speed connections, eliminating network blackspots between properties.',
+        title: 'Point-to-Point and Outbuilding Links',
+        description:
+          'Connect outbuildings and remote areas with stable wireless links when cable runs are not practical.',
         icon: 'tabler:antenna-bars-5',
       },
       {
-        title: 'Your Expert Network System Specialists',
-        description: 'Deep expertise in advanced network applications and hardware. We deploy and manage enterprise-quality network systems tailored to your environment, offering powerful solutions for slow internet, better routing, enhanced switching, and superior Wi-Fi features without complex contracts.',
-        icon: 'tabler:settings-cog',
+        title: 'Network Health Checks and Troubleshooting',
+        description:
+          'We diagnose bottlenecks, interference, and configuration issues, then provide clear fixes to restore performance.',
+        icon: 'tabler:activity',
       },
       {
-        title: 'Network Health Checks: Diagnose & Fix Slow Internet',
-        description: 'Is your current network underperforming or causing slow internet speeds? We test and diagnose slowdowns, Wi-Fi interference, and security issues, providing actionable insights to optimize your existing network setup and improve internet speed.',
-        icon: 'tabler:activity',
+        title: 'Business-Grade Hardware Guidance',
+        description:
+          'Get practical recommendations on routers, switches, and access points that fit your needs and budget.',
+        icon: 'tabler:settings-cog',
       },
     ]}
   />
 
   <Contact {...contactProps} />
-
 </Layout>
