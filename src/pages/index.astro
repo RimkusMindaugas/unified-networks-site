@@ -15,7 +15,7 @@ const metadata = {
 
 const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || '').replace(/\D/g, '');
 const whatsappMessage = encodeURIComponent(
-  'Hi Unified Networks, I need help with my internet or Wi-Fi setup in Drogheda, Dundalk, Navan, Dublin, or nearby areas.'
+  'Hi Unified Networks, I need help with my internet or Wi-Fi setup.'
 );
 const whatsappHref = whatsappNumber ? `https://wa.me/${whatsappNumber}?text=${whatsappMessage}` : '/#contact';
 
@@ -23,7 +23,7 @@ const contactProps = {
   id: 'contact',
   title: 'Ready to Fix Your Internet?',
   subtitle:
-    'Tell us what is not working and we will recommend the right solution for your home or business. Service area includes Drogheda, Dundalk, Navan, Dublin, Swords, Ashbourne, Naas, Bray, Cavan, Monaghan, Mullingar, Portlaoise, and nearby towns.',
+    'Tell us what is not working and we will recommend the right solution for your home or business.',
   formName: 'consultation',
   button: 'Send Message',
   inputs: [
@@ -100,14 +100,13 @@ const contactProps = {
 
     <Fragment slot="subtitle">
       Expert network design, Wi-Fi optimization, and Starlink installation for homes and businesses. We remove blackspots,
-      improve speed, and deliver stable coverage where you need it across Louth, Meath, Dublin, Kildare, Wicklow, Cavan,
-      Monaghan, Westmeath, and Laois.
+      improve speed, and deliver stable coverage where you need it.
     </Fragment>
   </Hero>
 
   <Note
-    title="Service Area"
-    description="Primary coverage includes Drogheda, Dundalk, Ardee, Navan, Trim, Kells, Ashbourne, Swords, Dublin, Naas, Newbridge, Bray, Greystones, Cavan, Monaghan, Mullingar, and Portlaoise. If your location is nearby, send your Eircode and we will confirm."
+    title="Our Approach"
+    description="Clear diagnostics, practical recommendations, and clean installations that are tailored to your property and usage."
   />
 
   <Features
@@ -202,7 +201,7 @@ const contactProps = {
 
   <BlogLatestPosts
     title="Latest Network Tips and Guides"
-    information="Read practical articles on fixing slow Wi-Fi, choosing the right hardware, and improving reliability for homes and small businesses."
+    information="Short, practical guides on improving Wi-Fi coverage, speed, and reliability."
   />
 
   <Contact {...contactProps} />
