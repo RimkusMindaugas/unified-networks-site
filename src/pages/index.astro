@@ -9,8 +9,10 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Contact from '~/components/widgets/Contact.astro';
 
 const metadata = {
-  title: 'Expert Network Setup and Wi-Fi Solutions | Unified Networks',
+  title: 'Network Setup and Wi-Fi Solutions in Drogheda | Unified Networks',
   ignoreTitleTemplate: true,
+  description:
+    'Wi-Fi troubleshooting, network setup, and Starlink installation for homes and small businesses in Drogheda and nearby counties.',
 };
 
 const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || '').replace(/\D/g, '');
@@ -18,12 +20,59 @@ const whatsappMessage = encodeURIComponent(
   'Hi Unified Networks, I need help with my internet or Wi-Fi setup.'
 );
 const whatsappHref = whatsappNumber ? `https://wa.me/${whatsappNumber}?text=${whatsappMessage}` : '/#contact';
+const serviceAreas = [
+  'County Louth',
+  'County Meath',
+  'County Dublin',
+  'County Kildare',
+  'County Wicklow',
+  'County Cavan',
+  'County Monaghan',
+  'County Westmeath',
+  'County Laois',
+  'Drogheda',
+  'Dundalk',
+  'Navan',
+  'Swords',
+  'Naas',
+  'Bray',
+  'Mullingar',
+  'Portlaoise',
+];
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Unified Networks',
+  url: 'https://unifiednetworks.ie',
+  serviceType: [
+    'Wi-Fi troubleshooting',
+    'Network setup and optimization',
+    'Starlink installation',
+    'Point-to-point wireless links',
+  ],
+  areaServed: serviceAreas.map((name) => ({ '@type': 'Place', name })),
+  ...(whatsappNumber
+    ? {
+        telephone: `+${whatsappNumber}`,
+        sameAs: [`https://wa.me/${whatsappNumber}`],
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            telephone: `+${whatsappNumber}`,
+            contactType: 'customer support',
+            areaServed: 'IE',
+            availableLanguage: ['en'],
+          },
+        ],
+      }
+    : {}),
+};
 
 const contactProps = {
   id: 'contact',
   title: 'Ready to Fix Your Internet?',
   subtitle:
-    'Tell us what is not working and we will recommend the right solution for your home or business.',
+    'Tell us what is not working and we will recommend the right solution for your home or business in Drogheda or nearby counties.',
   formName: 'consultation',
   button: 'Send Message',
   inputs: [
@@ -72,6 +121,8 @@ const contactProps = {
 ---
 
 <Layout metadata={metadata}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
   <Hero
     actions={[
       {
@@ -99,8 +150,8 @@ const contactProps = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Expert network design, Wi-Fi optimization, and Starlink installation for homes and businesses. We remove blackspots,
-      improve speed, and deliver stable coverage where you need it.
+      Expert network design, Wi-Fi optimization, and Starlink installation for homes and small businesses in Drogheda and
+      nearby counties. We remove blackspots, improve speed, and deliver stable coverage where you need it.
     </Fragment>
   </Hero>
 
@@ -189,7 +240,7 @@ const contactProps = {
       {
         title: 'What areas do you currently cover?',
         description:
-          'We cover major towns across Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, and Laois, including Drogheda, Dundalk, Navan, Dublin, Swords, Naas, Bray, Cavan, Monaghan, Mullingar, and Portlaoise. Share your town or Eircode and we will confirm.',
+          'We serve Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, and Laois, including Drogheda, Dundalk, Navan, Swords, Naas, Bray, Mullingar, and Portlaoise. Share your town or Eircode and we will confirm coverage.',
       },
       {
         title: 'How quickly can I get started?',
@@ -201,7 +252,6 @@ const contactProps = {
 
   <BlogLatestPosts
     title="Latest Network Tips and Guides"
-    information="Short, practical guides on improving Wi-Fi coverage, speed, and reliability."
   />
 
   <Contact {...contactProps} />

@@ -20,3 +20,5 @@ Start with these checks:
 4. Run speed tests in multiple rooms and compare results.
 
 If signal quality drops sharply between rooms, adding correctly placed access points is often more effective than buying a stronger single router.
+
+Need help fixing dead zones in Drogheda or nearby counties? [Book a consultation](/#contact).
