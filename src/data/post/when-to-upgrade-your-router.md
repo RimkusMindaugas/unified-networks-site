@@ -21,4 +21,4 @@ Signs an upgrade is worth it:
 
 Before replacing hardware, test ISP speed at the modem and compare with Wi-Fi performance inside the building.
 
-Need a professional on-site assessment in Drogheda or nearby counties? [Book a consultation](/#contact).
+Need a professional on-site assessment in Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, or Laois? [Book a consultation](/#contact).

@@ -8,11 +8,12 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Contact from '~/components/widgets/Contact.astro';
 
+const coverageSummary = 'Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, and Laois';
+
 const metadata = {
-  title: 'Network Setup and Wi-Fi Solutions in Drogheda | Unified Networks',
+  title: 'Network Setup and Wi-Fi Solutions Across Louth, Meath, Dublin and Nearby Counties | Unified Networks',
   ignoreTitleTemplate: true,
-  description:
-    'Wi-Fi troubleshooting, network setup, and Starlink installation for homes and small businesses in Drogheda and nearby counties.',
+  description: `Wi-Fi troubleshooting, network setup, and Starlink installation for homes and small businesses across ${coverageSummary}.`,
 };
 
 const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || '').replace(/\D/g, '');
@@ -71,8 +72,7 @@ const localBusinessSchema = {
 const contactProps = {
   id: 'contact',
   title: 'Ready to Fix Your Internet?',
-  subtitle:
-    'Tell us what is not working and we will recommend the right solution for your home or business in Drogheda or nearby counties.',
+  subtitle: `Tell us what is not working and we will recommend the right solution for your home or business across ${coverageSummary}.`,
   formName: 'consultation',
   button: 'Send Message',
   inputs: [
@@ -100,7 +100,7 @@ const contactProps = {
       type: 'text',
       name: 'location',
       label: 'Town or Eircode',
-      placeholder: 'Drogheda / A92...',
+      placeholder: 'Town / Eircode (for example Navan / C15...)',
       required: true,
     },
   ],
@@ -150,8 +150,8 @@ const contactProps = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Expert network design, Wi-Fi optimization, and Starlink installation for homes and small businesses in Drogheda and
-      nearby counties. We remove blackspots, improve speed, and deliver stable coverage where you need it.
+      Expert network design, Wi-Fi optimization, and Starlink installation for homes and small businesses across
+      {coverageSummary}. We remove blackspots, improve speed, and deliver stable coverage where you need it.
     </Fragment>
   </Hero>
 
