@@ -7,6 +7,7 @@ tags:
   - starlink
   - ireland
   - rural-broadband
+  - new-build
   - wifi
   - internet
 author: Unified Networks
@@ -106,6 +107,35 @@ As of early 2026:
 That is where Starlink changed the game in Ireland. It gave people a way to stop waiting for a future date and start working online properly now.
 
 For rural families, remote workers, farms, and small businesses, that is not a minor upgrade. That is a major quality-of-life change.
+
+## New builds: fibre can be on your road, and still not ready at your door
+
+This catches a lot of people out.
+
+You move into a new house, see fibre poles or ducts on the same road, and assume you can order immediately.
+
+But here is the problem: the network outside and your address record inside provider systems are two different things.
+
+Open eir says this directly. Having an Eircode does not always mean you can order fibre right away. Their checker data is updated in cycles from GeoDirectory.
+
+So even when fibre is physically nearby, a new build can still be waiting for:
+
+- Address records to appear in the right databases.
+- Network records to be updated.
+- Final connection path checks from boundary to house.
+- Extra civil works if ducts are blocked or missing.
+
+And if local authority licences are needed for road or footpath works, that can add more delay. National Broadband Ireland says these licence timelines can range from about 3 to 42 days depending on the type of licence.
+
+So how long does it take in real life for a new build?
+
+In the best case, once your address is fully live in systems and no extra civil works are needed, installation itself is often quick (open eir says most installs are completed on the first day of the appointment).
+
+But if records, ducting, or licences are not ready, it can stretch from a few weeks into a few months.
+
+SIRO's own guidance for new homes says customers can end up waiting several days or weeks for broadband service, which lines up with what many homeowners report.
+
+So yes, fibre can be "right there" and still not be orderable yet. That delay is exactly why Starlink has been such a practical bridge for many new builds in rural areas.
 
 ## The part people forget: Starlink still needs good home Wi-Fi design
 
