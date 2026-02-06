@@ -1,5 +1,13 @@
 import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
+const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || '').replace(/\D/g, '');
+const whatsappMessage = encodeURIComponent(
+  'Hi Unified Networks, I am looking for help with internet or Wi-Fi setup within 100 km of Drogheda.'
+);
+const whatsappHref = whatsappNumber
+  ? `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+  : getPermalink('/#contact');
+
 export const headerData = {
   links: [
     {
@@ -19,7 +27,15 @@ export const headerData = {
       href: getPermalink('/#contact'),
     },
   ],
-  actions: [{ text: 'Book Consultation', href: getPermalink('/#contact') }],
+  actions: [
+    { text: 'Book Consultation', href: getPermalink('/#contact') },
+    {
+      text: 'WhatsApp',
+      href: whatsappHref,
+      target: whatsappNumber ? '_blank' : undefined,
+      icon: 'tabler:brand-whatsapp',
+    },
+  ],
 };
 
 export const footerData = {
@@ -41,7 +57,10 @@ export const footerData = {
     },
     {
       title: 'Company',
-      links: [{ text: 'Contact', href: getPermalink('/#contact') }],
+      links: [
+        { text: 'Contact', href: getPermalink('/#contact') },
+        { text: 'WhatsApp', href: whatsappHref },
+      ],
     },
   ],
   secondaryLinks: [
