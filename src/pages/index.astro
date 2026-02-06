@@ -13,11 +13,17 @@ const metadata = {
   ignoreTitleTemplate: true,
 };
 
+const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || '').replace(/\D/g, '');
+const whatsappMessage = encodeURIComponent(
+  'Hi Unified Networks, I need help with my internet or Wi-Fi setup. I am within 100 km of Drogheda.'
+);
+const whatsappHref = whatsappNumber ? `https://wa.me/${whatsappNumber}?text=${whatsappMessage}` : '/#contact';
+
 const contactProps = {
   id: 'contact',
   title: 'Ready to Fix Your Internet?',
   subtitle:
-    'Tell us what is not working and we will recommend the right solution for your home or business. Free consultation available.',
+    'Tell us what is not working and we will recommend the right solution for your home or business. We currently take jobs within 100 km of Drogheda.',
   formName: 'consultation',
   button: 'Send Message',
   inputs: [
@@ -40,6 +46,13 @@ const contactProps = {
       name: 'phone',
       label: 'Phone Number',
       placeholder: '08X XXX XXXX',
+    },
+    {
+      type: 'text',
+      name: 'location',
+      label: 'Town or Eircode',
+      placeholder: 'Drogheda / A92...',
+      required: true,
     },
   ],
   textarea: {
@@ -67,7 +80,12 @@ const contactProps = {
         href: '/#contact',
         icon: 'tabler:phone',
       },
-      { text: 'Read Our Blog', href: '/blog' },
+      {
+        text: 'Chat on WhatsApp',
+        href: whatsappHref,
+        target: whatsappNumber ? '_blank' : undefined,
+        icon: 'tabler:brand-whatsapp',
+      },
     ]}
     image={{
       src: '~/assets/images/hero-image.png',
@@ -82,13 +100,13 @@ const contactProps = {
 
     <Fragment slot="subtitle">
       Expert network design, Wi-Fi optimization, and Starlink installation for homes and businesses. We remove blackspots,
-      improve speed, and deliver stable coverage where you need it.
+      improve speed, and deliver stable coverage where you need it, within 100 km of Drogheda.
     </Fragment>
   </Hero>
 
   <Note
-    title="Our Promise"
-    description="Practical advice, clean installations, and high-performance networks tailored to your property and usage."
+    title="Service Area"
+    description="We currently serve homes and businesses within 100 km of Drogheda. Outside this area? Send your location and we will confirm availability."
   />
 
   <Features
@@ -167,6 +185,11 @@ const contactProps = {
         title: 'Do you provide support after installation?',
         description:
           'Yes. We provide follow-up support and optimization recommendations, especially after layout changes, ISP upgrades, or new device additions.',
+      },
+      {
+        title: 'What areas do you currently cover?',
+        description:
+          'We currently accept projects within a 100 km radius of Drogheda. Share your town or Eircode in the contact form and we will confirm availability.',
       },
       {
         title: 'How quickly can I get started?',

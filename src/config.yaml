@@ -9,7 +9,7 @@ metadata:
   title:
     default: Unified Networks
     template: '%s | Unified Networks'
-  description: 'Network setup, Wi-Fi optimization, Starlink installation, and internet troubleshooting for homes and businesses.'
+  description: 'Network setup, Wi-Fi optimization, Starlink installation, and internet troubleshooting within 100 km of Drogheda.'
   robots:
     index: true
     follow: true
