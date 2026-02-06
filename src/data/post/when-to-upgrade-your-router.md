@@ -20,3 +20,5 @@ Signs an upgrade is worth it:
 4. The router cannot handle coverage and throughput for your property size.
 
 Before replacing hardware, test ISP speed at the modem and compare with Wi-Fi performance inside the building.
+
+Need a professional on-site assessment in Drogheda or nearby counties? [Book a consultation](/#contact).

@@ -20,3 +20,5 @@ Best practices:
 4. Validate speed, latency, and stability from both wired and wireless clients.
 
 For larger properties, network design matters as much as satellite signal quality.
+
+Planning a Starlink install in Drogheda or nearby counties? [Book a consultation](/#contact).
