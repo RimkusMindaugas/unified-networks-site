@@ -15,7 +15,7 @@ const metadata = {
 
 const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || '').replace(/\D/g, '');
 const whatsappMessage = encodeURIComponent(
-  'Hi Unified Networks, I need help with my internet or Wi-Fi setup. I am within 100 km of Drogheda.'
+  'Hi Unified Networks, I need help with my internet or Wi-Fi setup in Drogheda, Dundalk, Navan, Dublin, or nearby areas.'
 );
 const whatsappHref = whatsappNumber ? `https://wa.me/${whatsappNumber}?text=${whatsappMessage}` : '/#contact';
 
@@ -23,7 +23,7 @@ const contactProps = {
   id: 'contact',
   title: 'Ready to Fix Your Internet?',
   subtitle:
-    'Tell us what is not working and we will recommend the right solution for your home or business. We currently take jobs within 100 km of Drogheda.',
+    'Tell us what is not working and we will recommend the right solution for your home or business. Service area includes Drogheda, Dundalk, Navan, Dublin, Swords, Ashbourne, Naas, Bray, Cavan, Monaghan, Mullingar, Portlaoise, and nearby towns.',
   formName: 'consultation',
   button: 'Send Message',
   inputs: [
@@ -100,13 +100,14 @@ const contactProps = {
 
     <Fragment slot="subtitle">
       Expert network design, Wi-Fi optimization, and Starlink installation for homes and businesses. We remove blackspots,
-      improve speed, and deliver stable coverage where you need it, within 100 km of Drogheda.
+      improve speed, and deliver stable coverage where you need it across Louth, Meath, Dublin, Kildare, Wicklow, Cavan,
+      Monaghan, Westmeath, and Laois.
     </Fragment>
   </Hero>
 
   <Note
     title="Service Area"
-    description="We currently serve homes and businesses within 100 km of Drogheda. Outside this area? Send your location and we will confirm availability."
+    description="Primary coverage includes Drogheda, Dundalk, Ardee, Navan, Trim, Kells, Ashbourne, Swords, Dublin, Naas, Newbridge, Bray, Greystones, Cavan, Monaghan, Mullingar, and Portlaoise. If your location is nearby, send your Eircode and we will confirm."
   />
 
   <Features
@@ -189,7 +190,7 @@ const contactProps = {
       {
         title: 'What areas do you currently cover?',
         description:
-          'We currently accept projects within a 100 km radius of Drogheda. Share your town or Eircode in the contact form and we will confirm availability.',
+          'We cover major towns across Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, and Laois, including Drogheda, Dundalk, Navan, Dublin, Swords, Naas, Bray, Cavan, Monaghan, Mullingar, and Portlaoise. Share your town or Eircode and we will confirm.',
       },
       {
         title: 'How quickly can I get started?',
