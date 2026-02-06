@@ -1,7 +1,7 @@
 ---
 publishDate: 2026-02-06
-title: 'New Build Home Wi-Fi Problems: Why Great Insulation Often Means Terrible Signal'
-excerpt: 'New build homes are warmer and more efficient, but modern materials can create Wi-Fi blackspots. Here is why one router no longer works, why Cat6 cabling matters, and what to install before move-in.'
+title: New Build Wi-Fi Is Harder Than It Looks (And What to Do Before You Move In)
+excerpt: New build homes often have bad Wi-Fi in key rooms because modern materials block signal. Here is why one router usually fails, and how Cat6, access point planning, and a comms cabinet fix it.
 category: Wi-Fi
 tags:
   - wifi
@@ -12,189 +12,188 @@ tags:
 author: Unified Networks
 ---
 
-You moved into a brand-new house. The paint is perfect, the insulation is excellent, and the broadband package looks great on paper.
+You finally get the keys to your new home. Everything is clean, fresh, and done right.
 
-Then reality hits.
+Then the first week happens.
 
-You can stream 4K in the kitchen, but upstairs the Wi-Fi behaves like it is on annual leave. Video calls freeze in the office. The smart TV buffers. Someone says, "Maybe reboot the router again," and nobody laughs because everyone knows that is about to happen.
+Netflix works in the kitchen, but the bedroom TV buffers. Your office call drops right when you are speaking. The kids say "the Wi-Fi is broken again," and you already know where this is going.
 
-If that sounds familiar, you are not doing anything wrong. New build home Wi-Fi issues are extremely common now, and they happen for very practical reasons.
+So you reboot the router. It works for a while. Then it starts again.
 
-## The insulation paradox: better energy performance, weaker wireless performance
+If this sounds familiar, you are not the only one. We see this all the time in new build homes.
 
-Modern building standards are excellent for heat retention and airtightness. That is exactly what you want for comfort and energy costs.
+And no, it does not mean your broadband provider is always the problem.
 
-Unfortunately, Wi-Fi signals do not care about your BER rating.
+## Why new build homes get Wi-Fi blackspots
 
-New build homes often include materials that reduce Wi-Fi penetration:
+Here is the thing. New homes are built to keep heat in and drafts out. That is good for comfort and bills. But those same materials can weaken Wi-Fi signal.
 
-1. Foil-backed insulation.
-2. Denser internal walls and concrete blockwork.
-3. Reinforced floors between levels.
-4. Modern glazing and coated glass.
+Foil-backed insulation, dense walls, concrete floors, and modern glass all chip away at wireless signal strength. One wall is fine. Two walls and a floor later, your phone is hanging on for dear life.
 
-Each material may reduce signal only a bit, but together they can create proper Wi-Fi blackspots. That is why you can have full bars in one room and unstable internet two doors away.
+That is why people say:
 
-So yes, your home is warm, quiet, and energy efficient. It is also unintentionally good at blocking radio signal.
+"My internet speed test is great beside the router, but rubbish in the room I actually use."
 
-## Why one router for a full house does not work anymore
+Both can be true.
 
-The old setup was simple: broadband comes in, router goes beside it, done.
+The broadband line can be fast. The in-home Wi-Fi can still be poor.
 
-That approach struggles in most new builds because usage is no longer in one room. Internet demand is spread across bedrooms, home offices, media rooms, kitchens, cameras, doorbells, garden offices, and everything else with an app.
+## Why one router does not cut it anymore
 
-A single router cannot bend physics:
+A lot of people still think a single router should cover a whole house. That used to work better years ago when homes had fewer devices and lighter usage.
 
-1. Signal weakens through floors and insulated walls.
-2. Devices at the edge of coverage perform badly and drag down overall wireless efficiency.
-3. Router placement is usually dictated by where broadband enters the property, not where people need reliable Wi-Fi.
+Now you have:
 
-This is why people buy one extender, then another, then another, and still end up with random dead zones and roaming issues. It is not because you chose the "wrong brand." It is because the house needs a designed network, not one loud router shouting from a utility cupboard.
+- Video calls in one room
+- Streaming in another
+- Phones everywhere
+- Smart TVs and boxes
+- Cameras and alarms
+- Work devices
+- Printers
+- Maybe a garden office
 
-## Plan your Wi-Fi like you plan your heating
+One router in a plant room or hallway cannot serve all of that well in most new builds.
 
-Nobody says, "We will figure out heating later with a portable fan heater in the hall."
+And adding random extenders is usually where things get messy. You might get a little more signal, but you also add roaming issues, odd dropouts, and more things to manage.
 
-But people still do this with internet and Wi-Fi, even though home connectivity is now just as critical for work, security, entertainment, and daily life.
+So yes, you can keep buying stronger routers. Or you can plan the house network properly once and stop playing Wi-Fi whack-a-mole.
 
-The best time to plan new build Wi-Fi is **before move-in**:
+## Plan Cat6 before you move in, not after
 
-1. Routes are easier to access.
-2. Equipment locations can be chosen properly.
-3. You avoid visible retrofit cabling.
-4. Costs are lower than fixing things after occupancy.
+If you are building or buying a new build, Cat6 is one of the best upgrades you can make.
 
-If you wait until furniture is in and routines are established, every network change becomes slower, messier, and more disruptive.
+Do it early.
 
-## Cat6 cabling is the backbone (and the cheapest future-proofing you'll ever buy)
+Once the house is finished and full of furniture, every cable run becomes harder, slower, and more expensive. You also end up with compromises that never look quite right.
 
-If you do only one thing for long-term network quality in a new build, do this: install Cat6 to key locations while the house is still easy to wire.
+Cat6 gives you a proper backbone. It lets you put Wi-Fi access points where they should be, not just where the broadband enters the house.
 
-Cat6 cabling is not just for "tech people." It gives you practical benefits on day one:
+It also gives you stable wired links for devices that hate weak Wi-Fi, like:
 
-1. Stable wired links for TVs, workstations, and consoles.
-2. Better Wi-Fi because access points can use wired backhaul.
-3. Cleaner installations with PoE for access points and cameras.
-4. Less reliance on wireless repeaters and workarounds.
-5. Faster troubleshooting because the network has structure.
+- TVs
+- TV boxes
+- Desktop PCs
+- Consoles
+- Printers
 
-And it gives you options later without opening walls.
+And that reduces pressure on wireless for everything else.
 
-## Ceiling APs vs socket APs: choose based on room use, not fashion
+People often ask if Cat6 is "worth it" in a house. In most new builds, yes. Very much yes.
 
-This choice matters more than people think, and both options can be right.
+It is like adding extra sockets while building. You may not use every run on day one, but you will be glad they are there later.
 
-### Ceiling-mounted access points
+## Wi-Fi should be part of pre-move planning, like heating
 
-Best for wide, even coverage and higher client density. They are usually the right choice for hallways, open-plan areas, and larger floors where you want consistent roaming.
+Most people would never leave heating design until after move-in. But many people do that with Wi-Fi, even though the internet now runs work, school, TV, security, and daily life.
 
-Pros:
+Network planning before move-in is not overkill. It is common sense.
 
-1. Better radio placement for broad coverage.
-2. Cleaner line-of-sight through the usable space.
-3. Typically better for busy households and larger layouts.
+A good pre-move plan means:
 
-Considerations:
+1. You know where your network gear will live.
+2. Cables go in the right places once.
+3. Access points are placed for real coverage.
+4. You avoid ugly retrofit fixes later.
 
-1. Requires planned cable routes to ceiling points.
-2. Usually done best before move-in.
+When this is done early, the house works from day one.
 
-### Socket APs (in-wall APs that replace an Ethernet outlet)
+When it is not done early, you spend months saying, "Signal is grand in that corner, just stand there."
 
-Great in rooms where you want both Wi-Fi and wired ports in one tidy location. Many in-wall models include extra Ethernet ports for a TV, TV box, printer, desk dock, or office equipment.
+## Ceiling APs or socket APs?
 
-Pros:
+This is a good question, and the answer is usually "both, in the right places."
 
-1. Very clean look, especially in finished rooms.
-2. Adds wired ports exactly where devices live.
-3. Excellent for bedrooms, offices, and media walls.
+### Ceiling-mounted APs
 
-Considerations:
+These are usually better for broad, even coverage. They are strong in open areas, upstairs landings, and spaces where lots of devices connect.
 
-1. Coverage footprint is usually smaller than ceiling APs.
-2. Placement is lower, so design needs to be intentional.
+If you want smooth coverage across floors, ceiling APs are often the better base design.
 
-In practice, many well-performing homes use a mix: ceiling APs for broad area coverage, socket APs where local wired connectivity is useful.
+### Socket APs (in-wall APs)
 
-## Do not skip the comms cabinet
+These replace an Ethernet outlet and give you Wi-Fi plus extra ports in the same unit.
 
-If the network is the nervous system of the house, the comms cabinet is the control panel.
+They are useful in bedrooms, TV areas, and offices where you want local wired ports for:
 
-A proper comms cabinet keeps things organised, serviceable, and upgrade-ready. Without one, equipment ends up scattered around cupboards and behind TVs, and every future change becomes a scavenger hunt.
+- TV
+- TV box
+- Printer
+- Docking station
+- Small office equipment
 
-A solid home comms cabinet setup usually includes:
+They look clean and practical when planned properly.
 
-1. Fibre ONT or broadband termination.
-2. Router/firewall.
-3. Managed PoE switch.
-4. Patch panel for Cat6 runs.
-5. Neat labelling for each cable run.
-6. Optional UPS for short power cuts and graceful shutdown.
+So the real decision is not "which one is best forever." It is "which one fits each room."
 
-Why this matters:
+Use ceiling APs for wide coverage.
+Use socket APs where local ports and tidy setup matter.
 
-1. Faults are easier to diagnose.
-2. Expansions are easier to install.
-3. Performance is more consistent.
-4. The house is cleaner and easier to maintain.
+Most strong home networks use a mix.
 
-If you are serious about new build home networking, the comms cabinet is not an "extra." It is foundational.
+## Why a comms cabinet matters more than people think
 
-## Think beyond today: future upgrades you should plan now
+A comms cabinet is where your network lives: fibre handoff, router, switch, patch panel, and related gear.
 
-Most homeowners plan for current devices only. That is understandable, but homes are now adding more connected systems every year.
+Without one, gear ends up scattered in random places. Then every change is harder than it should be.
 
-When planning Cat6, think 3 to 10 years ahead:
+With one, everything is tidy, labeled, and easy to manage.
 
-1. Solar inverter and energy monitoring.
-2. Battery systems.
-3. EV charger connectivity.
-4. CCTV/NVR expansions.
-5. Gate/door access systems.
-6. Garden office or outbuilding links.
+It helps with:
 
-One practical recommendation that pays off repeatedly: **run at least one Cat6 to the attic** (often two is better).  
-It gives you flexible routing options later for ceiling APs, cameras, future smart-home hardware, and additional drops without major rework.
+1. Fault finding when something goes wrong.
+2. Easy upgrades later.
+3. Cleaner cable routing.
+4. Better long-term reliability.
 
-People rarely regret having spare cable paths. They often regret not having them.
+In plain terms, it saves time and stress.
 
-## What a good pre-move network plan actually looks like
+If the house has proper Cat6 but no proper home for the network gear, you are still leaving value on the table.
 
-You do not need a lab setup. You need a sensible design that matches how people use the house.
+## Plan for future upgrades now
 
-At minimum:
+Most homes add more connected systems over time. So do not only design for what you own today.
 
-1. Confirm where broadband enters the property.
-2. Choose a proper comms cabinet location (ventilated, accessible, central if possible).
-3. Run Cat6 to offices, media points, and likely AP locations.
-4. Decide where ceiling APs make sense and where socket APs are better.
-5. Separate critical and non-critical traffic where appropriate.
-6. Validate coverage and roaming before full occupancy.
+Think ahead for:
 
-That is the difference between "internet mostly works, except when it doesn't" and "everything just works."
+- Solar inverters
+- Battery systems
+- EV charger connectivity
+- Extra cameras
+- Smart home control
+- Garden office links
 
-## New build Wi-Fi and Cat6 checklist before move-in
+One simple move that helps a lot later: run Cat6 to the attic.
 
-Use this as your practical handover checklist:
+Even if you do not use it right away, attic Cat6 gives you options for future APs, cameras, and extra runs with less disruption.
 
-1. Is Cat6 installed to every important room (not just one token outlet)?
-2. Is there at least one Cat6 run to the attic for future upgrades?
-3. Have you decided on ceiling APs, socket APs, or a mixed design?
-4. If using socket APs, are there enough passthrough ports for TVs, set-top boxes, printers, or office gear?
-5. Is there a proper comms cabinet with router, switch, patching, and clear labels?
-6. Is broadband entry and cabinet placement logical for cable routing?
-7. Are guest Wi-Fi and smart/IoT devices segmented where needed?
-8. Have you considered future systems (solar, battery, EV charging, extra CCTV)?
-9. Have you tested signal quality and roaming in all key rooms before move-in day?
+Future-you will be very happy with present-you for doing this.
 
-## Final thought
+## A realistic new build Wi-Fi checklist
 
-New build homes are fantastic, but modern construction can be surprisingly hostile to Wi-Fi. That is not a defect, it is a design reality.
+Here is a quick checklist you can use with your builder, electrician, or network installer before move-in:
 
-Treat internet like core infrastructure, not an afterthought. Plan Cat6 cabling early, choose access point types intentionally, and build around a proper comms cabinet.
+1. Pick a proper location for a comms cabinet that is accessible and ventilated.
+2. Confirm where the broadband line will enter the house.
+3. Run Cat6 to every room where people will work, stream, or use fixed devices.
+4. Run at least one Cat6 to the attic for future upgrades.
+5. Decide room by room: ceiling AP, socket AP, or both.
+6. For socket AP rooms, confirm enough extra ports for TV, TV box, printer, and office gear.
+7. Run Cat6 to camera points, alarm points, and any smart gate/intercom location.
+8. Plan for future systems like solar, battery, and EV charger connectivity.
+9. Label cable runs clearly in the comms cabinet.
+10. Test coverage and roaming before the house is fully occupied.
 
-Do that before you move in, and your network will feel invisible in the best way possible.
+That is the boring list that stops the boring problems.
 
-Skip it, and you may end up on first-name terms with your router's reboot button.
+## Final word
+
+New build homes are great. But they can be tough on Wi-Fi signal because of how they are built.
+
+So if you want strong, stable home Wi-Fi, treat it as infrastructure. Plan it early. Put Cat6 in the right places. Choose access points based on room use. Give the network a proper home in a comms cabinet.
+
+Do that before move-in and life is easier.
+
+Ignore it and the router reset button becomes part of your morning routine.
 
 Building or moving into a new home in Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, or Laois? [Book a consultation](/#contact).
