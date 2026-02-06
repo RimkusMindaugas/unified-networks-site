@@ -21,4 +21,4 @@ Start with these checks:
 
 If signal quality drops sharply between rooms, adding correctly placed access points is often more effective than buying a stronger single router.
 
-Need help fixing dead zones in Drogheda or nearby counties? [Book a consultation](/#contact).
+Need help fixing dead zones in Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, or Laois? [Book a consultation](/#contact).

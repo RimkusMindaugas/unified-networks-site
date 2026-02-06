@@ -21,4 +21,4 @@ Best practices:
 
 For larger properties, network design matters as much as satellite signal quality.
 
-Planning a Starlink install in Drogheda or nearby counties? [Book a consultation](/#contact).
+Planning a Starlink install in Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, or Laois? [Book a consultation](/#contact).
