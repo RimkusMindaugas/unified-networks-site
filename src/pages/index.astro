@@ -11,9 +11,9 @@ import Contact from '~/components/widgets/Contact.astro';
 const coverageSummary = 'Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, and Laois';
 
 const metadata = {
-  title: 'Network Setup and Wi-Fi Solutions Across Louth, Meath, Dublin and Nearby Counties | Unified Networks',
+  title: 'Network, Event Wi-Fi, and Failover Internet Solutions Across Louth, Meath, Dublin and Nearby Counties | Unified Networks',
   ignoreTitleTemplate: true,
-  description: `Wi-Fi troubleshooting, network setup, and Starlink installation for homes and small businesses across ${coverageSummary}.`,
+  description: `Wi-Fi troubleshooting, network setup, event Wi-Fi deployment, and failover internet solutions for homes and businesses across ${coverageSummary}.`,
 };
 
 const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || '').replace(/\D/g, '');
@@ -49,6 +49,8 @@ const localBusinessSchema = {
     'Wi-Fi troubleshooting',
     'Network setup and optimization',
     'Starlink installation',
+    'Event Wi-Fi setup and rental',
+    'Failover internet solutions',
     'Point-to-point wireless links',
   ],
   areaServed: serviceAreas.map((name) => ({ '@type': 'Place', name })),
@@ -107,7 +109,7 @@ const contactProps = {
   textarea: {
     name: 'message',
     label: 'Tell us about your internet issues',
-    placeholder: 'Slow Wi-Fi, dead zones, unstable connection, Starlink setup, or another issue.',
+    placeholder: 'Slow Wi-Fi, dead zones, event connectivity, failover setup, Starlink, or another issue.',
     rows: 5,
     required: true,
   },
@@ -151,7 +153,7 @@ const contactProps = {
 
     <Fragment slot="subtitle">
       Expert network design, Wi-Fi optimization, and Starlink installation for homes and small businesses across
-      {coverageSummary}. We remove blackspots, improve speed, and deliver stable coverage where you need it.
+      {coverageSummary}. We also deliver event Wi-Fi and failover internet setups for high-demand and business-critical use.
     </Fragment>
   </Hero>
 
@@ -164,7 +166,7 @@ const contactProps = {
     id="services"
     tagline="Network Services"
     title="Professional Solutions for Home and Business Connectivity"
-    subtitle="From full network installs to targeted fixes, we deliver reliable performance with clear recommendations and no guesswork."
+    subtitle="From full network installs to event deployments and failover resilience, we deliver reliable performance with clear recommendations and no guesswork."
     items={[
       {
         title: 'Custom Network Design and Deployment',
@@ -183,6 +185,18 @@ const contactProps = {
         description:
           'We install and optimize Starlink systems, then integrate them into your local network for reliable, usable speed.',
         icon: 'tabler:satellite',
+      },
+      {
+        title: 'Event Wi-Fi Setup, Broadband, and Rental',
+        description:
+          'We design and deploy temporary internet and Wi-Fi for festivals, conferences, and large events. Rent managed equipment for the event, or buy hardware and have it installed permanently.',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Failover Internet and Backup Connectivity',
+        description:
+          'Keep operations online with automatic failover between primary and backup links (for example fibre and 4G/5G). We configure routing and monitoring so traffic switches over when a line fails.',
+        icon: 'tabler:shield-check',
       },
       {
         title: 'Point-to-Point and Outbuilding Links',
@@ -208,8 +222,8 @@ const contactProps = {
   <FAQs
     id="faq"
     tagline="FAQ"
-    title="Common Questions About Network Upgrades"
-    subtitle="Answers to the questions we hear most before installations and troubleshooting visits."
+    title="Common Questions About Connectivity Projects"
+    subtitle="Answers to the questions we hear before installations, event deployments, and troubleshooting visits."
     classes={{ container: 'max-w-5xl' }}
     items={[
       {
@@ -226,6 +240,16 @@ const contactProps = {
         title: 'Do you install and configure Starlink?',
         description:
           'Yes. We handle dish placement, alignment, network integration, and internal Wi-Fi distribution so Starlink works well across the property, not just at the router.',
+      },
+      {
+        title: 'Can you provide internet and Wi-Fi for large events or festivals?',
+        description:
+          'Yes. We provide event broadband and managed Wi-Fi for high-attendance events, including temporary deployments. You can rent equipment for the event period or buy the hardware and have us install it as a permanent setup.',
+      },
+      {
+        title: 'Do you offer failover internet if our main broadband goes down?',
+        description:
+          'Yes. We configure automatic failover so your connection switches to a backup link if the primary service fails. This is ideal for businesses, venues, and remote operations where downtime is costly.',
       },
       {
         title: 'Can you connect a house to a shed or remote office?',
