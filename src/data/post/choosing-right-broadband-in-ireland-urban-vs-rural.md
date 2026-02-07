@@ -36,14 +36,6 @@ Sales teams sell plans. You need to buy what fits your home.
 
 The numbers below help you do that with facts, not just marketing.
 
-Ireland has moved fast on fibre rollout, but coverage still depends on exact location.
-
-As of **4 December 2025**, National Broadband Ireland said **439,712 premises** in the intervention area had been passed, out of **564,000**, with the main rollout on track to complete in 2026.
-
-Commercial rollout is also large. Open eir says its full fibre programme is targeting **1.9 million premises**, with over **1.4 million** already enabled. SIRO says more than **630,000** premises in **142 towns and cities** can access its network, with a **700,000 by 2026** target.
-
-So progress is real. But address-level availability still matters. A lot.
-
 ## Quick ranking: urban vs rural
 
 Here is the practical ranking most people can use as a starting point.
