@@ -25,6 +25,8 @@ This guide shows you a clean way to check:
 2. How much speed drops from room to room.
 3. Whether you have an ISP problem or a Wi-Fi coverage problem.
 
+If you want an expert review after testing, our [internet and Wi-Fi troubleshooting service](/services/internet-and-wifi-troubleshooting-dublin) is designed for exactly this.
+
 ## Quick rule before we start
 
 The best base test is a laptop connected by Ethernet cable to the router.
@@ -146,6 +148,8 @@ Common signs:
 
 This points to wall/floor attenuation, poor router placement, channel congestion, or the need for access points.
 
+That is usually where [Wi-Fi dead zone fixes and coverage improvement](/services/wifi-dead-zone-fixes-dublin) have the biggest impact.
+
 ## If results jump around a lot
 
 That can be:
@@ -195,4 +199,4 @@ If speed is good at the source but drops hard across the house, it is a Wi-Fi-si
 
 That one test flow saves a lot of wasted time and money.
 
-Need help reviewing your results and fixing weak rooms? [Book a consultation](/#contact).
+Need help reviewing your results and fixing weak rooms? Start with [internet and Wi-Fi troubleshooting](/services/internet-and-wifi-troubleshooting-dublin) or [book a consultation](/#contact).

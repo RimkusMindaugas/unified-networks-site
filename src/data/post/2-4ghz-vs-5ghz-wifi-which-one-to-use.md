@@ -163,6 +163,8 @@ Common signs:
 
 In those cases, you usually need better access point placement or additional wired-backhaul APs, not endless router reboots.
 
+If that sounds familiar, see our [Wi-Fi dead zone fixes](/services/wifi-dead-zone-fixes-dublin) and [Wi-Fi installation service](/services/wifi-installation-and-setup-dublin).
+
 If you have not tested room by room yet, start there first. We have a step-by-step guide for that here: [How to Check if Your Internet Is Slow or Your Wi-Fi Is Weak](/how-to-tell-slow-internet-vs-weak-wifi/).
 
 ## Simple decision checklist
@@ -188,4 +190,4 @@ Use 2.4 GHz where range and stability matter more.
 
 And if neither works well in key rooms, that is usually a layout issue, not a band issue.
 
-Need help tuning your Wi-Fi bands and coverage at home or in your business? [Book a consultation](/#contact).
+Need help tuning your Wi-Fi bands and coverage at home or in your business? Start with [internet and Wi-Fi troubleshooting](/services/internet-and-wifi-troubleshooting-dublin) or [book a consultation](/#contact).

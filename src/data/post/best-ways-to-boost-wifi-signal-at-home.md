@@ -39,6 +39,8 @@ If speed is poor even beside the router, the issue may be internet service, not 
 
 If speed is good at the router but bad in certain rooms, that is a Wi-Fi coverage/layout problem. Then this article is exactly what you need.
 
+If you are not sure which side is failing, use [internet and Wi-Fi troubleshooting](/services/internet-and-wifi-troubleshooting-dublin) first.
+
 ## 1) Powerline kits: handy, but very dependent on house wiring
 
 Powerline kits send network data through your home's electrical wiring.
@@ -141,6 +143,8 @@ Instead of trying to "stretch" one Wi-Fi source, you place access points where c
 
 But here is the honest bit: if your home has multiple weak zones, heavy usage, or work-from-home demands, professionally placed access points almost always outperform repeaters and basic mesh setups over time.
 
+That is exactly what our [Wi-Fi installation and setup service](/services/wifi-installation-and-setup-dublin) is built to deliver.
+
 ## Why access points usually beat mesh/repeaters in real homes
 
 Repeaters and many mesh setups still rely on wireless relay.
@@ -187,4 +191,4 @@ But they are not equal:
 
 If you want Wi-Fi that "just works" in every important room, access point design usually wins.
 
-Need help deciding the right upgrade path for your home or business? [Book a consultation](/#contact).
+Need help deciding the right upgrade path for your home or business? Start with [Wi-Fi dead zone fixes and coverage improvement](/services/wifi-dead-zone-fixes-dublin) or [book a consultation](/#contact).

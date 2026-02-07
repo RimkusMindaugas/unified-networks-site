@@ -92,6 +92,8 @@ Useful context:
 
 If FTTH is available at your Eircode, it is usually the right first choice.
 
+After install, pair it with [Wi-Fi installation and setup](/services/wifi-installation-and-setup-dublin) so the speed reaches every key room.
+
 ## 2) Cable / upgraded fibre-coax (very strong in many urban areas)
 
 In Ireland this is mainly Virgin Media footprint plus wholesale expansions.
@@ -183,6 +185,8 @@ Why it ranks high in rural:
 - Works in places with weak or delayed fixed rollout
 - Good speeds for many real-world home use cases
 - Fast path to "usable now" internet
+
+If you go this route, proper mounting and integration matter. See [Starlink installation and network integration](/services/starlink-installation-and-integration-dublin).
 
 What to expect:
 
@@ -281,4 +285,4 @@ And where you only have DSL, treat it as temporary and keep checking for upgrade
 
 If you want, this decision can be simple. Rank your options by what is genuinely available at your Eircode, then pick the most stable option your budget allows.
 
-Need help choosing between FTTH, FTTC, cable, 5G, or Starlink for your exact location? [Book a consultation](/#contact).
+Need help choosing between FTTH, FTTC, cable, 5G, or Starlink for your exact location? Start with [internet and Wi-Fi troubleshooting](/services/internet-and-wifi-troubleshooting-dublin), [Starlink installation and integration](/services/starlink-installation-and-integration-dublin), or [book a consultation](/#contact).

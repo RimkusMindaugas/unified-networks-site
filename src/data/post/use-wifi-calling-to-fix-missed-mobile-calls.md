@@ -44,6 +44,8 @@ Wi-Fi Calling is great, but it needs three things:
 2. Your phone model must support it.
 3. Your Wi-Fi in that room must be stable.
 
+If your room coverage is weak, our [Wi-Fi dead zone fixes](/services/wifi-dead-zone-fixes-dublin) can solve the root cause.
+
 If the setting does not appear, it is usually operator-related, device-related, or not enabled on your account yet.
 
 ## How to turn on Wi-Fi Calling on iPhone
@@ -128,4 +130,4 @@ If you keep missing calls at home, turn on Wi-Fi Calling before you buy any new 
 
 It is one setting. It takes a few minutes. And it often solves a very annoying problem.
 
-If Wi-Fi Calling is on but calls are still rough in certain rooms, that is usually a home Wi-Fi coverage issue. We can help with that. [Book a consultation](/#contact).
+If Wi-Fi Calling is on but calls are still rough in certain rooms, that is usually a home Wi-Fi coverage issue. Start with [internet and Wi-Fi troubleshooting](/services/internet-and-wifi-troubleshooting-dublin) or [book a consultation](/#contact).
