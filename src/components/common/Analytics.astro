@@ -77,7 +77,32 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
         };
 
         const trackContactLinkClicks = () => {
-          const trackFromEvent = (event, sourceType) => {
+          const trackPhoneClickAndDial = (event, anchor, href) => {
+            if (isDuplicateEvent('phone_click', href)) return;
+
+            // Keep the user on page briefly so GA can send the event before the dialer app opens.
+            event.preventDefault();
+
+            let didNavigate = false;
+            const navigateToDialer = () => {
+              if (didNavigate) return;
+              didNavigate = true;
+              window.location.href = href;
+            };
+
+            trackEvent('phone_click', {
+              link_url: href,
+              page_location: window.location.href,
+              link_text: (anchor.textContent || '').trim(),
+              interaction_type: 'click',
+              event_callback: navigateToDialer,
+              event_timeout: 800,
+            });
+
+            setTimeout(navigateToDialer, 350);
+          };
+
+          const trackFromClick = (event) => {
             const target = event.target;
             if (!(target instanceof Element)) return;
 
@@ -88,39 +113,25 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
             if (!href) return;
 
             if (href.startsWith('tel:')) {
-              if (isDuplicateEvent('phone_click', href)) return;
-              trackEvent('phone_click', {
-                link_url: href,
-                page_location: window.location.href,
-                link_text: (anchor.textContent || '').trim(),
-                interaction_type: sourceType,
-              });
+              trackPhoneClickAndDial(event, anchor, href);
               return;
             }
 
-            if (sourceType === 'click' && WHATSAPP_DIRECT_LINK_REGEX.test(href)) {
+            if (WHATSAPP_DIRECT_LINK_REGEX.test(href)) {
               if (isDuplicateEvent('whatsapp_click', href)) return;
               trackEvent('whatsapp_click', {
                 link_url: href,
                 page_location: window.location.href,
                 link_text: (anchor.textContent || '').trim(),
-                interaction_type: sourceType,
+                interaction_type: 'click',
               });
             }
           };
 
           document.addEventListener(
-            'pointerdown',
-            (event) => {
-              trackFromEvent(event, 'pointerdown');
-            },
-            { capture: true }
-          );
-
-          document.addEventListener(
             'click',
             (event) => {
-              trackFromEvent(event, 'click');
+              trackFromClick(event);
             },
             { capture: true }
           );
