@@ -1,0 +1,89 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Note from '~/components/widgets/Note.astro';
+import { coverageSummary, services } from '~/data/services';
+
+const defaultContactNumber = '353874118332';
+const contactNumber = (
+  import.meta.env.PUBLIC_CONTACT_PHONE ||
+  import.meta.env.PUBLIC_WHATSAPP_NUMBER ||
+  defaultContactNumber
+).replace(/\D/g, '');
+const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || contactNumber).replace(/\D/g, '');
+const whatsappMessage = encodeURIComponent(
+  'Hi Unified Networks, I need help choosing the right network service.'
+);
+const phoneHref = `tel:+${contactNumber}`;
+const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+const metadata = {
+  title: 'Network Services in Dublin and Surrounding Areas | Unified Networks',
+  ignoreTitleTemplate: true,
+  description:
+    'Explore Wi-Fi installation, structured cabling, managed Wi-Fi, Starlink, event connectivity, failover internet, and troubleshooting services in Dublin and surrounding areas.',
+};
+
+const serviceCards = services.map((service) => ({
+  title: service.title,
+  description: service.cardDescription,
+  icon: service.icon,
+  callToAction: {
+    text: 'View service details',
+    href: `/services/${service.slug}`,
+  },
+}));
+
+const noteText = `Need help deciding? Tell us your town or Eircode and what is not working. We cover ${coverageSummary}. Call <a class="underline" href="${phoneHref}">+${contactNumber}</a> or <a class="underline" href="${whatsappHref}" target="_blank" rel="noopener noreferrer">chat on WhatsApp</a>.`;
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book Free Consultation',
+        href: '/#contact',
+        icon: 'tabler:mail',
+      },
+      {
+        text: 'Call Now',
+        href: phoneHref,
+        icon: 'tabler:phone-call',
+      },
+      {
+        text: 'Chat on WhatsApp',
+        href: whatsappHref,
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hero-image.png',
+      alt: 'Network services for homes and businesses in Dublin and surrounding areas',
+    }}
+  >
+    <Fragment slot="title">
+      Network Services for Dublin
+      <br />
+      and Surrounding Areas
+    </Fragment>
+    <Fragment slot="subtitle">
+      Dedicated service pages for installation, optimization, cabling, Starlink, event connectivity, failover
+      internet, and troubleshooting.
+    </Fragment>
+  </Hero>
+
+  <Features
+    id="services-list"
+    tagline="All Services"
+    title="Choose The Service You Need"
+    subtitle="Each service has a dedicated page with clear scope, expected outcomes, and next steps."
+    items={serviceCards}
+  />
+
+  <Note icon="tabler:info-square" title="Need A Recommendation?" description={noteText} />
+</Layout>
+
