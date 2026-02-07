@@ -106,7 +106,7 @@ As of early 2026:
 
 That is where Starlink changed the game in Ireland. It gave people a way to stop waiting for a future date and start working online properly now.
 
-For rural families, remote workers, farms, and small businesses, that is not a minor upgrade. That is a major quality-of-life change.
+For rural families, remote workers, farms, and businesses, that is not a minor upgrade. That is a major quality-of-life change.
 
 ## New builds: fibre can be on your road, and still not ready at your door
 
@@ -169,7 +169,7 @@ But Starlink is usually a very strong fit when:
 - 4G/5G is inconsistent at your exact location.
 - You need good internet now, not next year.
 
-And in some places, Starlink also works well as a backup line for failover, especially for home offices and small business setups where outages are expensive.
+And in some places, Starlink also works well as a backup line for failover, especially for home offices and business setups where outages are expensive.
 
 ## What changed most in real life
 
