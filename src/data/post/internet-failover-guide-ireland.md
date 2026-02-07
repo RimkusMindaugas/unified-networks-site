@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-02-07
+publishDate: 2026-01-28
 title: 'Internet Failover in Ireland: How Backup Connectivity Keeps Your Business Online'
 excerpt: A plain-English guide to internet failover for Irish businesses, including setup options, what failover can and cannot do, and how to test it properly.
 category: Hardware

@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-02-06
+publishDate: 2025-07-16
 title: '2.4 GHz vs 5 GHz Wi-Fi: Which One Should You Use?'
 excerpt: A practical guide to the real difference between 2.4 GHz and 5 GHz Wi-Fi, why one reaches farther and the other is faster, and how to choose the right one in each room.
 category: Wi-Fi

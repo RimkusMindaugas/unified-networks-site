@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-02-06
+publishDate: 2026-01-18
 title: New Build Wi-Fi Is Harder Than It Looks (And What to Do Before You Move In)
 excerpt: New build homes often have bad Wi-Fi in key rooms because modern materials block signal. Here is why one router usually fails, and how Cat6, access point planning, and a comms cabinet fix it.
 category: Wi-Fi

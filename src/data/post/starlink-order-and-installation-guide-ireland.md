@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-02-06
+publishDate: 2026-01-10
 title: 'Starlink in Ireland: How to Order, Set Up, and Avoid Common Installation Mistakes'
 excerpt: A practical step-by-step guide for ordering Starlink, activating your account, and installing it properly, including mounts, cable routing, and what to watch out for.
 category: Starlink
