@@ -248,34 +248,43 @@ export async function getRelatedPosts(originalPost: Post, maxResults: number = 4
   const allPosts = await fetchPosts();
   const originalTagsSet = new Set(originalPost.tags ? originalPost.tags.map((tag) => tag.slug) : []);
 
-  const postsWithScores = allPosts.reduce((acc: { post: Post; score: number }[], iteratedPost: Post) => {
-    if (iteratedPost.slug === originalPost.slug) return acc;
+  const postsWithScores = allPosts.reduce((acc: { post: Post; score: number }[], candidatePost: Post) => {
+    if (candidatePost.slug === originalPost.slug) return acc;
 
     let score = 0;
-    if (iteratedPost.category && originalPost.category && iteratedPost.category.slug === originalPost.category.slug) {
+    if (candidatePost.category && originalPost.category && candidatePost.category.slug === originalPost.category.slug) {
       score += 5;
     }
 
-    if (iteratedPost.tags) {
-      iteratedPost.tags.forEach((tag) => {
+    if (candidatePost.tags) {
+      candidatePost.tags.forEach((tag) => {
         if (originalTagsSet.has(tag.slug)) {
-          score += 1;
+          score += 2;
         }
       });
     }
 
-    acc.push({ post: iteratedPost, score });
+    acc.push({ post: candidatePost, score });
     return acc;
   }, []);
 
-  postsWithScores.sort((a, b) => b.score - a.score);
+  const relevantPosts = postsWithScores
+    .filter(({ score }) => score > 0)
+    .sort(
+      (a, b) =>
+        b.score - a.score ||
+        b.post.publishDate.valueOf() - a.post.publishDate.valueOf()
+    )
+    .map(({ post }) => post);
 
-  const selectedPosts: Post[] = [];
-  let i = 0;
-  while (selectedPosts.length < maxResults && i < postsWithScores.length) {
-    selectedPosts.push(postsWithScores[i].post);
-    i++;
+  if (relevantPosts.length >= maxResults) {
+    return relevantPosts.slice(0, maxResults);
   }
 
-  return selectedPosts;
+  const selectedSlugs = new Set(relevantPosts.map((post) => post.slug));
+  const fallbackPosts = allPosts
+    .filter((post) => post.slug !== originalPost.slug && !selectedSlugs.has(post.slug))
+    .slice(0, Math.max(maxResults - relevantPosts.length, 0));
+
+  return [...relevantPosts, ...fallbackPosts];
 }

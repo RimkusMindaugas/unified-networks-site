@@ -5,7 +5,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import BlogHighlightedPosts from '~/components/widgets/BlogHighlightedPosts.astro';
 import Contact from '~/components/widgets/Contact.astro';
 
 const coverageSummary = 'Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, and Laois';
@@ -274,8 +274,15 @@ const contactProps = {
     ]}
   />
 
-  <BlogLatestPosts
-    title="Latest Network Tips and Guides"
+  <BlogHighlightedPosts
+    title="Start Here: Most Useful Network Guides"
+    information="These are the four guides most likely to help you make a confident buying decision and avoid expensive mistakes."
+    postSlugs={[
+      'how-to-tell-slow-internet-vs-weak-wifi',
+      'best-ways-to-boost-wifi-signal-at-home',
+      'new-build-homes-wifi-blackspots-cat6-planning',
+      'starlink-order-and-installation-guide-ireland',
+    ]}
   />
 
   <Contact {...contactProps} />

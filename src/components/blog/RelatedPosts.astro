@@ -2,9 +2,8 @@
 import { APP_BLOG } from 'astrowind:config';
 
 import { getRelatedPosts } from '~/utils/blog';
-import BlogHighlightedPosts from '../widgets/BlogHighlightedPosts.astro';
 import type { Post } from '~/types';
-import { getBlogPermalink } from '~/utils/permalinks';
+import { getBlogPermalink, getPermalink } from '~/utils/permalinks';
 
 export interface Props {
   post: Post;
@@ -12,20 +11,38 @@ export interface Props {
 
 const { post } = Astro.props;
 
-const relatedPosts = post.tags ? await getRelatedPosts(post, 4) : [];
+const relatedPosts = APP_BLOG.isRelatedPostsEnabled
+  ? await getRelatedPosts(post, APP_BLOG.relatedPostsCount || 3)
+  : [];
 ---
 
 {
-  APP_BLOG.isRelatedPostsEnabled ? (
-    <BlogHighlightedPosts
-      classes={{
-        container:
-          'pt-0 lg:pt-0 md:pt-0 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
-      }}
-      title="Related Posts"
-      linkText="View All Posts"
-      linkUrl={getBlogPermalink()}
-      postIds={relatedPosts.map((post) => post.id)}
-    />
+  APP_BLOG.isRelatedPostsEnabled && relatedPosts.length > 0 ? (
+    <section class="mx-auto px-6 sm:px-6 max-w-3xl pb-8 md:pb-12">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight font-heading mb-3">Related Articles</h2>
+      <p class="text-muted dark:text-slate-400 mb-4">
+        Read these next to keep building your network knowledge:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 marker:text-primary dark:marker:text-blue-400">
+        {
+          relatedPosts.map((relatedPost) => (
+            <li>
+              <a
+                href={getPermalink(relatedPost.permalink, 'post')}
+                class="text-primary dark:text-blue-400 hover:underline font-medium"
+              >
+                {relatedPost.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a
+        class="inline-block mt-5 text-muted dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition ease-in duration-200"
+        href={getBlogPermalink()}
+      >
+        View all posts »
+      </a>
+    </section>
   ) : null
 }
