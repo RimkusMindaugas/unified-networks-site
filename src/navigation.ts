@@ -1,12 +1,11 @@
 import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
-const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || '').replace(/\D/g, '');
+const defaultWhatsappNumber = '353874118332';
+const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || defaultWhatsappNumber).replace(/\D/g, '');
 const whatsappMessage = encodeURIComponent(
   'Hi Unified Networks, I am looking for help with internet or Wi-Fi setup.'
 );
-const whatsappHref = whatsappNumber
-  ? `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
-  : getPermalink('/#contact');
+const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
 export const headerData = {
   links: [
@@ -32,7 +31,7 @@ export const headerData = {
     {
       text: 'WhatsApp',
       href: whatsappHref,
-      target: whatsappNumber ? '_blank' : undefined,
+      target: '_blank',
       icon: 'tabler:brand-whatsapp',
     },
   ],
