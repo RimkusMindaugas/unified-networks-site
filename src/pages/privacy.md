@@ -10,7 +10,8 @@ Unified Networks ('we', 'us', 'our') respects your privacy. This page explains w
 ## Information We Collect
 
 - Information you submit through the contact form, such as name, email, phone number, and message.
-- Basic technical data from your browser or device that may be logged by hosting and analytics tools.
+- Basic technical data from your browser or device that may be logged by hosting tools.
+- Website usage data collected through Google Analytics, but only if you accept analytics cookies.
 
 ## How We Use Information
 
@@ -19,6 +20,13 @@ We use your information to:
 - Respond to enquiries and provide service quotes.
 - Deliver and support our network and connectivity services.
 - Improve website performance and service quality.
+
+## Cookies and Analytics
+
+- We use essential technical cookies required for normal site operation.
+- We use optional analytics cookies to understand traffic and page usage.
+- Analytics cookies are only enabled after you click "Accept analytics" in the cookie banner.
+- If you reject analytics cookies, Google Analytics will not run.
 
 ## Data Sharing
 
