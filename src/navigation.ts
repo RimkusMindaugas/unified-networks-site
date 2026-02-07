@@ -35,12 +35,6 @@ export const headerData = {
   actions: [
     { text: 'Book Consultation', href: getPermalink('/#contact') },
     { text: 'Call Now', href: phoneHref, icon: 'tabler:phone-call' },
-    {
-      text: 'WhatsApp',
-      href: whatsappHref,
-      target: '_blank',
-      icon: 'tabler:brand-whatsapp',
-    },
   ],
 };
 
