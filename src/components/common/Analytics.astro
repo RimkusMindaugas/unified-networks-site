@@ -14,6 +14,8 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
         const CONSENT_KEY = 'un_cookie_consent';
         const CONSENT_COOKIE = 'un_cookie_consent';
         const WHATSAPP_DIRECT_LINK_REGEX = /^https?:\/\/wa\.me\/\d+/i;
+        const RECENT_EVENT_WINDOW_MS = 800;
+        const recentlyTrackedEvents = new Map();
 
         const getConsent = () => {
           try {
@@ -58,6 +60,14 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
           });
         };
 
+        const isDuplicateEvent = (eventName, linkUrl) => {
+          const key = `${eventName}:${linkUrl}`;
+          const now = Date.now();
+          const lastTrackedAt = recentlyTrackedEvents.get(key) || 0;
+          recentlyTrackedEvents.set(key, now);
+          return now - lastTrackedAt < RECENT_EVENT_WINDOW_MS;
+        };
+
         const trackPageView = () => {
           trackEvent('page_view', {
             page_title: document.title,
@@ -67,34 +77,50 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
         };
 
         const trackContactLinkClicks = () => {
+          const trackFromEvent = (event, sourceType) => {
+            const target = event.target;
+            if (!(target instanceof Element)) return;
+
+            const anchor = target.closest('a[href]');
+            if (!(anchor instanceof HTMLAnchorElement)) return;
+
+            const href = anchor.href || '';
+            if (!href) return;
+
+            if (href.startsWith('tel:')) {
+              if (isDuplicateEvent('phone_click', href)) return;
+              trackEvent('phone_click', {
+                link_url: href,
+                page_location: window.location.href,
+                link_text: (anchor.textContent || '').trim(),
+                interaction_type: sourceType,
+              });
+              return;
+            }
+
+            if (sourceType === 'click' && WHATSAPP_DIRECT_LINK_REGEX.test(href)) {
+              if (isDuplicateEvent('whatsapp_click', href)) return;
+              trackEvent('whatsapp_click', {
+                link_url: href,
+                page_location: window.location.href,
+                link_text: (anchor.textContent || '').trim(),
+                interaction_type: sourceType,
+              });
+            }
+          };
+
+          document.addEventListener(
+            'pointerdown',
+            (event) => {
+              trackFromEvent(event, 'pointerdown');
+            },
+            { capture: true }
+          );
+
           document.addEventListener(
             'click',
             (event) => {
-              const target = event.target;
-              if (!(target instanceof Element)) return;
-
-              const anchor = target.closest('a[href]');
-              if (!(anchor instanceof HTMLAnchorElement)) return;
-
-              const href = anchor.href || '';
-              if (!href) return;
-
-              if (href.startsWith('tel:')) {
-                trackEvent('phone_click', {
-                  link_url: href,
-                  page_location: window.location.href,
-                  link_text: (anchor.textContent || '').trim(),
-                });
-                return;
-              }
-
-              if (WHATSAPP_DIRECT_LINK_REGEX.test(href)) {
-                trackEvent('whatsapp_click', {
-                  link_url: href,
-                  page_location: window.location.href,
-                  link_text: (anchor.textContent || '').trim(),
-                });
-              }
+              trackFromEvent(event, 'click');
             },
             { capture: true }
           );
