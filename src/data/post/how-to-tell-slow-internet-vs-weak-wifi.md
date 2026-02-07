@@ -37,20 +37,23 @@ So if you test with a very old device, you might measure the device limit, not t
 
 ## Run your speed test here (without leaving the site)
 
-<div style="text-align:right;">
-  <div style="min-height:360px;">
+<div
+  style="margin:1rem 0;padding:1rem;border-radius:16px;border:1px solid rgba(148,163,184,0.35);background:linear-gradient(130deg,#020617 0%,#0b1f5c 45%,#0f172a 100%);"
+>
+  <p style="margin:0 0 .75rem 0;color:#e2e8f0;font-weight:600;">Run 2-3 tests in each location and write down the average.</p>
+  <div style="min-height:360px;border-radius:12px;overflow:hidden;border:1px solid rgba(148,163,184,0.25);background:#020617;">
     <div style="width:100%;height:0;padding-bottom:50%;position:relative;">
       <iframe
         title="OpenSpeedTest"
         style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:360px;overflow:hidden;"
-        src="https://openspeedtest.com/speedtest"
+        src="https://openspeedtest.com/speedtest?Run=3"
         loading="lazy"
       ></iframe>
     </div>
   </div>
-  <small>
+  <small style="display:block;text-align:right;color:#94a3b8;margin-top:.5rem;">
     Speed test powered by
-    <a href="https://openspeedtest.com" target="_blank" rel="noopener noreferrer">OpenSpeedTest</a>
+    <a href="https://openspeedtest.com" target="_blank" rel="noopener noreferrer" style="color:#38bdf8;">OpenSpeedTest</a>
   </small>
 </div>
 
@@ -94,16 +97,32 @@ Run 2 or 3 tests per room and average them.
 
 Use this simple table:
 
-| Room | Avg speed | Drop vs base |
-| --- | ---: | ---: |
-| Router location (base) | 498 Mbps | 0% |
-| Living room | 430 Mbps | 14% |
-| Main bedroom | 280 Mbps | 44% |
-| Office | 190 Mbps | 62% |
+| Room | Avg speed | Notes |
+| --- | ---: | --- |
+| Router location (base) | 498 Mbps | Reference point |
+| Living room | 430 Mbps | Usually strong |
+| Main bedroom | 280 Mbps | Noticeable drop |
+| Office | 190 Mbps | Likely weak coverage |
 
-How to calculate drop:
+## Speed guide for common activities
 
-`Drop % = ((Base - Room) / Base) x 100`
+Use this as a practical guide (rough values per stream/device):
+
+| Activity | Typical speed needed | Notes |
+| --- | ---: | --- |
+| Browsing and email | 1-3 Mbps | Usually light usage |
+| Music streaming | 1-2 Mbps | Per active device |
+| Video calls (HD) | 3-5 Mbps up/down | Upload matters a lot |
+| HD streaming (Netflix, YouTube, IPTV) | 5-8 Mbps | Per TV/stream |
+| 4K streaming (Netflix, YouTube, IPTV) | 15-25 Mbps | Per TV/stream |
+| Cloud backup / large uploads | 20+ Mbps upload preferred | Can affect the whole home |
+| Online gaming | 3-10 Mbps + low latency | Ping/stability matters more than raw speed |
+
+IPTV quality can vary a lot by provider/feed. In Ireland people often call it a "dodgy box," and these streams can need more headroom than expected when quality shifts.
+
+And the big one people miss: bandwidth is shared.
+
+So even if one 4K stream works on paper, two TVs plus a video call can eat your available bandwidth quickly. Example: two 4K streams at ~20 Mbps each plus one HD call at 5 Mbps is already around 45 Mbps before anyone starts downloads.
 
 ## Step 3: Read the results the right way
 
@@ -137,17 +156,6 @@ That can be:
 - 2.4 GHz vs 5 GHz behavior
 
 Retest at quieter times and compare again.
-
-## What drop is "normal" and what is a red flag?
-
-There is no perfect number for every house, but this guide works well:
-
-- 0-20% drop: usually fine
-- 20-40% drop: acceptable in some rooms, watch it
-- 40-60% drop: likely Wi-Fi design issue
-- 60%+ drop: strong sign coverage needs work
-
-The bigger point: if the room you actually use has a major drop, that is a real problem even if another room looks great.
 
 ## Common testing mistakes (easy to avoid)
 
