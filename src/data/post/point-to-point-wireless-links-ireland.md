@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-02-07
+publishDate: 2025-08-19
 title: 'Point-to-Point Wireless in Ireland: Connect Outbuildings and Remote Offices Without Trenching'
 excerpt: A practical guide to point-to-point wireless links in Ireland for sheds, farm buildings, yards, and remote offices when running cable is not practical.
 category: Hardware

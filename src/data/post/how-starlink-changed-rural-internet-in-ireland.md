@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-02-06
+publishDate: 2025-06-28
 title: How Starlink Changed Rural Internet in Ireland (While Fibre Still Catches Up)
 excerpt: Rural Ireland used to be stuck waiting for better broadband. Starlink changed that by giving many homes a real high-speed option now, not years from now.
 category: Starlink

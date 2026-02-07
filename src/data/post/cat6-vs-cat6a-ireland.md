@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-02-07
+publishDate: 2025-09-05
 title: 'Cat6 vs Cat6a in Ireland: What to Install in Homes and Businesses'
 excerpt: Choosing between Cat6 and Cat6a? Here is a practical Irish guide on speed, distance, cost, and where each cable type makes sense in real properties.
 category: Hardware

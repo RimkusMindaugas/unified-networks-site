@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-02-06
+publishDate: 2025-12-14
 title: How to Check if Your Internet Is Slow or Your Wi-Fi Is Weak
 excerpt: A simple step-by-step guide to test your real broadband speed, then compare room-by-room Wi-Fi speed so you can find out what is actually causing slow internet at home.
 category: Wi-Fi

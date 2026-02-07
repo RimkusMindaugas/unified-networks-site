@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-02-07
+publishDate: 2025-10-04
 title: 'Wi-Fi Site Survey and Heatmap in Ireland: What You Get and Why It Saves Money'
 excerpt: A practical guide to Wi-Fi surveys and heatmaps for homes and businesses in Ireland, what the report includes, and when it is worth paying for one.
 category: Wi-Fi

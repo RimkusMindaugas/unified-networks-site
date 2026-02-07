@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-02-07
+publishDate: 2025-11-05
 title: 'Managed Wi-Fi in Ireland: What a Monthly Plan Should Actually Include'
 excerpt: Thinking about managed Wi-Fi? Here is what a monthly Wi-Fi support plan should include for Irish homes and businesses, what it should cost you in headaches, and what to avoid.
 category: Wi-Fi

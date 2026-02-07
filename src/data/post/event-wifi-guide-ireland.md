@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-02-07
+publishDate: 2025-09-18
 title: 'Event Wi-Fi in Ireland: How to Plan Internet for Festivals, Venues, and Large Crowds'
 excerpt: Planning event Wi-Fi in Ireland? This guide covers capacity, temporary broadband, guest access, and the most common mistakes that break connectivity on event day.
 category: Wi-Fi

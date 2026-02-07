@@ -1,5 +1,5 @@
 ﻿---
-publishDate: 2026-02-07
+publishDate: 2025-06-12
 title: 'Missing Calls at Home? Turn On Wi-Fi Calling'
 excerpt: Weak mobile signal inside the house can cause missed calls and dropped calls. Wi-Fi Calling can fix that fast. Here is how to set it up on iPhone and Android.
 category: Wi-Fi
