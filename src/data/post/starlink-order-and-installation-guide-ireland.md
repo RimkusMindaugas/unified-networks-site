@@ -16,6 +16,8 @@ Thinking about getting Starlink? Good idea if fibre is still not ready at your a
 
 But here is the thing. Buying Starlink is the easy part. Installing it properly is where most people run into trouble.
 
+If you want a clean professional install, see [Starlink installation and network integration](/services/starlink-installation-and-integration-dublin).
+
 This guide walks you through the full process:
 
 1. How to order
@@ -131,6 +133,8 @@ You can have excellent Starlink to the house but still poor Wi-Fi in far rooms i
 
 If needed, add proper access points instead of relying on random extenders.
 
+Our [Wi-Fi installation and setup service](/services/wifi-installation-and-setup-dublin) can handle this as part of the same project.
+
 ## Common mistakes to avoid
 
 1. Leaving the dish on the kickstand permanently
@@ -160,4 +164,4 @@ And you avoid the classic "temporary setup that becomes permanent."
 
 We install Starlink for homes and businesses across Dublin and surrounding areas, including Fingal, South Dublin, Dun Laoghaire-Rathdown, Meath, Kildare, Wicklow, Louth, Westmeath, Cavan, Monaghan, and Laois.
 
-If you want a clean, permanent setup with proper mounting and cable routing, [book a consultation](/#contact).
+If you want a clean, permanent setup with proper mounting and cable routing, start with [Starlink installation and network integration](/services/starlink-installation-and-integration-dublin) or [book a consultation](/#contact).

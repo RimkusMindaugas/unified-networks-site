@@ -63,6 +63,8 @@ So yes, you can keep buying stronger routers. Or you can plan the house network 
 
 If you are building or buying a new build, Cat6 is one of the best upgrades you can make.
 
+If you want this done as a dedicated project, we offer [structured cabling (Cat6/Cat6a/Fibre)](/services/structured-cabling-cat6-cat6a-fibre-dublin) as a standalone service.
+
 Do it early.
 
 Once the house is finished and full of furniture, every cable run becomes harder, slower, and more expensive. You also end up with compromises that never look quite right.
@@ -196,4 +198,4 @@ Do that before move-in and life is easier.
 
 Ignore it and the router reset button becomes part of your morning routine.
 
-Building or moving into a new home in Dublin and surrounding areas, including Fingal, South Dublin, Dun Laoghaire-Rathdown, Meath, Kildare, Wicklow, Louth, Westmeath, Cavan, Monaghan, or Laois? [Book a consultation](/#contact).
+Building or moving into a new home in Dublin and surrounding areas, including Fingal, South Dublin, Dun Laoghaire-Rathdown, Meath, Kildare, Wicklow, Louth, Westmeath, Cavan, Monaghan, or Laois? Start with [structured cabling](/services/structured-cabling-cat6-cat6a-fibre-dublin), [Wi-Fi installation and setup](/services/wifi-installation-and-setup-dublin), or [book a consultation](/#contact).

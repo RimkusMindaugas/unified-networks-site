@@ -156,6 +156,8 @@ If the property is larger, has thick walls, or has a separate office/shed, you s
 So yes, Starlink can solve the "last mile" problem.
 But you still need to solve the "inside the house" problem.
 
+That is where [Wi-Fi installation and setup](/services/wifi-installation-and-setup-dublin) and [Wi-Fi dead zone fixes](/services/wifi-dead-zone-fixes-dublin) come in.
+
 ## Is Starlink right for everyone in rural Ireland?
 
 Not always.
@@ -169,7 +171,7 @@ But Starlink is usually a very strong fit when:
 - 4G/5G is inconsistent at your exact location.
 - You need good internet now, not next year.
 
-And in some places, Starlink also works well as a backup line for failover, especially for home offices and business setups where outages are expensive.
+And in some places, Starlink also works well as a backup line for failover, especially for home offices and business setups where outages are expensive. We provide [internet failover and backup connectivity](/services/internet-failover-and-backup-connectivity-dublin) for this exact setup.
 
 ## What changed most in real life
 
@@ -195,4 +197,4 @@ If you have a clear sky view, Starlink can be the difference between "barely onl
 
 And that is exactly why it has had such a big impact across rural Ireland.
 
-Need help deciding between Starlink, fibre, or a hybrid setup for your home or business? [Book a consultation](/#contact).
+Need help deciding between Starlink, fibre, or a hybrid setup for your home or business? Start with [Starlink installation and network integration](/services/starlink-installation-and-integration-dublin) or [book a consultation](/#contact).
