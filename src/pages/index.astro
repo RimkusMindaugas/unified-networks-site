@@ -16,11 +16,17 @@ const metadata = {
   description: `Wi-Fi troubleshooting, network setup, event Wi-Fi deployment, and failover internet solutions for homes and businesses across ${coverageSummary}.`,
 };
 
-const defaultWhatsappNumber = '353874118332';
-const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || defaultWhatsappNumber).replace(/\D/g, '');
+const defaultContactNumber = '353874118332';
+const contactNumber = (
+  import.meta.env.PUBLIC_CONTACT_PHONE ||
+  import.meta.env.PUBLIC_WHATSAPP_NUMBER ||
+  defaultContactNumber
+).replace(/\D/g, '');
+const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || contactNumber).replace(/\D/g, '');
 const whatsappMessage = encodeURIComponent(
   'Hi Unified Networks, I need help with my internet or Wi-Fi setup.'
 );
+const phoneHref = `tel:+${contactNumber}`;
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 const serviceAreas = [
   'County Louth',
@@ -55,12 +61,12 @@ const localBusinessSchema = {
     'Point-to-point wireless links',
   ],
   areaServed: serviceAreas.map((name) => ({ '@type': 'Place', name })),
-  telephone: `+${whatsappNumber}`,
+  telephone: `+${contactNumber}`,
   sameAs: [`https://wa.me/${whatsappNumber}`],
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      telephone: `+${whatsappNumber}`,
+      telephone: `+${contactNumber}`,
       contactType: 'customer support',
       areaServed: 'IE',
       availableLanguage: ['en'],
@@ -129,6 +135,11 @@ const contactProps = {
         text: 'Book Free Consultation',
         href: '/#contact',
         icon: 'tabler:phone',
+      },
+      {
+        text: 'Call Now',
+        href: phoneHref,
+        icon: 'tabler:phone-call',
       },
       {
         text: 'Chat on WhatsApp',
