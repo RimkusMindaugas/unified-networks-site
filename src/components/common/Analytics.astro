@@ -16,6 +16,7 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
         const WHATSAPP_DIRECT_LINK_REGEX = /^https?:\/\/wa\.me\/\d+/i;
         const RECENT_EVENT_WINDOW_MS = 800;
         const recentlyTrackedEvents = new Map();
+        const DEBUG_LEAD_EVENTS = new Set(['phone_click', 'whatsapp_click', 'form_submit']);
 
         const getConsent = () => {
           try {
@@ -54,8 +55,10 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
 
         const trackEvent = (eventName, params = {}) => {
           if (typeof window.gtag !== 'function') return;
+          const debugFlag = DEBUG_LEAD_EVENTS.has(eventName) ? { debug_mode: true } : {};
           window.gtag('event', eventName, {
             transport_type: 'beacon',
+            ...debugFlag,
             ...params,
           });
         };
@@ -96,10 +99,10 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
               link_text: (anchor.textContent || '').trim(),
               interaction_type: 'click',
               event_callback: navigateToDialer,
-              event_timeout: 800,
+              event_timeout: 1200,
             });
 
-            setTimeout(navigateToDialer, 350);
+            setTimeout(navigateToDialer, 700);
           };
 
           const trackFromClick = (event) => {
