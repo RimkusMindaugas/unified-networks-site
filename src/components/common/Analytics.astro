@@ -17,6 +17,7 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
         const RECENT_EVENT_WINDOW_MS = 800;
         const recentlyTrackedEvents = new Map();
         const DEBUG_LEAD_EVENTS = new Set(['phone_click', 'whatsapp_click', 'form_submit']);
+        let analyticsEnabled = false;
 
         const getConsent = () => {
           try {
@@ -54,6 +55,7 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
         };
 
         const trackEvent = (eventName, params = {}) => {
+          if (!analyticsEnabled) return;
           if (typeof window.gtag !== 'function') return;
           const debugFlag = DEBUG_LEAD_EVENTS.has(eventName) ? { debug_mode: true } : {};
           window.gtag('event', eventName, {
@@ -159,14 +161,21 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
           );
         };
 
-        if (getConsent() === 'accepted') {
+        const enableAnalytics = () => {
+          analyticsEnabled = true;
           loadGoogleAnalytics();
-        }
+          trackPageView();
+        };
+
+        if (getConsent() === 'accepted') enableAnalytics();
 
         trackContactLinkClicks();
         trackLeadFormSubmissions();
 
-        window.addEventListener('un:cookie-consent-accepted', loadGoogleAnalytics);
+        window.addEventListener('un:cookie-consent-accepted', enableAnalytics);
+        window.addEventListener('un:cookie-consent-rejected', () => {
+          analyticsEnabled = false;
+        });
         document.addEventListener('astro:after-swap', trackPageView);
       })();
     </script>
