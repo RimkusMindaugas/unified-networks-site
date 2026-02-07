@@ -1,0 +1,33 @@
+---
+import { getPermalink } from '~/utils/permalinks';
+import { getRelatedServicesForPostSlug } from '~/data/services';
+
+export interface Props {
+  postSlug: string;
+}
+
+const { postSlug } = Astro.props;
+const relatedServices = getRelatedServicesForPostSlug(postSlug);
+---
+
+{
+  relatedServices.length > 0 ? (
+    <section class="mx-auto px-6 sm:px-6 max-w-3xl pb-8 md:pb-12">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight font-heading mb-3">Related Services</h2>
+      <p class="text-muted dark:text-slate-400 mb-4">Need help with this issue? These services are the best next step:</p>
+      <ul class="list-disc pl-5 space-y-2 marker:text-primary dark:marker:text-blue-400">
+        {relatedServices.map((service) => (
+          <li>
+            <a
+              href={getPermalink(`/services/${service.slug}`)}
+              class="text-primary dark:text-blue-400 hover:underline font-medium"
+            >
+              {service.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ) : null
+}
+

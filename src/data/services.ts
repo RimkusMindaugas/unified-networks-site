@@ -692,3 +692,157 @@ export const services: ServicePageData[] = [
 ];
 
 export const servicesBySlug = new Map(services.map((service) => [service.slug, service]));
+
+const serviceRelatedPostSlugs: Record<string, string[]> = {
+  'wifi-installation-and-setup-dublin': [
+    'how-to-tell-slow-internet-vs-weak-wifi',
+    'best-ways-to-boost-wifi-signal-at-home',
+    'business-wifi-installation-mistakes-ireland',
+  ],
+  'wifi-dead-zone-fixes-dublin': [
+    'best-ways-to-boost-wifi-signal-at-home',
+    'how-to-tell-slow-internet-vs-weak-wifi',
+    '2-4ghz-vs-5ghz-wifi-which-one-to-use',
+  ],
+  'wifi-site-survey-and-heatmap-dublin': [
+    'wifi-site-survey-heatmap-guide-ireland',
+    'business-wifi-installation-mistakes-ireland',
+    'how-to-tell-slow-internet-vs-weak-wifi',
+  ],
+  'structured-cabling-cat6-cat6a-fibre-dublin': [
+    'cat6-vs-cat6a-ireland',
+    'new-build-homes-wifi-blackspots-cat6-planning',
+    'point-to-point-wireless-links-ireland',
+  ],
+  'managed-wifi-plan-monthly-dublin': [
+    'managed-wifi-monthly-plan-ireland',
+    'business-wifi-installation-mistakes-ireland',
+    'guest-wifi-for-business-ireland',
+  ],
+  'guest-wifi-packages-dublin': [
+    'guest-wifi-for-business-ireland',
+    'event-wifi-guide-ireland',
+    'managed-wifi-monthly-plan-ireland',
+  ],
+  'starlink-installation-and-integration-dublin': [
+    'starlink-order-and-installation-guide-ireland',
+    'how-starlink-changed-rural-internet-in-ireland',
+    'choosing-right-broadband-in-ireland-urban-vs-rural',
+  ],
+  'event-wifi-setup-and-rental-dublin': [
+    'event-wifi-guide-ireland',
+    'guest-wifi-for-business-ireland',
+    'internet-failover-guide-ireland',
+  ],
+  'internet-failover-and-backup-connectivity-dublin': [
+    'internet-failover-guide-ireland',
+    'business-wifi-installation-mistakes-ireland',
+    'choosing-right-broadband-in-ireland-urban-vs-rural',
+  ],
+  'point-to-point-wireless-links-dublin': [
+    'point-to-point-wireless-links-ireland',
+    'event-wifi-guide-ireland',
+    'cat6-vs-cat6a-ireland',
+  ],
+  'internet-and-wifi-troubleshooting-dublin': [
+    'how-to-tell-slow-internet-vs-weak-wifi',
+    'best-ways-to-boost-wifi-signal-at-home',
+    'business-wifi-installation-mistakes-ireland',
+  ],
+};
+
+const postRelatedServiceSlugs: Record<string, string[]> = {
+  'business-wifi-installation-mistakes-ireland': [
+    'wifi-installation-and-setup-dublin',
+    'internet-and-wifi-troubleshooting-dublin',
+    'managed-wifi-plan-monthly-dublin',
+  ],
+  'internet-failover-guide-ireland': [
+    'internet-failover-and-backup-connectivity-dublin',
+    'managed-wifi-plan-monthly-dublin',
+    'starlink-installation-and-integration-dublin',
+  ],
+  'new-build-homes-wifi-blackspots-cat6-planning': [
+    'structured-cabling-cat6-cat6a-fibre-dublin',
+    'wifi-installation-and-setup-dublin',
+    'wifi-dead-zone-fixes-dublin',
+  ],
+  'starlink-order-and-installation-guide-ireland': [
+    'starlink-installation-and-integration-dublin',
+    'wifi-installation-and-setup-dublin',
+    'internet-failover-and-backup-connectivity-dublin',
+  ],
+  'how-to-tell-slow-internet-vs-weak-wifi': [
+    'internet-and-wifi-troubleshooting-dublin',
+    'wifi-dead-zone-fixes-dublin',
+    'wifi-installation-and-setup-dublin',
+  ],
+  'choosing-right-broadband-in-ireland-urban-vs-rural': [
+    'internet-and-wifi-troubleshooting-dublin',
+    'starlink-installation-and-integration-dublin',
+    'internet-failover-and-backup-connectivity-dublin',
+  ],
+  'managed-wifi-monthly-plan-ireland': [
+    'managed-wifi-plan-monthly-dublin',
+    'guest-wifi-packages-dublin',
+    'internet-and-wifi-troubleshooting-dublin',
+  ],
+  'guest-wifi-for-business-ireland': [
+    'guest-wifi-packages-dublin',
+    'managed-wifi-plan-monthly-dublin',
+    'event-wifi-setup-and-rental-dublin',
+  ],
+  'wifi-site-survey-heatmap-guide-ireland': [
+    'wifi-site-survey-and-heatmap-dublin',
+    'wifi-installation-and-setup-dublin',
+    'internet-and-wifi-troubleshooting-dublin',
+  ],
+  'event-wifi-guide-ireland': [
+    'event-wifi-setup-and-rental-dublin',
+    'guest-wifi-packages-dublin',
+    'internet-failover-and-backup-connectivity-dublin',
+  ],
+  'cat6-vs-cat6a-ireland': [
+    'structured-cabling-cat6-cat6a-fibre-dublin',
+    'wifi-installation-and-setup-dublin',
+    'point-to-point-wireless-links-dublin',
+  ],
+  'point-to-point-wireless-links-ireland': [
+    'point-to-point-wireless-links-dublin',
+    'structured-cabling-cat6-cat6a-fibre-dublin',
+    'wifi-installation-and-setup-dublin',
+  ],
+  'best-ways-to-boost-wifi-signal-at-home': [
+    'wifi-dead-zone-fixes-dublin',
+    'wifi-installation-and-setup-dublin',
+    'internet-and-wifi-troubleshooting-dublin',
+  ],
+  '2-4ghz-vs-5ghz-wifi-which-one-to-use': [
+    'wifi-dead-zone-fixes-dublin',
+    'wifi-installation-and-setup-dublin',
+    'internet-and-wifi-troubleshooting-dublin',
+  ],
+  'how-starlink-changed-rural-internet-in-ireland': [
+    'starlink-installation-and-integration-dublin',
+    'internet-failover-and-backup-connectivity-dublin',
+    'wifi-installation-and-setup-dublin',
+  ],
+  'use-wifi-calling-to-fix-missed-mobile-calls': [
+    'wifi-dead-zone-fixes-dublin',
+    'internet-and-wifi-troubleshooting-dublin',
+    'wifi-installation-and-setup-dublin',
+  ],
+};
+
+export const getRelatedPostSlugsForService = (serviceSlug: string): string[] =>
+  serviceRelatedPostSlugs[serviceSlug] || [];
+
+export const getRelatedServicesForPostSlug = (postSlug: string): ServicePageData[] => {
+  const mappedServiceSlugs = postRelatedServiceSlugs[postSlug] || [
+    'internet-and-wifi-troubleshooting-dublin',
+    'wifi-installation-and-setup-dublin',
+  ];
+  return mappedServiceSlugs
+    .map((slug) => servicesBySlug.get(slug))
+    .filter((service): service is ServicePageData => Boolean(service));
+};

@@ -1,0 +1,114 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Note from '~/components/widgets/Note.astro';
+import { coverageSummary } from '~/data/services';
+
+const metadata = {
+  title: 'Areas We Serve in Dublin and Surrounding Counties | Unified Networks',
+  ignoreTitleTemplate: true,
+  description:
+    'Unified Networks serves Dublin and surrounding areas including Fingal, South Dublin, Dun Laoghaire-Rathdown, Meath, Kildare, Wicklow, Louth, Westmeath, Cavan, Monaghan, and Laois.',
+};
+
+const defaultContactNumber = '353874118332';
+const contactNumber = (
+  import.meta.env.PUBLIC_CONTACT_PHONE ||
+  import.meta.env.PUBLIC_WHATSAPP_NUMBER ||
+  defaultContactNumber
+).replace(/\D/g, '');
+const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || contactNumber).replace(/\D/g, '');
+const whatsappMessage = encodeURIComponent(
+  'Hi Unified Networks, can you confirm if you cover my area?'
+);
+const phoneHref = `tel:+${contactNumber}`;
+const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+const areaItems = [
+  {
+    title: 'Dublin City and County Dublin',
+    description:
+      'Dublin City, Swords, Blanchardstown, Tallaght, Lucan, Dundrum, and nearby areas in Fingal, South Dublin, and Dun Laoghaire-Rathdown.',
+    icon: 'tabler:map-pin',
+  },
+  {
+    title: 'Meath and Louth',
+    description: 'Navan, Drogheda, Dundalk, and nearby towns across both counties.',
+    icon: 'tabler:map-pin',
+  },
+  {
+    title: 'Kildare and Wicklow',
+    description: 'Naas, Bray, and surrounding commuter-belt locations.',
+    icon: 'tabler:map-pin',
+  },
+  {
+    title: 'Westmeath, Cavan, Monaghan, and Laois',
+    description: 'Mullingar, Portlaoise, and nearby towns depending on project scope and scheduling.',
+    icon: 'tabler:map-pin',
+  },
+];
+
+const localBusinessAreaSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Unified Networks',
+  url: 'https://unifiednetworks.ie/areas-we-serve',
+  areaServed: coverageSummary.split(', ').map((name) => ({ '@type': 'Place', name })),
+  telephone: `+${contactNumber}`,
+};
+
+const noteText = `Not sure if your town is covered? Share your Eircode and we will confirm quickly. Call <a class="underline" href="${phoneHref}">+${contactNumber}</a> or <a class="underline" href="${whatsappHref}" target="_blank" rel="noopener noreferrer">chat on WhatsApp</a>.`;
+---
+
+<Layout metadata={metadata}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(localBusinessAreaSchema)} />
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book Free Consultation',
+        href: '/#contact',
+        icon: 'tabler:mail',
+      },
+      {
+        text: 'Call Now',
+        href: phoneHref,
+        icon: 'tabler:phone-call',
+      },
+      {
+        text: 'Chat on WhatsApp',
+        href: whatsappHref,
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hero-image.png',
+      alt: 'Unified Networks service coverage in Dublin and surrounding counties',
+    }}
+  >
+    <Fragment slot="title">
+      Areas We Serve
+      <br />
+      Dublin and Surrounding Counties
+    </Fragment>
+    <Fragment slot="subtitle">
+      Dublin is our main focus, and we also cover surrounding counties for Wi-Fi, cabling, Starlink, events, and
+      failover projects.
+    </Fragment>
+  </Hero>
+
+  <Features
+    id="coverage-areas"
+    tagline="Coverage"
+    title="Current Service Coverage"
+    subtitle={`We currently serve ${coverageSummary}.`}
+    items={areaItems}
+  />
+
+  <Note icon="tabler:info-square" title="Coverage Confirmation." description={noteText} />
+</Layout>
+
