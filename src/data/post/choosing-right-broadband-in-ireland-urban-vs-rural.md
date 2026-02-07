@@ -42,18 +42,20 @@ Here is the practical ranking most people can use as a starting point.
 
 1. FTTH fibre (Open eir / SIRO / NBI where available)
 2. Cable / upgraded Virgin Media network
-3. 5G home broadband
-4. 4G home broadband / fixed wireless
-5. Starlink (usually not first choice in dense urban unless fixed options are poor)
-6. DSL (legacy fallback)
+3. FTTC / VDSL ("fibre to the cabinet", copper to your home)
+4. 5G home broadband
+5. 4G home broadband / fixed wireless
+6. Starlink (usually not first choice in dense urban unless fixed options are poor)
+7. DSL (legacy fallback)
 
 ### Rural areas (typical order)
 
 1. FTTH fibre (NBI/Open eir/SIRO) if available at your Eircode
 2. Starlink (with clear sky view)
-3. 5G home broadband (if you have strong, consistent signal)
-4. 4G home broadband / fixed wireless
-5. DSL
+3. FTTC / VDSL (if you are close to the cabinet and line quality is good)
+4. 5G home broadband (if you have strong, consistent signal)
+5. 4G home broadband / fixed wireless
+6. DSL
 
 The key point: in rural Ireland, Starlink often moves much higher up the list because fixed options are not always ready yet.
 
@@ -115,7 +117,35 @@ Useful context:
 
 In urban/suburban Ireland, cable can be an excellent choice when FTTH is not available or priced well.
 
-## 3) 5G home broadband (great in some places, average in others)
+## 3) FTTC / VDSL (better than DSL, but not full fibre)
+
+This is where a lot of people get confused.
+
+FTTC is often sold as "fibre broadband," but it is **not** the same as FTTH.
+
+With FTTC, fibre goes from the exchange to the street cabinet, then the last stretch to your house is still copper (VDSL). Openreach describes this exact setup in its FTTC explanation.
+
+That copper last stretch is the catch.
+
+The closer you are to the cabinet, the better FTTC usually performs. The farther away you are, the more speed you lose. So FTTC can be decent on one road and disappointing nearby.
+
+And a quick myth check: people often blame "distance from the exchange" for everything. For FTTC, cabinet distance is usually the bigger factor. Exchange distance is more of an old ADSL problem.
+
+Why FTTC can still be useful:
+
+- Often better than legacy DSL
+- Can be a decent middle ground while waiting for FTTH
+- Widely available in many areas
+
+Things to watch:
+
+- Performance is hit-or-miss because of copper quality and length
+- Uploads are usually much weaker than FTTH
+- Not as future-proof as full fibre
+
+If FTTH is available, choose FTTH. If it is not, FTTC can still be a workable stopgap.
+
+## 4) 5G home broadband (great in some places, average in others)
 
 5G home broadband is fixed internet delivered over mobile network.
 
@@ -142,7 +172,7 @@ Useful context:
 
 So 5G can be excellent, but check by exact address and test if possible before fully committing.
 
-## 4) Starlink (major rural fallback, sometimes primary choice)
+## 5) Starlink (major rural fallback, sometimes primary choice)
 
 Starlink changed the rural broadband conversation because it bypasses local fixed infrastructure delays.
 
@@ -169,7 +199,7 @@ Useful context:
 
 In cities, Starlink is usually not the first pick if you have strong fixed options. In rural areas, it can be the practical answer while waiting for fibre.
 
-## 5) 4G home broadband / fixed wireless (useful fallback)
+## 6) 4G home broadband / fixed wireless (useful fallback)
 
 This is still a valid option where fibre and strong 5G are not available.
 
@@ -192,7 +222,7 @@ Things to watch:
 
 Bottom line: very useful as a fallback, less ideal as a long-term heavy-use solution.
 
-## 6) DSL (legacy option, last resort where possible)
+## 7) DSL (legacy option, last resort where possible)
 
 DSL is still present in some areas, but it is a legacy technology.
 
@@ -205,7 +235,7 @@ What to expect:
 - Basic browsing and low-demand use
 - Limited upload and lower headroom for modern multi-device homes
 
-If you are on DSL and can move to any of FTTH, strong cable, strong 5G, or Starlink, that is usually worth doing.
+If you are on DSL and can move to FTTH, strong cable, good FTTC, strong 5G, or Starlink, that is usually worth doing.
 
 ## What this means in real life
 
@@ -213,12 +243,14 @@ If you are in an urban area:
 
 - Check FTTH first.
 - If not available, check cable.
-- If both are unavailable or delayed, check 5G with an address-level test.
+- If both are unavailable, check FTTC next and ask for expected speed at your exact line.
+- Then check 5G with an address-level test.
 
 If you are in a rural area:
 
 - Check NBI/Open eir/SIRO availability first.
-- If not ready yet, compare Starlink and 5G at your exact location.
+- If not ready yet, check whether FTTC is available and what speed estimate you get.
+- Then compare Starlink and 5G at your exact location.
 - Keep DSL as a temporary stopgap, not a long-term plan.
 
 And always test Wi-Fi inside your home after install. Many "broadband problems" are actually in-home Wi-Fi layout issues.
@@ -247,4 +279,4 @@ And where you only have DSL, treat it as temporary and keep checking for upgrade
 
 If you want, this decision can be simple. Rank your options by what is genuinely available at your Eircode, then pick the most stable option your budget allows.
 
-Need help choosing between fibre, cable, 5G, or Starlink for your exact location? [Book a consultation](/#contact).
+Need help choosing between FTTH, FTTC, cable, 5G, or Starlink for your exact location? [Book a consultation](/#contact).
