@@ -1,0 +1,106 @@
+---
+import { ANALYTICS } from 'astrowind:config';
+
+const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.googleAnalytics.id) : '';
+---
+
+{
+  gaId ? (
+    <>
+      <div
+        id="cookie-consent-banner"
+        class="hidden fixed inset-x-4 bottom-4 z-[70] mx-auto w-auto max-w-3xl rounded-2xl border border-gray-300/70 bg-white/95 p-4 text-sm shadow-xl backdrop-blur dark:border-slate-700 dark:bg-slate-900/95"
+        role="dialog"
+        aria-live="polite"
+        aria-label="Cookie consent"
+      >
+        <p class="text-default dark:text-slate-200">
+          We use analytics cookies to understand site usage and improve performance. You can accept or reject optional
+          analytics cookies.
+          <a class="underline hover:text-primary dark:hover:text-blue-400" href="/privacy/">
+            Learn more in our privacy policy.
+          </a>
+        </p>
+        <div class="mt-4 flex flex-col gap-2 sm:flex-row sm:justify-end">
+          <button
+            type="button"
+            data-cookie-reject
+            class="inline-flex items-center justify-center rounded-md border border-gray-300 px-4 py-2 font-medium text-default hover:bg-gray-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800"
+          >
+            Reject
+          </button>
+          <button
+            type="button"
+            data-cookie-accept
+            class="inline-flex items-center justify-center rounded-md border border-transparent bg-primary px-4 py-2 font-medium text-white hover:opacity-90"
+          >
+            Accept analytics
+          </button>
+        </div>
+      </div>
+
+      <script is:inline>
+        (() => {
+          if (window.__unCookieConsentBannerInitialized) return;
+          window.__unCookieConsentBannerInitialized = true;
+
+          const CONSENT_KEY = 'un_cookie_consent';
+          const CONSENT_COOKIE = 'un_cookie_consent';
+          const ONE_YEAR_IN_SECONDS = 60 * 60 * 24 * 365;
+
+          const banner = document.getElementById('cookie-consent-banner');
+          if (!banner) return;
+
+          const readConsent = () => {
+            try {
+              const stored = localStorage.getItem(CONSENT_KEY);
+              if (stored) return stored;
+            } catch (_) {
+              // Ignore localStorage access errors
+            }
+
+            const match = document.cookie.match(new RegExp(`(?:^|; )${CONSENT_COOKIE}=([^;]*)`));
+            return match ? decodeURIComponent(match[1]) : null;
+          };
+
+          const persistConsent = (value) => {
+            try {
+              localStorage.setItem(CONSENT_KEY, value);
+            } catch (_) {
+              // Ignore localStorage access errors
+            }
+
+            document.cookie = `${CONSENT_COOKIE}=${encodeURIComponent(value)}; Max-Age=${ONE_YEAR_IN_SECONDS}; Path=/; SameSite=Lax`;
+          };
+
+          const showBanner = () => banner.classList.remove('hidden');
+          const hideBanner = () => banner.classList.add('hidden');
+
+          const syncBannerState = () => {
+            const consent = readConsent();
+            if (consent === 'accepted' || consent === 'rejected') {
+              hideBanner();
+            } else {
+              showBanner();
+            }
+          };
+
+          banner.querySelector('[data-cookie-accept]')?.addEventListener('click', () => {
+            persistConsent('accepted');
+            hideBanner();
+            window.dispatchEvent(new Event('un:cookie-consent-accepted'));
+          });
+
+          banner.querySelector('[data-cookie-reject]')?.addEventListener('click', () => {
+            persistConsent('rejected');
+            hideBanner();
+            window.dispatchEvent(new Event('un:cookie-consent-rejected'));
+          });
+
+          syncBannerState();
+          document.addEventListener('astro:after-swap', syncBannerState);
+        })();
+      </script>
+    </>
+  ) : null
+}
