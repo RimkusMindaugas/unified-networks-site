@@ -14,9 +14,9 @@ author: Unified Networks
 
 If you are trying to choose broadband in Ireland, here is the honest answer:
 
-There is no single "best" broadband for everyone.
+If FTTH fibre is available at your address, it is usually the best option.
 
-There is only the best broadband for your address, your usage, and your tolerance for outages.
+But when FTTH is not available yet, the best option depends on your address, your usage, and your tolerance for outages.
 
 That is why people get frustrated. A package that is brilliant for one home can be a bad fit a few kilometres away.
 
