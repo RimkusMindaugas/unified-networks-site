@@ -158,6 +158,6 @@ And you avoid the classic "temporary setup that becomes permanent."
 
 ## Need help installing Starlink properly?
 
-We install Starlink for homes and businesses across Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, and Laois.
+We install Starlink for homes and businesses across Dublin and surrounding areas, including Fingal, South Dublin, Dun Laoghaire-Rathdown, Meath, Kildare, Wicklow, Louth, Westmeath, Cavan, Monaghan, and Laois.
 
 If you want a clean, permanent setup with proper mounting and cable routing, [book a consultation](/#contact).

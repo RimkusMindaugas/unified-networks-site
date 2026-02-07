@@ -8,11 +8,12 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import BlogHighlightedPosts from '~/components/widgets/BlogHighlightedPosts.astro';
 import Contact from '~/components/widgets/Contact.astro';
 
-const coverageSummary = 'Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, and Laois';
+const coverageSummary =
+  'Dublin, Fingal, South Dublin, Dun Laoghaire-Rathdown, Meath, Kildare, Wicklow, Louth, Westmeath, Cavan, Monaghan, and Laois';
 
 const metadata = {
   title:
-    'Wi-Fi Installation, Structured Cabling, Managed Wi-Fi, and Event Connectivity Across Louth, Meath, Dublin and Nearby Counties | Unified Networks',
+    'Wi-Fi Installation, Structured Cabling, Managed Wi-Fi, and Starlink in Dublin and Surrounding Areas | Unified Networks',
   ignoreTitleTemplate: true,
   description: `Wi-Fi installation, structured cabling, managed Wi-Fi plans, site surveys with heatmaps, guest Wi-Fi setup, event connectivity, and failover internet solutions for homes and businesses across ${coverageSummary}.`,
 };
@@ -30,21 +31,29 @@ const whatsappMessage = encodeURIComponent(
 const phoneHref = `tel:+${contactNumber}`;
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 const serviceAreas = [
-  'County Louth',
-  'County Meath',
+  'Dublin City',
+  'Fingal',
+  'South Dublin',
+  'Dun Laoghaire-Rathdown',
   'County Dublin',
+  'County Meath',
   'County Kildare',
   'County Wicklow',
+  'County Louth',
   'County Cavan',
   'County Monaghan',
   'County Westmeath',
   'County Laois',
+  'Swords',
+  'Blanchardstown',
+  'Tallaght',
+  'Lucan',
+  'Dundrum',
+  'Bray',
+  'Naas',
+  'Navan',
   'Drogheda',
   'Dundalk',
-  'Navan',
-  'Swords',
-  'Naas',
-  'Bray',
   'Mullingar',
   'Portlaoise',
 ];
@@ -111,7 +120,7 @@ const contactProps = {
       type: 'text',
       name: 'location',
       label: 'Town or Eircode',
-      placeholder: 'Town / Eircode (for example Navan / C15...)',
+      placeholder: 'Town / Eircode (for example Dublin 15 / D15...)',
       required: true,
     },
   ],
@@ -166,8 +175,7 @@ const contactProps = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Expert network design, Wi-Fi optimization, and Starlink installation for homes and businesses across
-      {coverageSummary}. We also deliver event Wi-Fi and failover internet setups for high-demand and business-critical use.
+      Expert network design, Wi-Fi optimization, and Starlink installation for homes and businesses across Dublin and surrounding areas, including {coverageSummary}. We also deliver event Wi-Fi and failover internet setups for high-demand and business-critical use.
     </Fragment>
   </Hero>
 
@@ -303,7 +311,7 @@ const contactProps = {
       {
         title: 'What areas do you currently cover?',
         description:
-          'We serve Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, and Laois, including Drogheda, Dundalk, Navan, Swords, Naas, Bray, Mullingar, and Portlaoise. Share your town or Eircode and we will confirm coverage.',
+          'Dublin and surrounding areas are our main focus, including Fingal, South Dublin, Dun Laoghaire-Rathdown, Meath, Kildare, Wicklow, Louth, Westmeath, Cavan, Monaghan, and Laois. Share your town or Eircode and we will confirm coverage.',
       },
       {
         title: 'How quickly can I get started?',

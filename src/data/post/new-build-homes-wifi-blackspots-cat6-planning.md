@@ -196,4 +196,4 @@ Do that before move-in and life is easier.
 
 Ignore it and the router reset button becomes part of your morning routine.
 
-Building or moving into a new home in Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, or Laois? [Book a consultation](/#contact).
+Building or moving into a new home in Dublin and surrounding areas, including Fingal, South Dublin, Dun Laoghaire-Rathdown, Meath, Kildare, Wicklow, Louth, Westmeath, Cavan, Monaghan, or Laois? [Book a consultation](/#contact).
