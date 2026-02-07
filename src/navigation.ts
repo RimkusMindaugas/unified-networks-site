@@ -20,6 +20,10 @@ export const headerData = {
       href: getPermalink('/services'),
     },
     {
+      text: 'Areas',
+      href: getPermalink('/areas-we-serve'),
+    },
+    {
       text: 'FAQ',
       href: getPermalink('/#faq'),
     },
@@ -56,6 +60,7 @@ export const footerData = {
       title: 'Resources',
       links: [
         { text: 'Blog', href: getBlogPermalink() },
+        { text: 'Areas We Serve', href: getPermalink('/areas-we-serve') },
         { text: 'FAQ', href: getPermalink('/#faq') },
       ],
     },
