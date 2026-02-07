@@ -24,7 +24,17 @@ So this guide is simple. It ranks the main broadband options available in Irelan
 
 No hype. Just what to expect.
 
-## First, the big picture in Ireland
+## How to make an informed choice (and avoid buying the wrong package)
+
+Before any speed claims or sales calls, focus on this:
+
+1. What is truly available at your exact Eircode.
+2. What speed and stability you actually need in daily life.
+3. What trade-offs you are willing to accept (price, contract length, install delay, consistency).
+
+Sales teams sell plans. You need to buy what fits your home.
+
+The numbers below help you do that with facts, not just marketing.
 
 Ireland has moved fast on fibre rollout, but coverage still depends on exact location.
 
