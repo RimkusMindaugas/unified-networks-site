@@ -9,7 +9,7 @@ metadata:
   title:
     default: Unified Networks
     template: '%s | Unified Networks'
-  description: 'Network setup, Wi-Fi optimization, and Starlink installation across Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, and Laois for homes and businesses.'
+  description: 'Network setup, Wi-Fi optimization, and Starlink installation in Dublin and surrounding areas including Fingal, South Dublin, Dun Laoghaire-Rathdown, Meath, Kildare, Wicklow, Louth, Westmeath, Cavan, Monaghan, and Laois for homes and businesses.'
   robots:
     index: true
     follow: true
