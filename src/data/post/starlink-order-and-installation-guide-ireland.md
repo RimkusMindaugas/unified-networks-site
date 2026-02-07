@@ -97,11 +97,14 @@ Once mounted and cabled:
 
 1. Connect dish cable to router
 2. Power on router
-3. Wait for dish to align
-4. Connect to Starlink Wi-Fi network
-5. Open the Starlink app and follow prompts
+3. Connect to Starlink Wi-Fi network
+4. Open the Starlink app and use the Alignment tool
+5. Manually adjust dish direction until alignment looks good
+6. Complete setup prompts in the app
 
 Starlink's setup page confirms you can use the app to set up, and account activation can also be done online.
+
+Quick note: the current Standard kit is software-assisted manual orienting. Auto-aim behavior was for actuated hardware generations, not the current fixed Standard dish.
 
 ## Step 7: Activate your account
 
