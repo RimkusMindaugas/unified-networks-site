@@ -73,6 +73,7 @@ const localBusinessSchema = {
     },
   ],
 };
+const trustStripDescription = `Serving ${coverageSummary}. We usually reply within one business day. Call <a class="underline" href="${phoneHref}">+${contactNumber}</a> or <a class="underline" href="${whatsappHref}" target="_blank" rel="noopener noreferrer">chat on WhatsApp</a>.`;
 
 const contactProps = {
   id: 'contact',
@@ -165,11 +166,6 @@ const contactProps = {
     </Fragment>
   </Hero>
 
-  <Note
-    title="Our Approach"
-    description="Clear diagnostics, practical recommendations, and clean installations that are tailored to your property and usage."
-  />
-
   <Features
     id="services"
     tagline="Network Services"
@@ -227,6 +223,8 @@ const contactProps = {
     ]}
   />
 
+  <Note icon="tabler:info-square" title="Coverage, Fast Response, Direct Contact." description={trustStripDescription} />
+
   <FAQs
     id="faq"
     tagline="FAQ"
@@ -282,6 +280,8 @@ const contactProps = {
     ]}
   />
 
+  <Contact {...contactProps} />
+
   <BlogHighlightedPosts
     title="Start Here: Most Useful Network Guides"
     information="These are the four guides most likely to help you make a confident buying decision and avoid expensive mistakes."
@@ -292,6 +292,4 @@ const contactProps = {
       'starlink-order-and-installation-guide-ireland',
     ]}
   />
-
-  <Contact {...contactProps} />
 </Layout>
