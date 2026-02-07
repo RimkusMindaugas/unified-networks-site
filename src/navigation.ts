@@ -17,7 +17,7 @@ export const headerData = {
   links: [
     {
       text: 'Services',
-      href: getPermalink('/#services'),
+      href: getPermalink('/services'),
     },
     {
       text: 'FAQ',
@@ -43,9 +43,13 @@ export const footerData = {
     {
       title: 'Services',
       links: [
-        { text: 'Network Design', href: getPermalink('/#services') },
-        { text: 'Wi-Fi Optimization', href: getPermalink('/#services') },
-        { text: 'Starlink Installation', href: getPermalink('/#services') },
+        { text: 'All Services', href: getPermalink('/services') },
+        { text: 'Wi-Fi Installation', href: getPermalink('/services/wifi-installation-and-setup-dublin') },
+        {
+          text: 'Structured Cabling',
+          href: getPermalink('/services/structured-cabling-cat6-cat6a-fibre-dublin'),
+        },
+        { text: 'Starlink Installation', href: getPermalink('/services/starlink-installation-and-integration-dublin') },
       ],
     },
     {
