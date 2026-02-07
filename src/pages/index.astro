@@ -11,9 +11,10 @@ import Contact from '~/components/widgets/Contact.astro';
 const coverageSummary = 'Louth, Meath, Dublin, Kildare, Wicklow, Cavan, Monaghan, Westmeath, and Laois';
 
 const metadata = {
-  title: 'Network, Event Wi-Fi, and Failover Internet Solutions Across Louth, Meath, Dublin and Nearby Counties | Unified Networks',
+  title:
+    'Wi-Fi Installation, Structured Cabling, Managed Wi-Fi, and Event Connectivity Across Louth, Meath, Dublin and Nearby Counties | Unified Networks',
   ignoreTitleTemplate: true,
-  description: `Wi-Fi troubleshooting, network setup, event Wi-Fi deployment, and failover internet solutions for homes and businesses across ${coverageSummary}.`,
+  description: `Wi-Fi installation, structured cabling, managed Wi-Fi plans, site surveys with heatmaps, guest Wi-Fi setup, event connectivity, and failover internet solutions for homes and businesses across ${coverageSummary}.`,
 };
 
 const defaultContactNumber = '353874118332';
@@ -53,8 +54,12 @@ const localBusinessSchema = {
   name: 'Unified Networks',
   url: 'https://unifiednetworks.ie',
   serviceType: [
-    'Wi-Fi troubleshooting',
-    'Network setup and optimization',
+    'Wi-Fi installation and setup',
+    'Wi-Fi troubleshooting and optimization',
+    'Wi-Fi site survey and heatmap reports',
+    'Structured cabling (Cat6/Cat6a/Fibre)',
+    'Managed Wi-Fi monthly plans',
+    'Guest Wi-Fi setup',
     'Starlink installation',
     'Event Wi-Fi setup and rental',
     'Failover internet solutions',
@@ -169,56 +174,74 @@ const contactProps = {
   <Features
     id="services"
     tagline="Network Services"
-    title="Professional Solutions for Home and Business Connectivity"
-    subtitle="From full network installs to event deployments and failover resilience, we deliver reliable performance with clear recommendations and no guesswork."
+    title="Wi-Fi, Cabling, and Internet Services for Homes and Businesses"
+    subtitle="Clear, practical services for Wi-Fi coverage, structured cabling, guest networks, managed support, Starlink, events, and failover resilience."
     items={[
       {
-        title: 'Custom Network Design and Deployment',
+        title: 'Wi-Fi Installation and Setup (Homes and Businesses)',
         description:
-          'We design and install network infrastructure with proper routing, switching, and Wi-Fi planning for stable performance.',
+          'We design and install reliable Wi-Fi networks with proper router, switch, and access point setup based on your layout and usage.',
         icon: 'tabler:network',
       },
       {
-        title: 'Wi-Fi Dead Zone Elimination',
+        title: 'Wi-Fi Dead Zone Fixes and Coverage Improvement',
         description:
-          'We improve signal quality and place access points correctly so coverage is consistent across your property.',
+          'We fix weak-signal areas by improving placement, radio planning, and access point layout so coverage is consistent where you actually use it.',
         icon: 'tabler:wifi',
       },
       {
-        title: 'Starlink Installation and Integration',
+        title: 'Wi-Fi Site Survey and Heatmap Reports',
         description:
-          'We install and optimize Starlink systems, then integrate them into your local network for reliable, usable speed.',
-        icon: 'tabler:satellite',
-      },
-      {
-        title: 'Event Wi-Fi Setup, Broadband, and Rental',
-        description:
-          'We design and deploy temporary internet and Wi-Fi for festivals, conferences, and large events. Rent managed equipment for the event, or buy hardware and have it installed permanently.',
-        icon: 'tabler:calendar-event',
-      },
-      {
-        title: 'Failover Internet and Backup Connectivity',
-        description:
-          'Keep operations online with automatic failover between primary and backup links (for example fibre and 4G/5G). We configure routing and monitoring so traffic switches over when a line fails.',
-        icon: 'tabler:shield-check',
-      },
-      {
-        title: 'Point-to-Point and Outbuilding Links',
-        description:
-          'Connect outbuildings and remote areas with stable wireless links when cable runs are not practical.',
-        icon: 'tabler:antenna-bars-5',
-      },
-      {
-        title: 'Network Health Checks and Troubleshooting',
-        description:
-          'We diagnose bottlenecks, interference, and configuration issues, then provide clear fixes to restore performance.',
+          'Get a formal Wi-Fi survey with practical recommendations and heatmap-based coverage planning before installation or upgrade.',
         icon: 'tabler:activity',
       },
       {
-        title: 'Business-Grade Hardware Guidance',
+        title: 'Structured Cabling (Cat6/Cat6a/Fibre)',
         description:
-          'Get practical recommendations on routers, switches, and access points that fit your needs and budget.',
+          'Standalone structured cabling service for homes and businesses, including planning, clean runs, termination, and reliable wired backbone performance.',
+        icon: 'tabler:network',
+      },
+      {
+        title: 'Managed Wi-Fi Plan (Monthly)',
+        description:
+          'Monthly managed Wi-Fi support with ongoing monitoring, optimization, and practical guidance so performance stays stable as your setup grows.',
         icon: 'tabler:settings-cog',
+      },
+      {
+        title: 'Guest Wi-Fi Packages (Staff and Guest Separation)',
+        description:
+          'Guest Wi-Fi setup for businesses and venues with separate staff and visitor networks, safer access control, and smoother user experience.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Starlink Installation and Network Integration',
+        description:
+          'We install and optimize Starlink systems, then integrate them into your internal network so performance is usable across the whole property.',
+        icon: 'tabler:satellite',
+      },
+      {
+        title: 'Event Wi-Fi Setup, Temporary Broadband, and Rental',
+        description:
+          'We design and deploy temporary internet and Wi-Fi for festivals, conferences, and high-attendance events. Rent managed equipment for the event, or buy hardware for permanent setup.',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Internet Failover and Backup Connectivity',
+        description:
+          'Keep operations online with automatic failover between primary and backup links (for example fibre and 4G/5G) so traffic switches when a line fails.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Point-to-Point Links for Outbuildings and Remote Offices',
+        description:
+          'Connect sheds, outbuildings, and remote offices with stable wireless links when cable runs are not practical.',
+        icon: 'tabler:antenna-bars-5',
+      },
+      {
+        title: 'Internet and Wi-Fi Troubleshooting',
+        description:
+          'We diagnose bottlenecks, interference, and configuration issues, then apply clear fixes to restore speed, stability, and reliability.',
+        icon: 'tabler:activity',
       },
     ]}
   />
@@ -236,6 +259,16 @@ const contactProps = {
         title: 'Do I need to replace everything, or can you improve what I already have?',
         description:
           'In many homes and businesses, we can improve performance using parts of the existing setup. If upgrades are needed, we explain exactly what to change and why, so you do not waste money on unnecessary gear.',
+      },
+      {
+        title: 'Can you do structured cabling as a standalone service?',
+        description:
+          'Yes. We provide standalone structured cabling for homes and businesses, including Cat6/Cat6a runs and backbone planning for reliable long-term performance.',
+      },
+      {
+        title: 'Do you offer monthly managed Wi-Fi and guest Wi-Fi setup?',
+        description:
+          'Yes. We offer monthly managed Wi-Fi support and can set up separate guest and staff networks for businesses and venues.',
       },
       {
         title: 'We have Wi-Fi blackspots in our house. Do you do only businesses, or domestic too?',
