@@ -41,7 +41,7 @@ If speed is good at the router but bad in certain rooms, that is a Wi-Fi coverag
 
 ## 1) Powerline kits: handy, but very dependent on house wiring
 
-Powerline kits send network data through your home’s electrical wiring.
+Powerline kits send network data through your home's electrical wiring.
 
 You plug one unit near the router and another in the weak area. Some kits also create Wi-Fi from the second unit.
 
@@ -56,6 +56,10 @@ You plug one unit near the router and another in the weak area. Some kits also c
 1. Performance depends heavily on electrical wiring quality
 2. Can be inconsistent between sockets
 3. Speeds can drop on different circuits or noisy electrical lines
+
+Real-life example:
+
+In one house, a powerline kit can give 180 Mbps in an upstairs office. In another house, just moving the adapter to the socket on the other side of the same room can cut that to 60 Mbps.
 
 So powerline can help. But it is not guaranteed. One house gets solid results, another gets random dropouts.
 
@@ -80,6 +84,12 @@ Sounds good in theory. In practice, many repeaters reduce performance because th
 3. Roaming between networks can be messy
 4. Usually poor in larger homes
 
+Real-life example:
+
+Many repeater setups create two different network names, like `Home-WiFi` and `Home-WiFi-EXT`.
+
+When you walk from the kitchen to a back office, your phone has to leave one network and join the other. If the first signal is still borderline okay, it can hold on too long. During that handover, calls can drop, audio can glitch, and videos can pause.
+
 Repeaters are okay as a quick patch. They are rarely the best long-term fix.
 
 ## 3) Mesh kits: better user experience, still not perfect
@@ -100,6 +110,10 @@ You have one main unit and one or more nodes around the house. Devices can move 
 2. Node placement is critical
 3. Performance can still drop a lot through thick walls/floors
 4. Bigger homes may still need more than a basic kit
+
+Real-life example:
+
+You might see 500 Mbps beside the main unit, but only 120 Mbps in an upstairs office if that node has a weak link back to the main unit. So the app shows "connected," but performance still feels poor when someone is on a video call and two TVs are streaming.
 
 Mesh can be a good option for many homes. But it still depends on wireless links between nodes unless wired backhaul is used.
 
