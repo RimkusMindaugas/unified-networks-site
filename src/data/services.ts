@@ -695,14 +695,14 @@ export const servicesBySlug = new Map(services.map((service) => [service.slug, s
 
 const serviceRelatedPostSlugs: Record<string, string[]> = {
   'wifi-installation-and-setup-dublin': [
+    'why-smart-homes-fail-on-bad-wifi',
     'how-to-tell-slow-internet-vs-weak-wifi',
     'best-ways-to-boost-wifi-signal-at-home',
-    'business-wifi-installation-mistakes-ireland',
   ],
   'wifi-dead-zone-fixes-dublin': [
+    'why-smart-homes-fail-on-bad-wifi',
     'best-ways-to-boost-wifi-signal-at-home',
     'how-to-tell-slow-internet-vs-weak-wifi',
-    '2-4ghz-vs-5ghz-wifi-which-one-to-use',
   ],
   'wifi-site-survey-and-heatmap-dublin': [
     'wifi-site-survey-heatmap-guide-ireland',
@@ -745,9 +745,9 @@ const serviceRelatedPostSlugs: Record<string, string[]> = {
     'cat6-vs-cat6a-ireland',
   ],
   'internet-and-wifi-troubleshooting-dublin': [
+    'why-smart-homes-fail-on-bad-wifi',
     'how-to-tell-slow-internet-vs-weak-wifi',
     'best-ways-to-boost-wifi-signal-at-home',
-    'business-wifi-installation-mistakes-ireland',
   ],
 };
 
@@ -828,6 +828,11 @@ const postRelatedServiceSlugs: Record<string, string[]> = {
     'wifi-installation-and-setup-dublin',
   ],
   'use-wifi-calling-to-fix-missed-mobile-calls': [
+    'wifi-dead-zone-fixes-dublin',
+    'internet-and-wifi-troubleshooting-dublin',
+    'wifi-installation-and-setup-dublin',
+  ],
+  'why-smart-homes-fail-on-bad-wifi': [
     'wifi-dead-zone-fixes-dublin',
     'internet-and-wifi-troubleshooting-dublin',
     'wifi-installation-and-setup-dublin',
