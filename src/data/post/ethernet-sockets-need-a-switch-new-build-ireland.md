@@ -2,6 +2,7 @@
 publishDate: 2026-02-21
 title: "Ethernet Sockets in Your New Build Don't Work? Here's What's Missing"
 excerpt: "New build homes come with ethernet sockets and a patch panel, but most people don't realise you still need a network switch to make them work. Here is what's missing and how to fix it."
+image: "~/assets/images/new-build-ireland-ethernet-sockets-missing-network-switch.png"
 category: Home Network
 tags:
   - ethernet
@@ -72,8 +73,6 @@ If you are happy doing a bit of plugging in, here is what you need:
 An unmanaged gigabit switch is what most homes need. They are simple. Plug in, it works. No setup, no configuration, no software.
 
 Pick one with enough ports for the number of sockets you have, plus a couple of spares. If you have six wall sockets, an 8-port switch gives you room.
-
-These cost around EUR20 to EUR40 for a basic unmanaged model.
 
 ### 2. Get patch cables
 
