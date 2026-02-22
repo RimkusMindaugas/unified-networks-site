@@ -2,6 +2,7 @@
 publishDate: 2026-02-07
 title: 'Business Wi-Fi Setup Mistakes in Ireland (and How to Fix Them)'
 excerpt: The most common business Wi-Fi mistakes in Ireland, why they cause dropped calls and slow systems, and what to change if you want stable performance.
+image: "~/assets/images/business-wifi-installation-mistakes-ireland.png"
 category: Wi-Fi
 tags:
   - business-wifi

@@ -2,6 +2,7 @@
 publishDate: 2025-08-03
 title: Best Ways to Boost Wi-Fi Signal at Home (And What Actually Works)
 excerpt: A practical breakdown of powerline kits, Wi-Fi repeaters, mesh systems, and professionally installed access points so you can choose the right way to improve weak Wi-Fi signal.
+image: "~/assets/images/best-ways-to-boost-wifi-signal-at-home-ireland.png"
 category: Wi-Fi
 tags:
   - wifi
