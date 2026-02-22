@@ -2,6 +2,7 @@
 publishDate: 2025-11-22
 title: 'Choosing the Right Broadband in Ireland: What to Expect in Urban vs Rural Areas'
 excerpt: Not all broadband types perform the same in Ireland. This guide ranks the main options for urban and rural areas, with realistic expectations, pros, and trade-offs.
+image: "~/assets/images/choosing-right-broadband-ireland-urban-vs-rural.png"
 category: Hardware
 tags:
   - broadband
