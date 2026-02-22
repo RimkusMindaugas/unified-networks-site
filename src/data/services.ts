@@ -153,8 +153,7 @@ export const services: ServicePageData[] = [
     slug: 'wifi-site-survey-and-heatmap-dublin',
     title: 'Wi-Fi Site Survey and Heatmap Reports',
     icon: 'tabler:activity',
-    cardDescription:
-      'Formal survey and heatmap-based planning before upgrades, relocations, or new installations.',
+    cardDescription: 'Formal survey and heatmap-based planning before upgrades, relocations, or new installations.',
     metadataTitle: 'Wi-Fi Site Survey and Heatmap Reports in Dublin | Unified Networks',
     metadataDescription:
       'Get a professional Wi-Fi site survey with heatmap reporting and practical upgrade recommendations in Dublin and surrounding areas.',
@@ -199,8 +198,7 @@ export const services: ServicePageData[] = [
       },
       {
         title: 'Do I receive a report after the survey?',
-        description:
-          'Yes. We provide a clear report with findings and practical recommendations you can act on.',
+        description: 'Yes. We provide a clear report with findings and practical recommendations you can act on.',
       },
       {
         title: 'Can this be done before installation?',
@@ -219,8 +217,7 @@ export const services: ServicePageData[] = [
     metadataDescription:
       'Structured cabling for homes and businesses in Dublin and surrounding areas, including Cat6, Cat6a, and fibre backbone planning.',
     heroTitle: 'Structured Cabling for Homes and Businesses',
-    heroSubtitle:
-      'Cat6, Cat6a, and fibre-ready backbone cabling for stable long-term network performance.',
+    heroSubtitle: 'Cat6, Cat6a, and fibre-ready backbone cabling for stable long-term network performance.',
     introTitle: 'The Backbone Behind Reliable Wi-Fi and Internet',
     introBody:
       'Good Wi-Fi depends on good cabling. Clean, planned cabling supports access points, office devices, cameras, and future upgrades without messy retrofits.',
@@ -254,8 +251,7 @@ export const services: ServicePageData[] = [
     faqs: [
       {
         title: 'Can I order cabling without a full Wi-Fi install?',
-        description:
-          'Yes. Structured cabling is available as a standalone service for homes and businesses.',
+        description: 'Yes. Structured cabling is available as a standalone service for homes and businesses.',
       },
       {
         title: 'Is Cat6 enough or should I use Cat6a?',
@@ -264,8 +260,7 @@ export const services: ServicePageData[] = [
       },
       {
         title: 'Do you install comms cabinets?',
-        description:
-          'Yes. We can plan and install a tidy central cabinet setup for easier management and upgrades.',
+        description: 'Yes. We can plan and install a tidy central cabinet setup for easier management and upgrades.',
       },
     ],
   },
@@ -279,8 +274,7 @@ export const services: ServicePageData[] = [
     metadataDescription:
       'Monthly managed Wi-Fi support for homes and businesses in Dublin and surrounding areas, including monitoring and ongoing optimization.',
     heroTitle: 'Managed Wi-Fi Support on a Monthly Plan',
-    heroSubtitle:
-      'Keep performance stable over time with proactive monitoring, tuning, and practical support.',
+    heroSubtitle: 'Keep performance stable over time with proactive monitoring, tuning, and practical support.',
     introTitle: 'Ongoing Wi-Fi Performance Without Guesswork',
     introBody:
       'Networks drift over time as usage changes, devices increase, and layouts move. A managed plan keeps your Wi-Fi tuned and reliable instead of waiting for outages.',
@@ -319,13 +313,11 @@ export const services: ServicePageData[] = [
       },
       {
         title: 'Can I start after an installation?',
-        description:
-          'Yes. Many clients start managed support after setup to keep performance consistent.',
+        description: 'Yes. Many clients start managed support after setup to keep performance consistent.',
       },
       {
         title: 'Do you include upgrade advice?',
-        description:
-          'Yes. We recommend upgrades only when they are genuinely needed for performance or growth.',
+        description: 'Yes. We recommend upgrades only when they are genuinely needed for performance or growth.',
       },
     ],
   },
@@ -374,18 +366,15 @@ export const services: ServicePageData[] = [
     faqs: [
       {
         title: 'Can guest Wi-Fi slow down our staff network?',
-        description:
-          'It can, unless configured correctly. We separate and tune networks to keep operations stable.',
+        description: 'It can, unless configured correctly. We separate and tune networks to keep operations stable.',
       },
       {
         title: 'Do you support hospitality and event venues?',
-        description:
-          'Yes. We provide guest Wi-Fi setups for many business types, including higher-footfall locations.',
+        description: 'Yes. We provide guest Wi-Fi setups for many business types, including higher-footfall locations.',
       },
       {
         title: 'Can this be added to an existing network?',
-        description:
-          'Usually yes. We assess current infrastructure and implement the right separation model.',
+        description: 'Usually yes. We assess current infrastructure and implement the right separation model.',
       },
     ],
   },
@@ -434,18 +423,15 @@ export const services: ServicePageData[] = [
     faqs: [
       {
         title: 'Do you install only Starlink or full Wi-Fi too?',
-        description:
-          'Both. We can install Starlink only, or build out full property Wi-Fi coverage around it.',
+        description: 'Both. We can install Starlink only, or build out full property Wi-Fi coverage around it.',
       },
       {
         title: 'Can Starlink be integrated with existing network gear?',
-        description:
-          'Yes. We regularly integrate Starlink into existing router, switch, and AP setups.',
+        description: 'Yes. We regularly integrate Starlink into existing router, switch, and AP setups.',
       },
       {
         title: 'Do you support homes and business sites?',
-        description:
-          'Yes. We provide Starlink installs for domestic and commercial environments.',
+        description: 'Yes. We provide Starlink installs for domestic and commercial environments.',
       },
     ],
   },
@@ -494,18 +480,15 @@ export const services: ServicePageData[] = [
     faqs: [
       {
         title: 'Can you handle large attendance events?',
-        description:
-          'Yes. We design for high-demand environments and operational reliability.',
+        description: 'Yes. We design for high-demand environments and operational reliability.',
       },
       {
         title: 'Can we rent equipment just for the event?',
-        description:
-          'Yes. Rental is available for temporary events, with buy options for permanent setups.',
+        description: 'Yes. Rental is available for temporary events, with buy options for permanent setups.',
       },
       {
         title: 'Do you support business-critical event systems?',
-        description:
-          'Yes. We can prioritize operational traffic for ticketing, payments, staff, and production.',
+        description: 'Yes. We can prioritize operational traffic for ticketing, payments, staff, and production.',
       },
     ],
   },
@@ -513,14 +496,12 @@ export const services: ServicePageData[] = [
     slug: 'internet-failover-and-backup-connectivity-dublin',
     title: 'Internet Failover and Backup Connectivity',
     icon: 'tabler:shield-check',
-    cardDescription:
-      'Automatic failover between primary and backup links to reduce downtime when broadband fails.',
+    cardDescription: 'Automatic failover between primary and backup links to reduce downtime when broadband fails.',
     metadataTitle: 'Internet Failover Solutions in Dublin | Unified Networks',
     metadataDescription:
       'Failover internet setup for businesses and high-dependency sites in Dublin and surrounding areas with automatic backup switching.',
     heroTitle: 'Failover Internet That Keeps You Online',
-    heroSubtitle:
-      'When the main line drops, traffic switches to backup connectivity so work can continue.',
+    heroSubtitle: 'When the main line drops, traffic switches to backup connectivity so work can continue.',
     introTitle: 'Protect Operations From Broadband Outages',
     introBody:
       'If uptime matters, one internet line is a risk. We set up failover between primary and backup links so downtime impact is reduced when an outage happens.',
@@ -554,13 +535,11 @@ export const services: ServicePageData[] = [
     faqs: [
       {
         title: 'Is failover only for large companies?',
-        description:
-          'No. Any business or site that loses revenue during outages can benefit from failover.',
+        description: 'No. Any business or site that loses revenue during outages can benefit from failover.',
       },
       {
         title: 'What can be used as backup internet?',
-        description:
-          'Common options include fibre plus 4G/5G, dual fixed lines, or satellite plus fixed broadband.',
+        description: 'Common options include fibre plus 4G/5G, dual fixed lines, or satellite plus fixed broadband.',
       },
       {
         title: 'Will sessions drop during failover?',
@@ -573,14 +552,12 @@ export const services: ServicePageData[] = [
     slug: 'point-to-point-wireless-links-dublin',
     title: 'Point-to-Point Links for Outbuildings and Remote Offices',
     icon: 'tabler:antenna-bars-5',
-    cardDescription:
-      'Stable point-to-point wireless links for sheds, outbuildings, yards, and remote office spaces.',
+    cardDescription: 'Stable point-to-point wireless links for sheds, outbuildings, yards, and remote office spaces.',
     metadataTitle: 'Point-to-Point Wireless Links in Dublin | Unified Networks',
     metadataDescription:
       'Point-to-point wireless links for connecting remote buildings and outbuildings in Dublin and surrounding areas when cabling is not practical.',
     heroTitle: 'Point-to-Point Wireless Links for Hard-to-Reach Buildings',
-    heroSubtitle:
-      'Connect sheds, workshops, remote offices, and outbuildings without long trenching projects.',
+    heroSubtitle: 'Connect sheds, workshops, remote offices, and outbuildings without long trenching projects.',
     introTitle: 'Extend Connectivity Beyond the Main Building',
     introBody:
       'When cable runs are costly or impractical, point-to-point links can deliver reliable connectivity between buildings. We design and align links for stable operation.',
@@ -614,8 +591,7 @@ export const services: ServicePageData[] = [
     faqs: [
       {
         title: 'Can this replace digging a cable trench?',
-        description:
-          'In many scenarios, yes. It depends on distance, line of sight, and throughput requirements.',
+        description: 'In many scenarios, yes. It depends on distance, line of sight, and throughput requirements.',
       },
       {
         title: 'Will weather affect the link?',
@@ -624,8 +600,7 @@ export const services: ServicePageData[] = [
       },
       {
         title: 'Can remote buildings have full Wi-Fi too?',
-        description:
-          'Yes. We can combine point-to-point links with local Wi-Fi setup in the remote building.',
+        description: 'Yes. We can combine point-to-point links with local Wi-Fi setup in the remote building.',
       },
     ],
   },
@@ -679,13 +654,11 @@ export const services: ServicePageData[] = [
       },
       {
         title: 'Do you help with call drops and unstable meetings?',
-        description:
-          'Yes. We troubleshoot roaming, latency, and local coverage issues that commonly impact calls.',
+        description: 'Yes. We troubleshoot roaming, latency, and local coverage issues that commonly impact calls.',
       },
       {
         title: 'Will I get a clear recommendation after troubleshooting?',
-        description:
-          'Yes. We provide practical advice and prioritized actions, not generic suggestions.',
+        description: 'Yes. We provide practical advice and prioritized actions, not generic suggestions.',
       },
     ],
   },
@@ -712,7 +685,7 @@ const serviceRelatedPostSlugs: Record<string, string[]> = {
   'structured-cabling-cat6-cat6a-fibre-dublin': [
     'cat6-vs-cat6a-ireland',
     'new-build-homes-wifi-blackspots-cat6-planning',
-    'point-to-point-wireless-links-ireland',
+    'ethernet-sockets-need-a-switch-new-build-ireland',
   ],
   'managed-wifi-plan-monthly-dublin': [
     'managed-wifi-monthly-plan-ireland',
@@ -841,6 +814,11 @@ const postRelatedServiceSlugs: Record<string, string[]> = {
     'internet-and-wifi-troubleshooting-dublin',
     'wifi-installation-and-setup-dublin',
     'wifi-dead-zone-fixes-dublin',
+  ],
+  'ethernet-sockets-need-a-switch-new-build-ireland': [
+    'structured-cabling-cat6-cat6a-fibre-dublin',
+    'wifi-installation-and-setup-dublin',
+    'internet-and-wifi-troubleshooting-dublin',
   ],
 };
 
