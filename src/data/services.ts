@@ -671,6 +671,7 @@ const serviceRelatedPostSlugs: Record<string, string[]> = {
     'why-smart-homes-fail-on-bad-wifi',
     'how-much-internet-speed-does-home-need-ireland',
     'how-to-tell-slow-internet-vs-weak-wifi',
+    'sean-new-build-dublin-no-fibre-starlink-wifi-case-study',
   ],
   'wifi-dead-zone-fixes-dublin': [
     'why-smart-homes-fail-on-bad-wifi',
@@ -681,11 +682,13 @@ const serviceRelatedPostSlugs: Record<string, string[]> = {
     'wifi-site-survey-heatmap-guide-ireland',
     'business-wifi-installation-mistakes-ireland',
     'how-to-tell-slow-internet-vs-weak-wifi',
+    'sean-new-build-dublin-no-fibre-starlink-wifi-case-study',
   ],
   'structured-cabling-cat6-cat6a-fibre-dublin': [
     'cat6-vs-cat6a-ireland',
     'new-build-homes-wifi-blackspots-cat6-planning',
     'ethernet-sockets-need-a-switch-new-build-ireland',
+    'sean-new-build-dublin-no-fibre-starlink-wifi-case-study',
   ],
   'managed-wifi-plan-monthly-dublin': [
     'managed-wifi-monthly-plan-ireland',
@@ -701,6 +704,8 @@ const serviceRelatedPostSlugs: Record<string, string[]> = {
     'starlink-order-and-installation-guide-ireland',
     'how-starlink-changed-rural-internet-in-ireland',
     'choosing-right-broadband-in-ireland-urban-vs-rural',
+    'sean-new-build-dublin-no-fibre-starlink-wifi-case-study',
+    'critical-locations-failover-water-treatment-facility-ireland',
   ],
   'event-wifi-setup-and-rental-dublin': [
     'event-wifi-guide-ireland',
@@ -711,6 +716,7 @@ const serviceRelatedPostSlugs: Record<string, string[]> = {
     'internet-failover-guide-ireland',
     'business-wifi-installation-mistakes-ireland',
     'choosing-right-broadband-in-ireland-urban-vs-rural',
+    'critical-locations-failover-water-treatment-facility-ireland',
   ],
   'point-to-point-wireless-links-dublin': [
     'point-to-point-wireless-links-ireland',
@@ -818,6 +824,16 @@ const postRelatedServiceSlugs: Record<string, string[]> = {
   'ethernet-sockets-need-a-switch-new-build-ireland': [
     'structured-cabling-cat6-cat6a-fibre-dublin',
     'wifi-installation-and-setup-dublin',
+    'internet-and-wifi-troubleshooting-dublin',
+  ],
+  'sean-new-build-dublin-no-fibre-starlink-wifi-case-study': [
+    'wifi-site-survey-and-heatmap-dublin',
+    'starlink-installation-and-integration-dublin',
+    'wifi-installation-and-setup-dublin',
+  ],
+  'critical-locations-failover-water-treatment-facility-ireland': [
+    'internet-failover-and-backup-connectivity-dublin',
+    'starlink-installation-and-integration-dublin',
     'internet-and-wifi-troubleshooting-dublin',
   ],
 };
