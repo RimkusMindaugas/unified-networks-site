@@ -2,6 +2,7 @@
 publishDate: 2025-10-20
 title: 'Guest Wi-Fi for Irish Businesses: Safe Setup Without Slowing Your Staff'
 excerpt: A practical guide to guest Wi-Fi setup in Ireland, including staff and guest separation, common mistakes, and what good guest access should look like.
+image: "~/assets/images/guest-wifi-for-irish-businesses.png"
 category: Wi-Fi
 tags:
   - guest-wifi
