@@ -1,7 +1,7 @@
 ---
 import Headline from '~/components/ui/Headline.astro';
-import ItemGrid from '~/components/ui/ItemGrid.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import { Icon } from 'astro-icon/components';
 import type { Faqs as Props } from '~/types';
 
 const {
@@ -10,6 +10,8 @@ const {
   tagline = '',
   items = [],
   columns = 2,
+  iconUp = 'tabler:minus',
+  iconDown = 'tabler:plus',
 
   id,
   isDark = false,
@@ -20,14 +22,28 @@ const {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
-  <ItemGrid
-    items={items}
-    columns={columns}
-    defaultIcon="tabler:chevron-right"
-    classes={{
-      container: `${columns === 1 ? 'max-w-4xl' : ''} gap-y-8 md:gap-y-12`,
-      panel: 'max-w-none',
-      icon: 'flex-shrink-0 mt-1 w-6 h-6 text-primary',
-    }}
-  />
+  {
+    items && items.length > 0 && (
+      <div
+        class={`grid gap-6 ${
+          columns === 2 ? 'md:grid-cols-2' : ''
+        } ${columns === 1 ? 'max-w-4xl mx-auto' : ''}`}
+      >
+        {items.map(({ title: itemTitle, description }) => (
+          <details class="group rounded-2xl border border-gray-200 bg-white/80 p-0 shadow-sm transition dark:border-slate-700 dark:bg-slate-900/60">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-4 px-6 py-5 marker:hidden">
+              <span class="pr-4 text-lg font-bold leading-tight text-heading" set:html={itemTitle || ''} />
+              <span class="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-blue-400/10 dark:text-blue-400">
+                <Icon name={iconDown} class="h-4 w-4 group-open:hidden" />
+                <Icon name={iconUp} class="hidden h-4 w-4 group-open:block" />
+              </span>
+            </summary>
+            {description && (
+              <div class="px-6 pb-5 text-muted dark:text-slate-300" set:html={description} />
+            )}
+          </details>
+        ))}
+      </div>
+    )
+  }
 </WidgetWrapper>
