@@ -4,16 +4,18 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import BlogHighlightedPosts from '~/components/widgets/BlogHighlightedPosts.astro';
 import Contact from '~/components/widgets/Contact.astro';
 import { coverageSummary, services } from '~/data/services';
 
 const metadata = {
-  title:
-    'Wi-Fi Installation, Structured Cabling, Managed Wi-Fi, and Starlink in Dublin and Surrounding Areas | Unified Networks',
+  title: 'Wi-Fi Installation Dublin | Cabling, Starlink & Failover',
   ignoreTitleTemplate: true,
-  description: `Wi-Fi installation, structured cabling, managed Wi-Fi plans, site surveys with heatmaps, guest Wi-Fi setup, event connectivity, and failover internet solutions for homes and businesses across ${coverageSummary}.`,
+  description:
+    'Fix slow Wi-Fi, dead zones, and unstable internet in Dublin with practical installation, cabling, Starlink, and failover support. Book a consultation.',
 };
 
 const defaultContactNumber = '353874118332';
@@ -74,7 +76,7 @@ const localBusinessSchema = {
     },
   ],
 };
-const trustStripDescription = `Serving ${coverageSummary}. We usually reply within one business day. Call <a class="underline" href="${phoneHref}">+${contactNumber}</a> or <a class="underline" href="${whatsappHref}" target="_blank" rel="noopener noreferrer">chat on WhatsApp</a>.`;
+const trustStripDescription = `Serving ${coverageSummary}. We usually reply within one business day. Share your town or Eircode, what is not working, and we will point you to the right next step. Call <a class="underline" href="${phoneHref}">+${contactNumber}</a> or <a class="underline" href="${whatsappHref}" target="_blank" rel="noopener noreferrer">chat on WhatsApp</a>.`;
 const serviceCards = services.map((service) => ({
   title: service.title,
   description: service.cardDescription,
@@ -85,9 +87,78 @@ const serviceCards = services.map((service) => ({
   },
 }));
 
+const processItems = [
+  {
+    title: 'Consultation and site assessment',
+    description: 'We start with what is failing, where it fails, and how the building is actually used.',
+    icon: 'tabler:message-circle',
+  },
+  {
+    title: 'Review the layout and existing equipment',
+    description: 'Where sensible, we improve what is already there before recommending new hardware.',
+    icon: 'tabler:search',
+  },
+  {
+    title: 'Install or tune what is actually needed',
+    description: 'The goal is reliable coverage, cleaner cabling, and stable day-to-day performance, not more random gear.',
+    icon: 'tabler:settings',
+  },
+  {
+    title: 'Validate, hand over, and support',
+    description: 'You get a clear scope, practical next steps, and follow-up recommendations after the work is done.',
+    icon: 'tabler:clipboard-check',
+  },
+];
+
+const differentiatorItems = [
+  {
+    title: 'Measured planning, not guesswork',
+    description: 'We use site assessment, layout review, and heatmaps where they are actually needed before recommending bigger changes.',
+  },
+  {
+    title: 'Existing equipment reviewed first',
+    description: 'If part of the current setup is still good, we use it and avoid unnecessary replacement.',
+  },
+  {
+    title: 'Clear scope before installation',
+    description: 'Most projects start with a consultation and site assessment so the work is defined before money is spent.',
+  },
+  {
+    title: 'Follow-up support after the install',
+    description: 'We keep helping after layout changes, ISP upgrades, or device growth where the setup needs tuning again.',
+  },
+];
+
+const proofItems = [
+  {
+    title: 'New-build Dublin case study',
+    description: 'A pre-move survey and heatmap plan led to 8 UniFi access points plus Starlink integration for stable coverage from day one.',
+    callToAction: {
+      text: 'Read the case study',
+      href: '/sean-new-build-dublin-no-fibre-starlink-wifi-case-study',
+    },
+  },
+  {
+    title: 'Critical-site failover case study',
+    description: 'A remote water treatment facility moved from roughly 10 Mbps / 1 Mbps DSL to Starlink Enterprise with 5G failover.',
+    callToAction: {
+      text: 'Read the failover case study',
+      href: '/critical-locations-failover-water-treatment-facility-ireland',
+    },
+  },
+  {
+    title: 'Fast response expectation',
+    description: 'The site now states that enquiries usually get a reply within one business day.',
+    callToAction: {
+      text: 'Book consultation',
+      href: '/#contact',
+    },
+  },
+];
+
 const contactProps = {
   id: 'contact',
-  title: 'Ready to Fix Your Internet?',
+  title: 'Ready to Fix Your Wi-Fi or Internet Setup?',
   subtitle: `Tell us what is not working and we will recommend the right solution for your home or business across ${coverageSummary}.`,
   formName: 'consultation',
   button: 'Send Message',
@@ -143,7 +214,7 @@ const contactProps = {
     actions={[
       {
         variant: 'primary',
-        text: 'Book Free Consultation',
+        text: 'Book Consultation',
         href: '/#contact',
         icon: 'tabler:mail',
       },
@@ -165,13 +236,13 @@ const contactProps = {
     }}
   >
     <Fragment slot="title">
-      Slow Internet or Wi-Fi Dead Zones?
+      Fix Slow Wi-Fi, Dead Zones,
       <br />
-      We Build Fast, Reliable Networks.
+      and Network Problems
     </Fragment>
 
     <Fragment slot="subtitle">
-      Expert network design, Wi-Fi optimization, and Starlink installation for homes and businesses across Dublin and surrounding areas, including {coverageSummary}. We also deliver event Wi-Fi and failover internet setups for high-demand and business-critical use.
+      Practical Wi-Fi installation, cabling, Starlink, and failover support for homes and businesses across Dublin and surrounding areas. We assess the building, review existing equipment, and recommend upgrades only when there is a real performance reason.
     </Fragment>
   </Hero>
 
@@ -181,6 +252,34 @@ const contactProps = {
     title="Wi-Fi, Cabling, and Internet Services for Homes and Businesses"
     subtitle="Clear, practical services for Wi-Fi coverage, structured cabling, guest networks, managed support, Starlink, events, and failover resilience. Open each service page for full details."
     items={serviceCards}
+  />
+
+  <Steps
+    id="process"
+    tagline="How It Works"
+    title="How We Fix The Right Problem First"
+    subtitle="The goal is not to sell more hardware. The goal is to identify the real bottleneck, scope the work clearly, and leave the site more reliable."
+    items={processItems}
+  />
+
+  <Content
+    id="why-us"
+    tagline="Why Choose Us"
+    title="Why This Approach Beats Trial-And-Error Upgrades"
+    subtitle="These are the operating rules behind the work on the site."
+    items={differentiatorItems}
+    columns={2}
+    content="Use this approach when the issue is not just raw broadband speed, but poor Wi-Fi layout, weak coverage in the rooms that matter, messy retrofits, or an unreliable setup that keeps drifting over time."
+  />
+
+  <Content
+    id="proof"
+    tagline="Proof"
+    title="Recent Proof Behind The Claims"
+    subtitle="Use real projects and response expectations instead of generic promises."
+    items={proofItems}
+    columns={1}
+    content="Two recent case studies already support the positioning on the site: one shows data-led Wi-Fi planning before move-in, and one shows why resilient internet design matters for critical locations."
   />
 
   <Note icon="tabler:info-square" title="Coverage, Fast Response, Direct Contact." description={trustStripDescription} />

@@ -14,19 +14,13 @@ tags:
 author: Unified Networks
 ---
 
-You move into your new build. There are ethernet sockets on the walls. Lovely.
+If your new build has Ethernet sockets that do nothing, the missing piece is usually simpler than people expect.
 
-You plug in your TV. Nothing.
+Most people lose time and money here by changing hardware, changing providers, or applying random fixes before proving where the real bottleneck sits.
 
-You try the office. Nothing.
+This guide shows what usually causes the issue, what a sensible fix path looks like, and when it makes sense to move from DIY testing to a proper site plan.
 
-You try every socket in the house. None of them work.
-
-So you Google it. And now you are here.
-
-Good news: nothing is broken. The sockets are real. The cables are there. The patch panel in the utility room or comms cabinet is wired up.
-
-But there is one piece missing. And nobody told you about it.
+If you need help in Dublin or surrounding areas, the closest starting point is [structured cabling](/services/structured-cabling-cat6-cat6a-fibre-dublin), and the next most relevant path is [Wi-Fi installation and setup](/services/wifi-installation-and-setup-dublin).
 
 ## What the builder actually installed
 
@@ -162,14 +156,12 @@ Getting a switch connected is the first step. But if you want real performance a
 
 The cabling is already in your walls. The hard part is done. A switch just wakes it all up.
 
-## Final word
+## When to stop guessing
 
-If you moved into a new build and the ethernet sockets do nothing, you are not alone. This catches a lot of people.
+If this issue affects work, payments, move-in deadlines, customer experience, or the rooms people rely on every day, it is usually cheaper to diagnose it properly than to keep layering on random fixes.
 
-The fix is simple: a switch and some patch cables.
+## Bottom line
 
-But if you want the whole setup done properly, with clean cabling, good labelling, the right switch, and Wi-Fi access points wired in for real coverage, that is what we do.
+New build homes come with ethernet sockets and a patch panel, but most people don't realise you still need a network switch to make them work. Here is what's missing and how to fix it.
 
-Get in touch through [structured cabling](/services/structured-cabling-cat6-cat6a-fibre-dublin), [Wi-Fi installation](/services/wifi-installation-and-setup-dublin), or [book a consultation](/#contact) and we will sort it out.
-
-Related reading: [New Build Wi-Fi Is Harder Than It Looks (And What to Do Before You Move In)](/new-build-homes-wifi-blackspots-cat6-planning/) | [Cat6 vs Cat6a in Ireland](/cat6-vs-cat6a-ireland/).
+If you want help with this in Dublin or surrounding areas, start with [structured cabling](/services/structured-cabling-cat6-cat6a-fibre-dublin), [Wi-Fi installation and setup](/services/wifi-installation-and-setup-dublin), or [book a consultation](/#contact).

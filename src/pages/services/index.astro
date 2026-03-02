@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import Note from '~/components/widgets/Note.astro';
 import { coverageSummary, services } from '~/data/services';
 
@@ -20,10 +21,44 @@ const phoneHref = `tel:+${contactNumber}`;
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
 const metadata = {
-  title: 'Network Services in Dublin and Surrounding Areas | Unified Networks',
+  title: 'Network Services Dublin | Wi-Fi, Cabling, Starlink & More',
   ignoreTitleTemplate: true,
   description:
-    'Explore Wi-Fi installation, structured cabling, managed Wi-Fi, Starlink, event connectivity, failover internet, and troubleshooting services in Dublin and surrounding areas.',
+    'Choose the right Wi-Fi, cabling, Starlink, failover, or troubleshooting service in Dublin with a clear consultation-first process.',
+};
+
+const servicesHubUrl = 'https://unifiednetworks.ie/services';
+const servicesHubSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Network Services Dublin',
+  description: metadata.description,
+  url: servicesHubUrl,
+  hasPart: services.map((service, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: service.title,
+    url: `https://unifiednetworks.ie/services/${service.slug}`,
+  })),
+};
+
+const servicesBreadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://unifiednetworks.ie/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Services',
+      item: servicesHubUrl,
+    },
+  ],
 };
 
 const serviceCards = services.map((service) => ({
@@ -37,14 +72,38 @@ const serviceCards = services.map((service) => ({
 }));
 
 const noteText = `Need help deciding? Tell us your town or Eircode and what is not working. We cover ${coverageSummary}. Call <a class="underline" href="${phoneHref}">+${contactNumber}</a> or <a class="underline" href="${whatsappHref}" target="_blank" rel="noopener noreferrer">chat on WhatsApp</a>.`;
+const serviceSelectionSteps = [
+  {
+    title: 'Tell us what is not working',
+    description: 'Slow rooms, dropouts, cabling questions, Starlink setup, event demand, or backup internet risk.',
+    icon: 'tabler:message-circle',
+  },
+  {
+    title: 'Share your town or Eircode',
+    description: 'We confirm coverage and whether the first step should be consultation, troubleshooting, survey, or direct installation.',
+    icon: 'tabler:map-pin',
+  },
+  {
+    title: 'Get the right service path',
+    description: 'If existing equipment can be reused, we say so. If a survey or larger redesign is needed, we scope that clearly.',
+    icon: 'tabler:route',
+  },
+  {
+    title: 'Move to implementation with clear scope',
+    description: 'The goal is a better result, not sending you to the wrong service page and hoping it fits.',
+    icon: 'tabler:clipboard-check',
+  },
+];
 ---
 
 <Layout metadata={metadata}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(servicesHubSchema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(servicesBreadcrumbSchema)} />
   <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'Book Free Consultation',
+        text: 'Book Consultation',
         href: '/#contact',
         icon: 'tabler:mail',
       },
@@ -66,13 +125,12 @@ const noteText = `Need help deciding? Tell us your town or Eircode and what is n
     }}
   >
     <Fragment slot="title">
-      Network Services for Dublin
+      Choose The Right
       <br />
-      and Surrounding Areas
+      Network Service In Dublin
     </Fragment>
     <Fragment slot="subtitle">
-      Dedicated service pages for installation, optimization, cabling, Starlink, event connectivity, failover
-      internet, and troubleshooting.
+      Dedicated service pages for installation, optimization, cabling, Starlink, event connectivity, failover internet, and troubleshooting. If you are not sure which page fits, start with consultation and we will route you properly.
     </Fragment>
   </Hero>
 
@@ -82,6 +140,14 @@ const noteText = `Need help deciding? Tell us your town or Eircode and what is n
     title="Choose The Service You Need"
     subtitle="Each service has a dedicated page with clear scope, expected outcomes, and next steps."
     items={serviceCards}
+  />
+
+  <Steps
+    id="service-selection"
+    tagline="Selection Flow"
+    title="How To Pick The Right Service Without Guessing"
+    subtitle="Use this page as the commercial hub. The fastest path is to identify the actual problem, then move to the right service scope."
+    items={serviceSelectionSteps}
   />
 
   <Note icon="tabler:info-square" title="Need A Recommendation?" description={noteText} />

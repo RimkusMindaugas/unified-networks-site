@@ -16,17 +16,13 @@ tags:
 author: Unified Networks
 ---
 
-Sean is about a month away from moving into a lovely new home in County Dublin.
+If a new build has no fibre a month before move-in, the solution has to be practical, fast, and planned around how the house will actually be used.
 
-The house was nearly ready. The finish was great. The layout was right. And then one problem showed up late in the day.
+Most people lose time and money here by changing hardware, changing providers, or applying random fixes before proving where the real bottleneck sits.
 
-Fibre was not available.
+This guide shows what usually causes the issue, what a sensible fix path looks like, and when it makes sense to move from DIY testing to a proper site plan.
 
-That is the sort of issue that catches a lot of people with new builds in Ireland. The house is finished, but the broadband side is still not where it needs to be.
-
-So Sean got in touch before move-in, not after.
-
-That was the smart part.
+If you need help in Dublin or surrounding areas, the closest starting point is [Wi-Fi site survey and heatmap](/services/wifi-site-survey-and-heatmap-dublin), and the next most relevant path is [Wi-Fi installation and setup](/services/wifi-installation-and-setup-dublin).
 
 ## The problem was bigger than just "no fibre"
 
@@ -168,14 +164,12 @@ That gives you time to:
 
 That is what "new build done right" really means on the network side.
 
-## Final word
+## When to stop guessing
 
-Sean had a great new house nearly ready to go. The risk was that he would move in, find out fibre was not available, and then spend the first few months dealing with patchy Wi-Fi in a house that should have felt finished.
+If this issue affects work, payments, move-in deadlines, customer experience, or the rooms people rely on every day, it is usually cheaper to diagnose it properly than to keep layering on random fixes.
 
-Instead, he dealt with it early.
+## Bottom line
 
-We surveyed the property, planned the layout with a heatmap, installed the right number of access points, integrated Starlink cleanly, and gave the house a network that fits how it will actually be used.
+Sean was a month away from moving into his new County Dublin home when he found out fibre was not available. We carried out a Wi-Fi survey, built a heatmap plan, installed 8 UniFi access points, and integrated Starlink for a fast, stable setup from day one.
 
-That is how you fix the problem before it happens.
-
-If you are building or moving into a new home in Dublin or surrounding areas, start with a [Wi-Fi survey and heatmap](/services/wifi-site-survey-and-heatmap-dublin), [Wi-Fi installation and setup](/services/wifi-installation-and-setup-dublin), or [book a consultation](/#contact).
+If you want help with this in Dublin or surrounding areas, start with [Wi-Fi site survey and heatmap](/services/wifi-site-survey-and-heatmap-dublin), [Wi-Fi installation and setup](/services/wifi-installation-and-setup-dublin), or [book a consultation](/#contact).

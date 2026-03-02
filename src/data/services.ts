@@ -20,6 +20,7 @@ export interface ServicePageData {
   heroSubtitle: string;
   introTitle: string;
   introBody: string;
+  bestFor: string[];
   outcomes: string[];
   features: ServiceFeature[];
   faqs: ServiceFaq[];
@@ -31,19 +32,24 @@ export const coverageSummary =
 export const services: ServicePageData[] = [
   {
     slug: 'wifi-installation-and-setup-dublin',
-    title: 'Wi-Fi Installation and Setup (Homes and Businesses)',
+    title: 'Wi-Fi Installation and Setup Dublin',
     icon: 'tabler:network',
     cardDescription:
-      'Full Wi-Fi installation with proper router, switch, and access point placement for stable coverage and speed.',
-    metadataTitle: 'Wi-Fi Installation and Setup in Dublin and Surrounding Areas | Unified Networks',
+      'Wi-Fi installation for homes and businesses in Dublin with proper access point placement, existing-equipment review, and reliable coverage.',
+    metadataTitle: 'Wi-Fi Installation and Setup Dublin | Unified Networks',
     metadataDescription:
-      'Professional Wi-Fi installation and setup for homes and businesses in Dublin and surrounding areas. Reliable coverage, clean setup, and practical advice.',
-    heroTitle: 'Wi-Fi Installation and Setup in Dublin and Surrounding Areas',
+      'Wi-Fi installation and setup in Dublin for homes and businesses. Fix weak rooms, poor layout, and unstable coverage with practical planning and clean setup.',
+    heroTitle: 'Wi-Fi Installation and Setup Dublin',
     heroSubtitle:
-      'We design and install reliable Wi-Fi systems for homes and businesses, with clean setup and practical coverage planning.',
-    introTitle: 'Build Wi-Fi That Works Everywhere You Need It',
+      'Fix weak rooms, poor layout, and unstable day-to-day performance with Wi-Fi designed around how the building is actually used.',
+    introTitle: 'Install Wi-Fi That Works Where People Actually Use It',
     introBody:
-      'Most weak Wi-Fi issues come from poor layout, not just weak internet. We plan the network around your building and usage so streaming, calls, office tools, and smart devices stay stable.',
+      'If video calls drop, rooms have weak signal, or the router is in the wrong place, the issue is usually layout and planning rather than raw internet speed. We assess the building, review existing equipment, and design the right setup before recommending upgrades.',
+    bestFor: [
+      'Homes or businesses with weak coverage in the rooms that matter most',
+      'New setups that need proper access point placement rather than another router guess',
+      'Sites where existing equipment might still be usable if the layout is fixed properly',
+    ],
     outcomes: [
       'Consistent signal in day-to-day use areas',
       'Cleaner setup with less trial-and-error hardware spending',
@@ -51,12 +57,17 @@ export const services: ServicePageData[] = [
     ],
     features: [
       {
-        title: 'Site and Usage Review',
+        title: 'Site Assessment and Usage Review',
         description: 'We map where Wi-Fi is needed most and how your devices are actually used.',
         icon: 'tabler:map-pin',
       },
       {
-        title: 'Router, Switch, and AP Setup',
+        title: 'Existing Equipment Review',
+        description: 'We assess what can stay, what needs adjustment, and where new hardware is actually justified.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Router, Switch, and Access Point Setup',
         description: 'We configure hardware correctly so the whole network works as one system.',
         icon: 'tabler:router',
       },
@@ -66,8 +77,8 @@ export const services: ServicePageData[] = [
         icon: 'tabler:wifi',
       },
       {
-        title: 'Handover and Recommendations',
-        description: 'You get clear advice for future upgrades and ongoing reliability.',
+        title: 'Validation, Handover, and Follow-Up',
+        description: 'You get clear next-step advice for future upgrades and ongoing reliability.',
         icon: 'tabler:clipboard-check',
       },
     ],
@@ -91,19 +102,24 @@ export const services: ServicePageData[] = [
   },
   {
     slug: 'wifi-dead-zone-fixes-dublin',
-    title: 'Wi-Fi Dead Zone Fixes and Coverage Improvement',
+    title: 'Wi-Fi Dead Zone Fixes Dublin',
     icon: 'tabler:wifi',
     cardDescription:
-      'Fix weak-signal rooms and blackspots with better Wi-Fi layout, access point placement, and practical tuning.',
-    metadataTitle: 'Wi-Fi Dead Zone Fixes in Dublin and Surrounding Areas | Unified Networks',
+      'Fix weak-signal rooms and blackspots in Dublin with better Wi-Fi layout, access point placement, and practical tuning.',
+    metadataTitle: 'Wi-Fi Dead Zone Fixes Dublin | Unified Networks',
     metadataDescription:
-      'Eliminate Wi-Fi blackspots in homes and businesses with professional coverage planning and optimization across Dublin and nearby counties.',
-    heroTitle: 'Wi-Fi Blackspot Elimination for Homes and Businesses',
+      'Fix Wi-Fi dead zones in Dublin homes and businesses with practical coverage diagnosis, access point planning, and measured improvement.',
+    heroTitle: 'Wi-Fi Dead Zone Fixes Dublin',
     heroSubtitle:
-      'If your internet is fast near the router but weak in key rooms, we fix the coverage problem at the source.',
-    introTitle: 'Stop Living With Wi-Fi Dead Zones',
+      'If the connection is fine near the router but weak where you actually work, stream, or call, this is the service to fix it.',
+    introTitle: 'Fix The Rooms Where Wi-Fi Keeps Failing',
     introBody:
-      'Dead zones are usually caused by layout, interference, and signal obstruction. We diagnose what is causing weak coverage and apply the right fixes so service is strong where people actually use it.',
+      'Dead zones usually come from layout, interference, poor access point placement, or signal-blocking materials. We diagnose what is actually causing weak coverage and fix the areas that matter most instead of piling on random extenders.',
+    bestFor: [
+      'One or two rooms keep failing even though speed looks fine near the router',
+      'Calls, streaming, or work devices drop in bedrooms, offices, or reception areas',
+      'You want a targeted fix before committing to a larger full-network redesign',
+    ],
     outcomes: [
       'Fewer dropouts in bedrooms, offices, and TV areas',
       'More stable roaming as you move through the building',
@@ -151,18 +167,24 @@ export const services: ServicePageData[] = [
   },
   {
     slug: 'wifi-site-survey-and-heatmap-dublin',
-    title: 'Wi-Fi Site Survey and Heatmap Reports',
+    title: 'Wi-Fi Site Survey and Heatmap Dublin',
     icon: 'tabler:activity',
-    cardDescription: 'Formal survey and heatmap-based planning before upgrades, relocations, or new installations.',
-    metadataTitle: 'Wi-Fi Site Survey and Heatmap Reports in Dublin | Unified Networks',
+    cardDescription:
+      'Survey-first Wi-Fi planning in Dublin with measured coverage data, heatmaps, and practical upgrade recommendations.',
+    metadataTitle: 'Wi-Fi Site Survey and Heatmap Dublin | Unified Networks',
     metadataDescription:
-      'Get a professional Wi-Fi site survey with heatmap reporting and practical upgrade recommendations in Dublin and surrounding areas.',
-    heroTitle: 'Wi-Fi Site Surveys and Heatmap Reports',
+      'Get a Wi-Fi site survey and heatmap in Dublin before upgrades, fit-outs, or move-ins. Use measured data to plan access points and avoid wasted spend.',
+    heroTitle: 'Wi-Fi Site Survey and Heatmap Dublin',
     heroSubtitle:
-      'Make network decisions based on measured data, not guesswork. Ideal before major upgrades or fit-outs.',
-    introTitle: 'Measure First, Upgrade With Confidence',
+      'Measure coverage, interference, and weak zones before you change hardware, move in, or scale up the site.',
+    introTitle: 'Use Measured Data Before You Spend On Upgrades',
     introBody:
-      'A formal survey shows where signal is strong, weak, or noisy. That gives you a clear plan for access point placement, capacity, and upgrade priorities.',
+      'A formal survey shows where signal is strong, weak, congested, or unreliable. That gives you a clear plan for access point placement, capacity, and upgrade priorities before money goes into the wrong hardware.',
+    bestFor: [
+      'Sites where people are guessing which hardware to buy next',
+      'New builds, fit-outs, or move-ins that need coverage planned properly before installation',
+      'Businesses or homes with repeated complaints in specific rooms and no measured diagnosis yet',
+    ],
     outcomes: [
       'Data-backed decisions for installations and upgrades',
       'Clear visibility of weak coverage zones',
@@ -209,18 +231,23 @@ export const services: ServicePageData[] = [
   },
   {
     slug: 'structured-cabling-cat6-cat6a-fibre-dublin',
-    title: 'Structured Cabling (Cat6/Cat6a/Fibre)',
+    title: 'Structured Cabling Dublin (Cat6, Cat6a, Fibre)',
     icon: 'tabler:network',
     cardDescription:
-      'Standalone structured cabling service with clean runs, termination, and reliable wired backbone setup.',
-    metadataTitle: 'Structured Cabling Cat6 Cat6a Fibre in Dublin | Unified Networks',
+      'Structured cabling in Dublin for homes and businesses, including Cat6, Cat6a, fibre backbones, patch panels, and tidy termination.',
+    metadataTitle: 'Structured Cabling Dublin | Cat6, Cat6a & Fibre',
     metadataDescription:
-      'Structured cabling for homes and businesses in Dublin and surrounding areas, including Cat6, Cat6a, and fibre backbone planning.',
-    heroTitle: 'Structured Cabling for Homes and Businesses',
-    heroSubtitle: 'Cat6, Cat6a, and fibre-ready backbone cabling for stable long-term network performance.',
-    introTitle: 'The Backbone Behind Reliable Wi-Fi and Internet',
+      'Structured cabling in Dublin for homes and businesses, including Cat6, Cat6a, fibre backbones, patch panels, and clean tested runs.',
+    heroTitle: 'Structured Cabling Dublin',
+    heroSubtitle: 'Install the wired backbone properly so Wi-Fi, desks, cameras, and future upgrades stop depending on messy retrofits.',
+    introTitle: 'Build The Wired Backbone Properly The First Time',
     introBody:
-      'Good Wi-Fi depends on good cabling. Clean, planned cabling supports access points, office devices, cameras, and future upgrades without messy retrofits.',
+      'Good Wi-Fi still depends on good cabling. Clean, planned runs support access points, desks, cameras, cabinets, and future upgrades without the fault-finding problems that come from rushed retrofits.',
+    bestFor: [
+      'New builds, renovations, or refits where cable routes can still be planned properly',
+      'Homes or businesses that need better AP backhaul, desk connections, or cabinet organisation',
+      'Sites that want a cleaner long-term backbone before adding more wireless or smart systems',
+    ],
     outcomes: [
       'Stable wired backhaul for better Wi-Fi performance',
       'Cleaner network layout and easier fault finding',
@@ -266,18 +293,23 @@ export const services: ServicePageData[] = [
   },
   {
     slug: 'managed-wifi-plan-monthly-dublin',
-    title: 'Managed Wi-Fi Plan (Monthly)',
+    title: 'Managed Wi-Fi Support Dublin',
     icon: 'tabler:settings-cog',
     cardDescription:
-      'Monthly Wi-Fi management with monitoring, optimization, and ongoing support as your setup changes.',
-    metadataTitle: 'Managed Wi-Fi Monthly Plan in Dublin | Unified Networks',
+      'Ongoing managed Wi-Fi support in Dublin with monitoring, tuning, and practical help as your network changes.',
+    metadataTitle: 'Managed Wi-Fi Support Dublin | Unified Networks',
     metadataDescription:
-      'Monthly managed Wi-Fi support for homes and businesses in Dublin and surrounding areas, including monitoring and ongoing optimization.',
-    heroTitle: 'Managed Wi-Fi Support on a Monthly Plan',
-    heroSubtitle: 'Keep performance stable over time with proactive monitoring, tuning, and practical support.',
-    introTitle: 'Ongoing Wi-Fi Performance Without Guesswork',
+      'Monthly managed Wi-Fi support in Dublin for homes and businesses that need monitoring, tuning, and practical follow-up after installation.',
+    heroTitle: 'Managed Wi-Fi Support Dublin',
+    heroSubtitle: 'Keep the network stable as devices, layouts, staff, or business requirements change.',
+    introTitle: 'Ongoing Wi-Fi Support Without Waiting For The Next Failure',
     introBody:
-      'Networks drift over time as usage changes, devices increase, and layouts move. A managed plan keeps your Wi-Fi tuned and reliable instead of waiting for outages.',
+      'Networks drift over time as usage changes, devices increase, teams move, and layouts evolve. A managed support plan keeps the system tuned and reliable instead of waiting for outages or complaints before acting.',
+    bestFor: [
+      'Sites that already have working Wi-Fi but want it kept stable as usage changes',
+      'Businesses that cannot afford recurring small issues turning into larger disruptions',
+      'Home or office setups where someone needs to own ongoing performance and change control',
+    ],
     outcomes: [
       'Faster issue resolution before problems become disruptive',
       'Steadier performance as device counts grow',
@@ -323,19 +355,24 @@ export const services: ServicePageData[] = [
   },
   {
     slug: 'guest-wifi-packages-dublin',
-    title: 'Guest Wi-Fi Packages (Staff and Guest Separation)',
+    title: 'Guest Wi-Fi Setup Dublin',
     icon: 'tabler:shield-check',
     cardDescription:
-      'Guest network setup with proper separation from staff systems for safer access and smoother visitor experience.',
-    metadataTitle: 'Guest Wi-Fi Setup Packages in Dublin | Unified Networks',
+      'Guest Wi-Fi setup in Dublin with safe staff separation, better visitor access, and less impact on business-critical traffic.',
+    metadataTitle: 'Guest Wi-Fi Setup Dublin | Unified Networks',
     metadataDescription:
-      'Guest Wi-Fi packages for businesses and venues in Dublin and surrounding areas with secure staff and guest network separation.',
-    heroTitle: 'Guest Wi-Fi Setup for Businesses and Venues',
+      'Guest Wi-Fi setup in Dublin for offices, venues, and customer-facing sites with secure staff separation and practical capacity planning.',
+    heroTitle: 'Guest Wi-Fi Setup Dublin',
     heroSubtitle:
-      'Give visitors reliable internet access while protecting internal business systems with proper network separation.',
-    introTitle: 'Safer Guest Access Without Compromising Operations',
+      'Give customers and visitors reliable internet access without exposing internal systems or crushing staff performance.',
+    introTitle: 'Separate Guest Access From The Network That Runs The Business',
     introBody:
-      'A shared single network increases risk and can create performance issues. We set up separate guest and staff access so visitors get internet while business systems remain protected.',
+      'A shared single network increases risk and can create performance problems at the worst possible time. We separate guest and staff access properly so visitors get internet while business systems stay protected and usable.',
+    bestFor: [
+      'Businesses or venues that currently put staff and guests on one shared network',
+      'Reception, retail, hospitality, and waiting areas where visitor access affects business operations',
+      'Sites that need safer guest access without rebuilding the whole network from scratch',
+    ],
     outcomes: [
       'Better security posture for business devices and data',
       'Improved visitor and customer connectivity experience',
@@ -380,19 +417,24 @@ export const services: ServicePageData[] = [
   },
   {
     slug: 'starlink-installation-and-integration-dublin',
-    title: 'Starlink Installation and Network Integration',
+    title: 'Starlink Installation Dublin',
     icon: 'tabler:satellite',
     cardDescription:
-      'Starlink installation, mounting, alignment, and full integration into your internal Wi-Fi network.',
-    metadataTitle: 'Starlink Installation in Dublin and Surrounding Areas | Unified Networks',
+      'Starlink installation in Dublin with mounting, cable routing, alignment, and clean integration into your internal Wi-Fi setup.',
+    metadataTitle: 'Starlink Installation Dublin | Unified Networks',
     metadataDescription:
-      'Professional Starlink installation and network integration for homes and businesses in Dublin and surrounding areas, including clean mounting and setup.',
-    heroTitle: 'Starlink Installation and Integration Done Properly',
+      'Starlink installation in Dublin for homes and businesses, including mounting, cable routing, Wi-Fi integration, and practical setup advice.',
+    heroTitle: 'Starlink Installation Dublin',
     heroSubtitle:
-      'We handle mounting, cable routing, alignment, and internal Wi-Fi integration so Starlink performs across your full property.',
-    introTitle: 'From Starlink Box to Fully Usable Network',
+      'Install Starlink cleanly, route it properly, and integrate it into the rest of the network so the service is usable indoors.',
+    introTitle: 'Turn A Starlink Install Into A Proper Working Network',
     introBody:
-      'Many Starlink issues are installation and in-home distribution problems, not satellite problems. We install it safely and make sure performance reaches the rooms where it is needed.',
+      'Many Starlink problems are really installation and in-building distribution problems, not satellite problems. We install it safely and make sure the connection actually reaches the rooms and work areas where it is needed.',
+    bestFor: [
+      'Homes or businesses that need Starlink mounted and routed properly the first time',
+      'Sites where Starlink must feed an existing router, switch, or access point setup',
+      'Properties that need indoor coverage and clean cable entry, not just a dish on the roof',
+    ],
     outcomes: [
       'Cleaner permanent installation with safer cable routing',
       'Better day-to-day performance throughout the property',
@@ -437,19 +479,24 @@ export const services: ServicePageData[] = [
   },
   {
     slug: 'event-wifi-setup-and-rental-dublin',
-    title: 'Event Wi-Fi Setup, Temporary Broadband, and Rental',
+    title: 'Event Wi-Fi and Temporary Broadband Dublin',
     icon: 'tabler:calendar-event',
     cardDescription:
-      'Managed internet and Wi-Fi for festivals, conferences, and high-attendance events with rental or buy options.',
-    metadataTitle: 'Event Wi-Fi Setup and Rental in Dublin | Unified Networks',
+      'Event Wi-Fi in Dublin with temporary broadband, managed deployment, and rental or buy options for high-demand events.',
+    metadataTitle: 'Event Wi-Fi and Temporary Broadband Dublin | Unified Networks',
     metadataDescription:
-      'Temporary broadband, managed Wi-Fi deployment, and rental solutions for events in Dublin and surrounding areas.',
-    heroTitle: 'Event Wi-Fi and Temporary Broadband for High-Demand Use',
+      'Event Wi-Fi and temporary broadband in Dublin for venues, festivals, conferences, and operational teams that cannot afford connectivity failure.',
+    heroTitle: 'Event Wi-Fi and Temporary Broadband Dublin',
     heroSubtitle:
-      'Connectivity planning and deployment for festivals, conferences, venues, and large temporary operations.',
-    introTitle: 'Reliable Connectivity for Busy Event Environments',
+      'Plan coverage, capacity, staff access, payment systems, and guest demand before the event day becomes a network problem.',
+    introTitle: 'Build Event Connectivity Around Real Operational Load',
     introBody:
-      'Events need more than basic Wi-Fi. We design coverage, capacity, and resilience for crowded environments where payment systems, operations, and attendees all depend on connectivity.',
+      'Events need more than a basic internet connection. We design coverage, capacity, and resilience for crowded environments where payments, operations, staff, production, and attendees all depend on connectivity at the same time.',
+    bestFor: [
+      'Festivals, conferences, venues, and temporary sites with high attendance or operational dependency',
+      'Events that need temporary broadband, managed Wi-Fi, or rental hardware with setup support',
+      'Projects where card payments, ticketing, staff tools, or production systems cannot drop offline',
+    ],
     outcomes: [
       'More stable internet under heavy attendee load',
       'Practical setup for vendors, staff, production, and guests',
@@ -494,17 +541,23 @@ export const services: ServicePageData[] = [
   },
   {
     slug: 'internet-failover-and-backup-connectivity-dublin',
-    title: 'Internet Failover and Backup Connectivity',
+    title: 'Internet Failover Dublin',
     icon: 'tabler:shield-check',
-    cardDescription: 'Automatic failover between primary and backup links to reduce downtime when broadband fails.',
-    metadataTitle: 'Internet Failover Solutions in Dublin | Unified Networks',
+    cardDescription: 'Internet failover in Dublin with automatic backup switching for businesses and sites that cannot afford downtime.',
+    metadataTitle: 'Internet Failover Dublin | Unified Networks',
     metadataDescription:
-      'Failover internet setup for businesses and high-dependency sites in Dublin and surrounding areas with automatic backup switching.',
-    heroTitle: 'Failover Internet That Keeps You Online',
-    heroSubtitle: 'When the main line drops, traffic switches to backup connectivity so work can continue.',
-    introTitle: 'Protect Operations From Broadband Outages',
+      'Internet failover in Dublin with backup connectivity, automatic switching, and tested resilience for businesses and critical sites.',
+    heroTitle: 'Internet Failover Dublin',
+    heroSubtitle:
+      'When the main line drops, backup connectivity takes over so payments, calls, cloud systems, and operations do not stop with it.',
+    introTitle: 'Reduce The Damage A Broadband Outage Can Cause',
     introBody:
-      'If uptime matters, one internet line is a risk. We set up failover between primary and backup links so downtime impact is reduced when an outage happens.',
+      'If uptime matters, one internet line is a business risk. We set up failover between primary and backup links so downtime impact is reduced when the main service drops, degrades, or disappears completely.',
+    bestFor: [
+      'Businesses where one broadband outage stops payments, calls, bookings, or cloud access',
+      'Remote or high-dependency sites that need a practical backup path before the next failure',
+      'Teams that want automatic switching and tested resilience instead of manual hotspot workarounds',
+    ],
     outcomes: [
       'Reduced outage impact on business operations',
       'Automatic switching between primary and backup links',
@@ -550,17 +603,24 @@ export const services: ServicePageData[] = [
   },
   {
     slug: 'point-to-point-wireless-links-dublin',
-    title: 'Point-to-Point Links for Outbuildings and Remote Offices',
+    title: 'Point-to-Point Wireless Links Dublin',
     icon: 'tabler:antenna-bars-5',
-    cardDescription: 'Stable point-to-point wireless links for sheds, outbuildings, yards, and remote office spaces.',
-    metadataTitle: 'Point-to-Point Wireless Links in Dublin | Unified Networks',
+    cardDescription:
+      'Point-to-point wireless links in Dublin for outbuildings, yards, workshops, and remote offices when trenching is not practical.',
+    metadataTitle: 'Point-to-Point Wireless Links Dublin | Unified Networks',
     metadataDescription:
-      'Point-to-point wireless links for connecting remote buildings and outbuildings in Dublin and surrounding areas when cabling is not practical.',
-    heroTitle: 'Point-to-Point Wireless Links for Hard-to-Reach Buildings',
-    heroSubtitle: 'Connect sheds, workshops, remote offices, and outbuildings without long trenching projects.',
-    introTitle: 'Extend Connectivity Beyond the Main Building',
+      'Point-to-point wireless links in Dublin for connecting remote buildings without trenching, with line-of-sight checks, alignment, and clean integration.',
+    heroTitle: 'Point-to-Point Wireless Links Dublin',
+    heroSubtitle:
+      'Connect sheds, workshops, remote offices, and other buildings without the cost or disruption of long cable runs where wireless is the better fit.',
+    introTitle: 'Extend Your Network To The Next Building Without Guesswork',
     introBody:
-      'When cable runs are costly or impractical, point-to-point links can deliver reliable connectivity between buildings. We design and align links for stable operation.',
+      'When cable runs are costly or impractical, point-to-point links can deliver reliable connectivity between buildings. We check viability properly, choose the right hardware, and align the link for stable real-world operation.',
+    bestFor: [
+      'Outbuildings, workshops, yards, remote offices, or farm buildings that need usable connectivity',
+      'Sites where trenching is too disruptive, too expensive, or simply not the right answer',
+      'Projects that need the remote building integrated cleanly into the main network afterwards',
+    ],
     outcomes: [
       'Usable connectivity in remote structures',
       'Lower disruption than long-distance trenching in many cases',
@@ -606,19 +666,24 @@ export const services: ServicePageData[] = [
   },
   {
     slug: 'internet-and-wifi-troubleshooting-dublin',
-    title: 'Internet and Wi-Fi Troubleshooting',
+    title: 'Internet and Wi-Fi Troubleshooting Dublin',
     icon: 'tabler:activity',
     cardDescription:
-      'Targeted troubleshooting for unstable internet, poor Wi-Fi speed, call drops, and device connectivity issues.',
-    metadataTitle: 'Internet and Wi-Fi Troubleshooting in Dublin | Unified Networks',
+      'Troubleshoot slow internet, weak Wi-Fi, call drops, and unstable devices in Dublin with clear diagnosis and practical fixes.',
+    metadataTitle: 'Internet and Wi-Fi Troubleshooting Dublin | Unified Networks',
     metadataDescription:
-      'Professional internet and Wi-Fi troubleshooting for homes and businesses in Dublin and surrounding areas, with clear diagnosis and practical fixes.',
-    heroTitle: 'Internet and Wi-Fi Troubleshooting That Finds the Real Cause',
+      'Internet and Wi-Fi troubleshooting in Dublin for homes and businesses. Separate broadband problems from local Wi-Fi issues and fix the real bottleneck.',
+    heroTitle: 'Internet and Wi-Fi Troubleshooting Dublin',
     heroSubtitle:
-      'We diagnose bottlenecks, interference, coverage issues, and configuration problems, then implement clear fixes.',
-    introTitle: 'Fix the Root Cause, Not Just the Symptoms',
+      'Find out whether the problem is broadband, Wi-Fi layout, interference, roaming, or misconfiguration, then fix the real cause.',
+    introTitle: 'Diagnose The Real Bottleneck Before You Spend On The Wrong Fix',
     introBody:
-      'Slow or unstable network performance can come from ISP issues, bad in-home Wi-Fi layout, device limits, or misconfiguration. We isolate the bottleneck and fix what is actually wrong.',
+      'Slow or unstable network performance can come from ISP issues, poor Wi-Fi layout, device limits, interference, or bad configuration. We isolate the bottleneck first so you stop spending time and money on the wrong fix.',
+    bestFor: [
+      'Sites where nobody is sure whether the real problem is broadband or internal Wi-Fi',
+      'Calls, streaming, devices, or specific rooms fail unpredictably and the cause is still unclear',
+      'Homes or businesses that want diagnosis before buying more gear or changing providers',
+    ],
     outcomes: [
       'Clear diagnosis of where performance is breaking down',
       'Practical fixes with measurable improvement',
