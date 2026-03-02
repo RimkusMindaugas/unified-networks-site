@@ -17,7 +17,7 @@ export const headerData = {
   links: [
     {
       text: 'Services',
-      href: getPermalink('/services'),
+      href: `${getPermalink('/services')}#services-list`,
     },
     {
       text: 'Areas',
