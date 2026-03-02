@@ -21,6 +21,17 @@ const hasExternalScripts = false;
 const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroIntegration)[] = []) =>
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
+const shouldIncludeInSitemap = (page: string) => {
+  const pathname = new URL(page).pathname.replace(/\/+$/, '') || '/';
+
+  if (/^\/tag(?:\/|$)/.test(pathname)) return false;
+  if (/^\/category(?:\/|$)/.test(pathname)) return false;
+  if (/^\/blog\/\d+$/.test(pathname)) return false;
+  if (pathname === '/privacy' || pathname === '/terms') return false;
+
+  return true;
+};
+
 export default defineConfig({
   output: 'static',
 
@@ -28,7 +39,9 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({
+      filter: shouldIncludeInSitemap,
+    }),
     mdx(),
     icon({
       include: {
