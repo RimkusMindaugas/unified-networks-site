@@ -61,6 +61,8 @@ If you are building or buying a new build, Cat6 is one of the best upgrades you 
 
 If you want this done as a dedicated project, we offer [structured cabling (Cat6/Cat6a/Fibre)](/services/structured-cabling-cat6-cat6a-fibre-dublin) as a standalone service.
 
+If you are still deciding cable spec, read [Cat6 vs Cat6a in Ireland](/cat6-vs-cat6a-ireland/) before you lock in the runs.
+
 Do it early.
 
 Once the house is finished and full of furniture, every cable run becomes harder, slower, and more expensive. You also end up with compromises that never look quite right.
@@ -128,6 +130,8 @@ Use ceiling APs for wide coverage.
 Use socket APs where local ports and tidy setup matter.
 
 Most strong home networks use a mix.
+
+If you want measured proof before finalizing AP positions, read [Wi-Fi Site Survey and Heatmap in Ireland](/wifi-site-survey-heatmap-guide-ireland/).
 
 ## Why a comms cabinet matters more than people think
 

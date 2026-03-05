@@ -135,6 +135,8 @@ So site design must account for changing crowd patterns and physical constraints
 
 This is often where temporary point-to-point links help connect distant zones. If needed, [point-to-point wireless links](/services/point-to-point-wireless-links-dublin) can bridge hard areas cleanly.
 
+If you want the non-service breakdown of when wireless bridging beats trenching, read [Point-to-Point Wireless in Ireland](/point-to-point-wireless-links-ireland/).
+
 ## Rent or buy equipment?
 
 For one-off events, rental usually makes sense.

@@ -202,6 +202,8 @@ Useful context:
 
 In cities, Starlink is usually not the first pick if you have strong fixed options. In rural areas, it can be the practical answer while waiting for fibre.
 
+For a real-world example of that trade-off, read [How Starlink Changed Rural Internet in Ireland](/how-starlink-changed-rural-internet-in-ireland/).
+
 ## 6) 4G home broadband / fixed wireless (useful fallback)
 
 This is still a valid option where fibre and strong 5G are not available.

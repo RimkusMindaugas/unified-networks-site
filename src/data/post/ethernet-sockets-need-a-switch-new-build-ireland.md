@@ -32,6 +32,8 @@ Here is what most new builds come with:
 
 That is a solid foundation. Seriously. Having cables in the walls is the hard part, and your builder already did it.
 
+If you are still deciding whether those runs should be Cat6 or Cat6a, read [Cat6 vs Cat6a in Ireland](/cat6-vs-cat6a-ireland/).
+
 But here is the thing. The patch panel is just an organised landing point for cables. It does not send data anywhere by itself.
 
 Think of it like plumbing pipes that all lead to the boiler room, but nobody connected them to the boiler.

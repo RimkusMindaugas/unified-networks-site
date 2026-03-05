@@ -33,6 +33,8 @@ If speed is good at the router but bad in certain rooms, that is a Wi-Fi coverag
 
 If you are not sure which side is failing, use [internet and Wi-Fi troubleshooting](/services/internet-and-wifi-troubleshooting-dublin) first.
 
+If the symptom is missed mobile calls in the weak room, [turn on Wi-Fi Calling first](/use-wifi-calling-to-fix-missed-mobile-calls/) and then fix the coverage underneath it.
+
 ## 1) Powerline kits: handy, but very dependent on house wiring
 
 Powerline kits send network data through your home's electrical wiring.

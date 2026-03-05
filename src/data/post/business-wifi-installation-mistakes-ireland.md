@@ -61,6 +61,8 @@ Run a [Wi-Fi site survey and heatmap report](/services/wifi-site-survey-and-heat
 
 Measured data helps you buy less, place better, and avoid rework.
 
+If you want to see what that process actually includes, read [Wi-Fi Site Survey and Heatmap in Ireland](/wifi-site-survey-heatmap-guide-ireland/).
+
 ## Mistake 4: putting guests on the same network as staff
 
 This one is still very common.

@@ -76,6 +76,8 @@ It can also make sense in larger business sites where cable replacement later wo
 
 So yes, there are cases where Cat6a is worth paying extra for.
 
+If one of those runs is heading to an outbuilding or remote office, compare that with [Point-to-Point Wireless in Ireland](/point-to-point-wireless-links-ireland/) before you commit to trenching.
+
 ## New builds: think ahead once
 
 New builds are the best time to get this right.

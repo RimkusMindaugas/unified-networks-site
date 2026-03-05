@@ -57,7 +57,7 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
             try {
               const stored = localStorage.getItem(CONSENT_KEY);
               if (stored) return stored;
-            } catch (_) {
+            } catch {
               // Ignore localStorage access errors
             }
 
@@ -68,7 +68,7 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
           const persistConsent = (value) => {
             try {
               localStorage.setItem(CONSENT_KEY, value);
-            } catch (_) {
+            } catch {
               // Ignore localStorage access errors
             }
 

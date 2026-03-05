@@ -143,6 +143,8 @@ This points to wall/floor attenuation, poor router placement, channel congestion
 
 That is usually where [Wi-Fi dead zone fixes and coverage improvement](/services/wifi-dead-zone-fixes-dublin) have the biggest impact.
 
+If the main pain point is dropped or missed mobile calls indoors, start with [Missing Calls at Home? Turn On Wi-Fi Calling](/use-wifi-calling-to-fix-missed-mobile-calls/) after you confirm the room coverage is stable enough to support it.
+
 ## If results jump around a lot
 
 That can be:

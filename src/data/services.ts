@@ -736,12 +736,14 @@ const serviceRelatedPostSlugs: Record<string, string[]> = {
     'why-smart-homes-fail-on-bad-wifi',
     'how-much-internet-speed-does-home-need-ireland',
     'how-to-tell-slow-internet-vs-weak-wifi',
+    'wifi-site-survey-heatmap-guide-ireland',
     'sean-new-build-dublin-no-fibre-starlink-wifi-case-study',
   ],
   'wifi-dead-zone-fixes-dublin': [
     'why-smart-homes-fail-on-bad-wifi',
     'how-much-internet-speed-does-home-need-ireland',
     'best-ways-to-boost-wifi-signal-at-home',
+    'use-wifi-calling-to-fix-missed-mobile-calls',
   ],
   'wifi-site-survey-and-heatmap-dublin': [
     'wifi-site-survey-heatmap-guide-ireland',
@@ -753,6 +755,7 @@ const serviceRelatedPostSlugs: Record<string, string[]> = {
     'cat6-vs-cat6a-ireland',
     'new-build-homes-wifi-blackspots-cat6-planning',
     'ethernet-sockets-need-a-switch-new-build-ireland',
+    'point-to-point-wireless-links-ireland',
     'sean-new-build-dublin-no-fibre-starlink-wifi-case-study',
   ],
   'managed-wifi-plan-monthly-dublin': [
@@ -781,6 +784,7 @@ const serviceRelatedPostSlugs: Record<string, string[]> = {
     'internet-failover-guide-ireland',
     'business-wifi-installation-mistakes-ireland',
     'choosing-right-broadband-in-ireland-urban-vs-rural',
+    'how-starlink-changed-rural-internet-in-ireland',
     'critical-locations-failover-water-treatment-facility-ireland',
   ],
   'point-to-point-wireless-links-dublin': [
@@ -792,6 +796,7 @@ const serviceRelatedPostSlugs: Record<string, string[]> = {
     'why-smart-homes-fail-on-bad-wifi',
     'how-much-internet-speed-does-home-need-ireland',
     'how-to-tell-slow-internet-vs-weak-wifi',
+    'use-wifi-calling-to-fix-missed-mobile-calls',
   ],
 };
 

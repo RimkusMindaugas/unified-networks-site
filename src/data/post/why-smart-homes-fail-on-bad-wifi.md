@@ -36,6 +36,8 @@ This is why homes with 500 Mbps broadband can still have smart homes that barely
 
 If you have not tested this room-by-room yet, start with [How to Check if Your Internet Is Slow or Your Wi-Fi Is Weak](/how-to-tell-slow-internet-vs-weak-wifi/).
 
+If your most obvious symptom is missed mobile calls in one weak room, [Missing Calls at Home? Turn On Wi-Fi Calling](/use-wifi-calling-to-fix-missed-mobile-calls/) is the fastest short-term fix while you sort out the underlying Wi-Fi layout.
+
 ## Why smart devices fail first
 
 Smart devices are usually placed in the hardest locations for Wi-Fi.

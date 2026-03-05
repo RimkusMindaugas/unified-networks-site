@@ -23,7 +23,7 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
           try {
             const stored = localStorage.getItem(CONSENT_KEY);
             if (stored) return stored;
-          } catch (_) {
+          } catch {
             // Ignore localStorage access errors
           }
 
@@ -38,8 +38,8 @@ const gaId = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.
           window.dataLayer = window.dataLayer || [];
           window.gtag =
             window.gtag ||
-            function () {
-              window.dataLayer.push(arguments);
+            function (...args) {
+              window.dataLayer.push(args);
             };
 
           window.gtag('js', new Date());

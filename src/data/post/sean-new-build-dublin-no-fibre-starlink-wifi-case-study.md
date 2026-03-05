@@ -84,6 +84,8 @@ getting that internet around the property properly is the real network design wo
 
 If you need help with that side specifically, we offer [Starlink installation and network integration](/services/starlink-installation-and-integration-dublin) as a standalone service.
 
+If you want the broader rural context behind installs like this, read [How Starlink Changed Rural Internet in Ireland](/how-starlink-changed-rural-internet-in-ireland/).
+
 ## The gear we used in the main house
 
 For the main house, we built the network around:
