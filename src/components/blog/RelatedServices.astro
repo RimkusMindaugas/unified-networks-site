@@ -34,10 +34,16 @@ const relatedServices = getRelatedServicesForPostSlug(postSlug);
           ))}
         </div>
         <div class="mt-6 flex flex-wrap gap-4 text-sm">
-          <a href={getPermalink('/services')} class="text-muted dark:text-slate-400 hover:text-primary transition ease-in duration-200">
+          <a
+            href={getPermalink('/services')}
+            class="text-muted dark:text-slate-400 hover:text-primary transition ease-in duration-200"
+          >
             See all services
           </a>
-          <a href={getPermalink('/#contact')} class="text-muted dark:text-slate-400 hover:text-primary transition ease-in duration-200">
+          <a
+            href={getPermalink('/#contact')}
+            class="text-muted dark:text-slate-400 hover:text-primary transition ease-in duration-200"
+          >
             Book consultation
           </a>
         </div>
@@ -45,4 +51,3 @@ const relatedServices = getRelatedServicesForPostSlug(postSlug);
     </section>
   ) : null
 }
-

@@ -1,0 +1,177 @@
+(() => {
+  if (window.__unAnalyticsScriptInitialized) return;
+  window.__unAnalyticsScriptInitialized = true;
+
+  const scriptTag = document.currentScript;
+  const gaId = scriptTag instanceof HTMLScriptElement ? scriptTag.dataset.gaId || '' : '';
+
+  if (!gaId) return;
+
+  const CONSENT_KEY = 'un_cookie_consent';
+  const CONSENT_COOKIE = 'un_cookie_consent';
+  const WHATSAPP_DIRECT_LINK_REGEX = /^https?:\/\/wa\.me\/\d+/i;
+  const RECENT_EVENT_WINDOW_MS = 800;
+  const recentlyTrackedEvents = new Map();
+  const DEBUG_LEAD_EVENTS = new Set(['phone_click', 'whatsapp_click', 'form_submit']);
+  let analyticsEnabled = false;
+
+  const getConsent = () => {
+    try {
+      const stored = localStorage.getItem(CONSENT_KEY);
+      if (stored) return stored;
+    } catch {
+      // Ignore localStorage access errors
+    }
+
+    const match = document.cookie.match(new RegExp(`(?:^|; )${CONSENT_COOKIE}=([^;]*)`));
+    return match ? decodeURIComponent(match[1]) : null;
+  };
+
+  const loadGoogleAnalytics = () => {
+    if (window.__unGoogleAnalyticsLoaded) return;
+    window.__unGoogleAnalyticsLoaded = true;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag =
+      window.gtag ||
+      function (...args) {
+        window.dataLayer.push(args);
+      };
+
+    window.gtag('js', new Date());
+    window.gtag('config', gaId, {
+      anonymize_ip: true,
+      send_page_view: true,
+    });
+
+    const analyticsScript = document.createElement('script');
+    analyticsScript.async = true;
+    analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(gaId)}`;
+    document.head.appendChild(analyticsScript);
+  };
+
+  const trackEvent = (eventName, params = {}) => {
+    if (!analyticsEnabled) return;
+    if (typeof window.gtag !== 'function') return;
+
+    const debugFlag = DEBUG_LEAD_EVENTS.has(eventName) ? { debug_mode: true } : {};
+    window.gtag('event', eventName, {
+      transport_type: 'beacon',
+      ...debugFlag,
+      ...params,
+    });
+  };
+
+  const isDuplicateEvent = (eventName, linkUrl) => {
+    const key = `${eventName}:${linkUrl}`;
+    const now = Date.now();
+    const lastTrackedAt = recentlyTrackedEvents.get(key) || 0;
+    recentlyTrackedEvents.set(key, now);
+    return now - lastTrackedAt < RECENT_EVENT_WINDOW_MS;
+  };
+
+  const trackPageView = () => {
+    trackEvent('page_view', {
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: `${window.location.pathname}${window.location.search}`,
+    });
+  };
+
+  const trackContactLinkClicks = () => {
+    const trackPhoneClickAndDial = (event, anchor, href) => {
+      if (isDuplicateEvent('phone_click', href)) return;
+
+      // Keep the user on page briefly so GA can send the event before the dialer app opens.
+      event.preventDefault();
+
+      let didNavigate = false;
+      const navigateToDialer = () => {
+        if (didNavigate) return;
+        didNavigate = true;
+        window.location.href = href;
+      };
+
+      trackEvent('phone_click', {
+        link_url: href,
+        page_location: window.location.href,
+        link_text: (anchor.textContent || '').trim(),
+        interaction_type: 'click',
+        event_callback: navigateToDialer,
+        event_timeout: 1200,
+      });
+
+      setTimeout(navigateToDialer, 700);
+    };
+
+    const trackFromClick = (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const anchor = target.closest('a[href]');
+      if (!(anchor instanceof HTMLAnchorElement)) return;
+
+      const href = anchor.href || '';
+      if (!href) return;
+
+      if (href.startsWith('tel:')) {
+        trackPhoneClickAndDial(event, anchor, href);
+        return;
+      }
+
+      if (WHATSAPP_DIRECT_LINK_REGEX.test(href)) {
+        if (isDuplicateEvent('whatsapp_click', href)) return;
+        trackEvent('whatsapp_click', {
+          link_url: href,
+          page_location: window.location.href,
+          link_text: (anchor.textContent || '').trim(),
+          interaction_type: 'click',
+        });
+      }
+    };
+
+    document.addEventListener(
+      'click',
+      (event) => {
+        trackFromClick(event);
+      },
+      { capture: true }
+    );
+  };
+
+  const trackLeadFormSubmissions = () => {
+    document.addEventListener(
+      'submit',
+      (event) => {
+        const form = event.target;
+        if (!(form instanceof HTMLFormElement)) return;
+        if (!form.hasAttribute('data-netlify')) return;
+
+        const submittedFormName = form.getAttribute('name') || form.getAttribute('data-form-name') || 'contact';
+        trackEvent('form_submit', {
+          form_name: submittedFormName,
+          page_location: window.location.href,
+          page_path: `${window.location.pathname}${window.location.search}`,
+        });
+      },
+      { capture: true }
+    );
+  };
+
+  const enableAnalytics = () => {
+    analyticsEnabled = true;
+    loadGoogleAnalytics();
+    trackPageView();
+  };
+
+  if (getConsent() === 'accepted') enableAnalytics();
+
+  trackContactLinkClicks();
+  trackLeadFormSubmissions();
+
+  window.addEventListener('un:cookie-consent-accepted', enableAnalytics);
+  window.addEventListener('un:cookie-consent-rejected', () => {
+    analyticsEnabled = false;
+  });
+  document.addEventListener('astro:after-swap', trackPageView);
+})();

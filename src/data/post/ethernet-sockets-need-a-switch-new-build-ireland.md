@@ -2,7 +2,7 @@
 publishDate: 2026-02-21
 title: "Ethernet Sockets in Your New Build Don't Work? Here's What's Missing"
 excerpt: "New build homes come with ethernet sockets and a patch panel, but most people don't realise you still need a network switch to make them work. Here is what's missing and how to fix it."
-image: "~/assets/images/new-build-ireland-ethernet-sockets-missing-network-switch.png"
+image: '~/assets/images/new-build-ireland-ethernet-sockets-missing-network-switch.png'
 category: Home Network
 tags:
   - ethernet

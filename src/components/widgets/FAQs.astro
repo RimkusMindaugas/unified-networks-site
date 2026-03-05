@@ -24,11 +24,7 @@ const {
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
   {
     items && items.length > 0 && (
-      <div
-        class={`grid gap-6 ${
-          columns === 2 ? 'md:grid-cols-2' : ''
-        } ${columns === 1 ? 'max-w-4xl mx-auto' : ''}`}
-      >
+      <div class={`grid gap-6 ${columns === 2 ? 'md:grid-cols-2' : ''} ${columns === 1 ? 'max-w-4xl mx-auto' : ''}`}>
         {items.map(({ title: itemTitle, description }) => (
           <details class="group rounded-2xl border border-gray-200 bg-white/80 p-0 shadow-sm transition dark:border-slate-700 dark:bg-slate-900/60">
             <summary class="flex cursor-pointer list-none items-start justify-between gap-4 px-6 py-5 marker:hidden">
@@ -38,9 +34,7 @@ const {
                 <Icon name={iconUp} class="hidden h-4 w-4 group-open:block" />
               </span>
             </summary>
-            {description && (
-              <div class="px-6 pb-5 text-muted dark:text-slate-300" set:html={description} />
-            )}
+            {description && <div class="px-6 pb-5 text-muted dark:text-slate-300" set:html={description} />}
           </details>
         ))}
       </div>

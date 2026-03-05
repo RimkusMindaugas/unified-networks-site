@@ -2,7 +2,7 @@
 publishDate: 2026-02-28
 title: A Month Before Move-In, Sean Found Out His New Build in Dublin Had No Fibre
 excerpt: Sean was a month away from moving into his new County Dublin home when he found out fibre was not available. We carried out a Wi-Fi survey, built a heatmap plan, installed 8 UniFi access points, and integrated Starlink for a fast, stable setup from day one.
-image: "~/assets/images/sean-new-build-house-and-outbuilding-dublin.jpg"
+image: '~/assets/images/sean-new-build-house-and-outbuilding-dublin.jpg'
 category: Wi-Fi
 tags:
   - wifi

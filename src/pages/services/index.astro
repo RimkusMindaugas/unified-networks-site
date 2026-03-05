@@ -14,9 +14,7 @@ const contactNumber = (
   defaultContactNumber
 ).replace(/\D/g, '');
 const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || contactNumber).replace(/\D/g, '');
-const whatsappMessage = encodeURIComponent(
-  'Hi Unified Networks, I need help choosing the right network service.'
-);
+const whatsappMessage = encodeURIComponent('Hi Unified Networks, I need help choosing the right network service.');
 const phoneHref = `tel:+${contactNumber}`;
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -80,12 +78,14 @@ const serviceSelectionSteps = [
   },
   {
     title: 'Share your town or Eircode',
-    description: 'We confirm coverage and whether the first step should be consultation, troubleshooting, survey, or direct installation.',
+    description:
+      'We confirm coverage and whether the first step should be consultation, troubleshooting, survey, or direct installation.',
     icon: 'tabler:map-pin',
   },
   {
     title: 'Get the right service path',
-    description: 'If existing equipment can be reused, we say so. If a survey or larger redesign is needed, we scope that clearly.',
+    description:
+      'If existing equipment can be reused, we say so. If a survey or larger redesign is needed, we scope that clearly.',
     icon: 'tabler:route',
   },
   {
@@ -130,7 +130,8 @@ const serviceSelectionSteps = [
       Network Service In Dublin
     </Fragment>
     <Fragment slot="subtitle">
-      Dedicated service pages for installation, optimization, cabling, Starlink, event connectivity, failover internet, and troubleshooting. If you are not sure which page fits, start with consultation and we will route you properly.
+      Dedicated service pages for installation, optimization, cabling, Starlink, event connectivity, failover internet,
+      and troubleshooting. If you are not sure which page fits, start with consultation and we will route you properly.
     </Fragment>
   </Hero>
 

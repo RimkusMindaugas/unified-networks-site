@@ -1,8 +1,8 @@
 ---
 publishDate: 2026-02-28
-title: "Why Critical Locations Cannot Rely on One Internet Line: Water Treatment Facility Case Study"
+title: 'Why Critical Locations Cannot Rely on One Internet Line: Water Treatment Facility Case Study'
 excerpt: A remote water treatment facility was stuck on a 10 Mbps download and 1 Mbps upload DSL line. We installed a Starlink Enterprise primary connection with 5G failover to show why critical locations need backup internet, not just faster internet.
-image: "~/assets/images/water-treatment-facility-failover-gateway.webp"
+image: '~/assets/images/water-treatment-facility-failover-gateway.webp'
 category: Hardware
 tags:
   - failover

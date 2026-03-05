@@ -270,11 +270,7 @@ export async function getRelatedPosts(originalPost: Post, maxResults: number = 4
 
   const relevantPosts = postsWithScores
     .filter(({ score }) => score > 0)
-    .sort(
-      (a, b) =>
-        b.score - a.score ||
-        b.post.publishDate.valueOf() - a.post.publishDate.valueOf()
-    )
+    .sort((a, b) => b.score - a.score || b.post.publishDate.valueOf() - a.post.publishDate.valueOf())
     .map(({ post }) => post);
 
   if (relevantPosts.length >= maxResults) {

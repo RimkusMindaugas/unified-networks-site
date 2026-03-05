@@ -69,7 +69,10 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '', f
           />
         </div>
         <div class="ml-3">
-          <label for={disclaimer.name || 'disclaimer'} class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
+          <label
+            for={disclaimer.name || 'disclaimer'}
+            class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400"
+          >
             {disclaimer.label}
           </label>
         </div>

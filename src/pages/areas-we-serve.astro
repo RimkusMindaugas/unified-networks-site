@@ -21,9 +21,7 @@ const contactNumber = (
   defaultContactNumber
 ).replace(/\D/g, '');
 const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || contactNumber).replace(/\D/g, '');
-const whatsappMessage = encodeURIComponent(
-  'Hi Unified Networks, can you confirm if you cover my area?'
-);
+const whatsappMessage = encodeURIComponent('Hi Unified Networks, can you confirm if you cover my area?');
 const phoneHref = `tel:+${contactNumber}`;
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -115,7 +113,8 @@ const coverageRequestItems = [
       For Dublin And Surrounding Counties
     </Fragment>
     <Fragment slot="subtitle">
-      Dublin is the main focus, and surrounding counties are covered for the right Wi-Fi, cabling, Starlink, event, and failover projects. Send your Eircode and the issue, and we will confirm the right next step quickly.
+      Dublin is the main focus, and surrounding counties are covered for the right Wi-Fi, cabling, Starlink, event, and
+      failover projects. Send your Eircode and the issue, and we will confirm the right next step quickly.
     </Fragment>
   </Hero>
 

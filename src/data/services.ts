@@ -239,7 +239,8 @@ export const services: ServicePageData[] = [
     metadataDescription:
       'Structured cabling in Dublin for homes and businesses, including Cat6, Cat6a, fibre backbones, patch panels, and clean tested runs.',
     heroTitle: 'Structured Cabling Dublin',
-    heroSubtitle: 'Install the wired backbone properly so Wi-Fi, desks, cameras, and future upgrades stop depending on messy retrofits.',
+    heroSubtitle:
+      'Install the wired backbone properly so Wi-Fi, desks, cameras, and future upgrades stop depending on messy retrofits.',
     introTitle: 'Build The Wired Backbone Properly The First Time',
     introBody:
       'Good Wi-Fi still depends on good cabling. Clean, planned runs support access points, desks, cameras, cabinets, and future upgrades without the fault-finding problems that come from rushed retrofits.',
@@ -543,7 +544,8 @@ export const services: ServicePageData[] = [
     slug: 'internet-failover-and-backup-connectivity-dublin',
     title: 'Internet Failover Dublin',
     icon: 'tabler:shield-check',
-    cardDescription: 'Internet failover in Dublin with automatic backup switching for businesses and sites that cannot afford downtime.',
+    cardDescription:
+      'Internet failover in Dublin with automatic backup switching for businesses and sites that cannot afford downtime.',
     metadataTitle: 'Internet Failover Dublin | Unified Networks',
     metadataDescription:
       'Internet failover in Dublin with backup connectivity, automatic switching, and tested resilience for businesses and critical sites.',

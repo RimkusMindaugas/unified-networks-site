@@ -25,9 +25,7 @@ const contactNumber = (
   defaultContactNumber
 ).replace(/\D/g, '');
 const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || contactNumber).replace(/\D/g, '');
-const whatsappMessage = encodeURIComponent(
-  'Hi Unified Networks, I need help with my internet or Wi-Fi setup.'
-);
+const whatsappMessage = encodeURIComponent('Hi Unified Networks, I need help with my internet or Wi-Fi setup.');
 const phoneHref = `tel:+${contactNumber}`;
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 const serviceAreas = [
@@ -100,7 +98,8 @@ const processItems = [
   },
   {
     title: 'Install or tune what is actually needed',
-    description: 'The goal is reliable coverage, cleaner cabling, and stable day-to-day performance, not more random gear.',
+    description:
+      'The goal is reliable coverage, cleaner cabling, and stable day-to-day performance, not more random gear.',
     icon: 'tabler:settings',
   },
   {
@@ -113,7 +112,8 @@ const processItems = [
 const differentiatorItems = [
   {
     title: 'Measured planning, not guesswork',
-    description: 'We use site assessment, layout review, and heatmaps where they are actually needed before recommending bigger changes.',
+    description:
+      'We use site assessment, layout review, and heatmaps where they are actually needed before recommending bigger changes.',
   },
   {
     title: 'Existing equipment reviewed first',
@@ -121,18 +121,21 @@ const differentiatorItems = [
   },
   {
     title: 'Clear scope before installation',
-    description: 'Most projects start with a consultation and site assessment so the work is defined before money is spent.',
+    description:
+      'Most projects start with a consultation and site assessment so the work is defined before money is spent.',
   },
   {
     title: 'Follow-up support after the install',
-    description: 'We keep helping after layout changes, ISP upgrades, or device growth where the setup needs tuning again.',
+    description:
+      'We keep helping after layout changes, ISP upgrades, or device growth where the setup needs tuning again.',
   },
 ];
 
 const proofItems = [
   {
     title: 'New-build Dublin case study',
-    description: 'A pre-move survey and heatmap plan led to 8 UniFi access points plus Starlink integration for stable coverage from day one.',
+    description:
+      'A pre-move survey and heatmap plan led to 8 UniFi access points plus Starlink integration for stable coverage from day one.',
     callToAction: {
       text: 'Read the case study',
       href: '/sean-new-build-dublin-no-fibre-starlink-wifi-case-study',
@@ -140,7 +143,8 @@ const proofItems = [
   },
   {
     title: 'Critical-site failover case study',
-    description: 'A remote water treatment facility moved from roughly 10 Mbps / 1 Mbps DSL to Starlink Enterprise with 5G failover.',
+    description:
+      'A remote water treatment facility moved from roughly 10 Mbps / 1 Mbps DSL to Starlink Enterprise with 5G failover.',
     callToAction: {
       text: 'Read the failover case study',
       href: '/critical-locations-failover-water-treatment-facility-ireland',
@@ -242,7 +246,9 @@ const contactProps = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Practical Wi-Fi installation, cabling, Starlink, and failover support for homes and businesses across Dublin and surrounding areas. We assess the building, review existing equipment, and recommend upgrades only when there is a real performance reason.
+      Practical Wi-Fi installation, cabling, Starlink, and failover support for homes and businesses across Dublin and
+      surrounding areas. We assess the building, review existing equipment, and recommend upgrades only when there is a
+      real performance reason.
     </Fragment>
   </Hero>
 
@@ -282,7 +288,11 @@ const contactProps = {
     content="Two recent case studies already support the positioning on the site: one shows data-led Wi-Fi planning before move-in, and one shows why resilient internet design matters for critical locations."
   />
 
-  <Note icon="tabler:info-square" title="Coverage, Fast Response, Direct Contact." description={trustStripDescription} />
+  <Note
+    icon="tabler:info-square"
+    title="Coverage, Fast Response, Direct Contact."
+    description={trustStripDescription}
+  />
 
   <FAQs
     id="faq"

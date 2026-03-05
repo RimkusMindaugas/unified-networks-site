@@ -108,12 +108,14 @@ const serviceProcessItems = [
   },
   {
     title: 'Implement the right scope',
-    description: 'The install or tuning work is matched to the property, usage, and reliability goal rather than a generic one-size-fits-all setup.',
+    description:
+      'The install or tuning work is matched to the property, usage, and reliability goal rather than a generic one-size-fits-all setup.',
     icon: 'tabler:settings',
   },
   {
     title: 'Validate and support after the work',
-    description: 'You get handover guidance, follow-up recommendations, and a clearer next step if the site changes later.',
+    description:
+      'You get handover guidance, follow-up recommendations, and a clearer next step if the site changes later.',
     icon: 'tabler:clipboard-check',
   },
 ];
@@ -180,11 +182,13 @@ const serviceProcessItems = [
     <div class="rounded-3xl border border-slate-700/60 bg-slate-900/40 p-6 md:p-8">
       <h2 class="text-2xl md:text-3xl font-bold font-heading">This Service Is Usually Right If...</h2>
       <div class="mt-5 grid gap-4 md:grid-cols-3">
-        {service.bestFor.map((item) => (
-          <div class="rounded-2xl border border-slate-700/60 bg-slate-950/40 p-5">
-            <p class="text-base text-muted dark:text-slate-300">{item}</p>
-          </div>
-        ))}
+        {
+          service.bestFor.map((item) => (
+            <div class="rounded-2xl border border-slate-700/60 bg-slate-950/40 p-5">
+              <p class="text-base text-muted dark:text-slate-300">{item}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
@@ -205,7 +209,11 @@ const serviceProcessItems = [
     items={service.features}
   />
 
-  <Note icon="tabler:rosette-discount-check" title="Need A Straight Answer Before You Book?" description={midPageCtaText} />
+  <Note
+    icon="tabler:rosette-discount-check"
+    title="Need A Straight Answer Before You Book?"
+    description={midPageCtaText}
+  />
 
   <FAQs
     id="service-faq"
@@ -226,7 +234,10 @@ const serviceProcessItems = [
         <ul class="list-disc pl-5 space-y-2 marker:text-primary dark:marker:text-blue-400">
           {relatedPosts.map((post) => (
             <li>
-              <a href={getPermalink(post.permalink, 'post')} class="text-primary dark:text-blue-400 hover:underline font-medium">
+              <a
+                href={getPermalink(post.permalink, 'post')}
+                class="text-primary dark:text-blue-400 hover:underline font-medium"
+              >
                 {post.title}
               </a>
             </li>

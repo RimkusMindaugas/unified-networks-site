@@ -2,7 +2,7 @@
 publishDate: 2025-07-16
 title: '2.4 GHz vs 5 GHz Wi-Fi: Which One Should You Use?'
 excerpt: A practical guide to the real difference between 2.4 GHz and 5 GHz Wi-Fi, why one reaches farther and the other is faster, and how to choose the right one in each room.
-image: "~/assets/images/2-4ghz-vs-5ghz-wifi-which-one-to-use-ireland.png"
+image: '~/assets/images/2-4ghz-vs-5ghz-wifi-which-one-to-use-ireland.png'
 category: Wi-Fi
 tags:
   - wifi
@@ -71,10 +71,10 @@ Then speeds drop, or the device jumps bands.
 
 ## Quick comparison table
 
-| Band | Typical speed | Range through walls | Interference level | Best use |
-| --- | --- | --- | --- | --- |
-| 2.4 GHz | Lower | Better | Higher | Far rooms, IoT, basic browsing |
-| 5 GHz | Higher | Weaker | Lower (usually) | Close/medium range, streaming, calls, gaming |
+| Band    | Typical speed | Range through walls | Interference level | Best use                                     |
+| ------- | ------------- | ------------------- | ------------------ | -------------------------------------------- |
+| 2.4 GHz | Lower         | Better              | Higher             | Far rooms, IoT, basic browsing               |
+| 5 GHz   | Higher        | Weaker              | Lower (usually)    | Close/medium range, streaming, calls, gaming |
 
 ## How to choose which one to use
 

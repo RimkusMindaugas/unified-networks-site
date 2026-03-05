@@ -92,26 +92,26 @@ Run 2 or 3 tests per room and average them.
 
 Use this simple table:
 
-| Room | Avg speed | Notes |
-| --- | ---: | --- |
-| Router location (base) | 498 Mbps | Reference point |
-| Living room | 430 Mbps | Usually strong |
-| Main bedroom | 280 Mbps | Noticeable drop |
-| Office | 190 Mbps | Likely weak coverage |
+| Room                   | Avg speed | Notes                |
+| ---------------------- | --------: | -------------------- |
+| Router location (base) |  498 Mbps | Reference point      |
+| Living room            |  430 Mbps | Usually strong       |
+| Main bedroom           |  280 Mbps | Noticeable drop      |
+| Office                 |  190 Mbps | Likely weak coverage |
 
 ## Speed guide for common activities
 
 Use this as a practical guide (rough values per stream/device):
 
-| Activity | Typical speed needed | Notes |
-| --- | ---: | --- |
-| Browsing and email | 1-3 Mbps | Usually light usage |
-| Music streaming | 1-2 Mbps | Per active device |
-| Video calls (HD) | 3-5 Mbps up/down | Upload matters a lot |
-| HD streaming (Netflix, YouTube, IPTV) | 5-8 Mbps | Per TV/stream |
-| 4K streaming (Netflix, YouTube, IPTV) | 15-25 Mbps | Per TV/stream |
-| Cloud backup / large uploads | 20+ Mbps upload preferred | Can affect the whole home |
-| Online gaming | 3-10 Mbps + low latency | Ping/stability matters more than raw speed |
+| Activity                              |      Typical speed needed | Notes                                      |
+| ------------------------------------- | ------------------------: | ------------------------------------------ |
+| Browsing and email                    |                  1-3 Mbps | Usually light usage                        |
+| Music streaming                       |                  1-2 Mbps | Per active device                          |
+| Video calls (HD)                      |          3-5 Mbps up/down | Upload matters a lot                       |
+| HD streaming (Netflix, YouTube, IPTV) |                  5-8 Mbps | Per TV/stream                              |
+| 4K streaming (Netflix, YouTube, IPTV) |                15-25 Mbps | Per TV/stream                              |
+| Cloud backup / large uploads          | 20+ Mbps upload preferred | Can affect the whole home                  |
+| Online gaming                         |   3-10 Mbps + low latency | Ping/stability matters more than raw speed |
 
 IPTV quality can vary a lot by provider/feed. In Ireland people often call it a "dodgy box," and these streams can need more headroom than expected when quality shifts.
 

@@ -7,9 +7,7 @@ const contactNumber = (
   defaultContactNumber
 ).replace(/\D/g, '');
 const whatsappNumber = (import.meta.env.PUBLIC_WHATSAPP_NUMBER || contactNumber).replace(/\D/g, '');
-const whatsappMessage = encodeURIComponent(
-  'Hi Unified Networks, I am looking for help with internet or Wi-Fi setup.'
-);
+const whatsappMessage = encodeURIComponent('Hi Unified Networks, I am looking for help with internet or Wi-Fi setup.');
 const phoneHref = `tel:+${contactNumber}`;
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
